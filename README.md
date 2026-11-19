@@ -22,3 +22,13 @@ Open `index.html` in your browser. Each project is a standalone folder with its 
 
 
 All projects are fictional concept demos created for portfolio presentation; they are not commissioned client work.
+
+## VÉRA SKIN — skincare storefront concept
+
+A responsive cosmetic storefront concept featuring product filtering, favorites, an interactive cart, promotional messaging, and newsletter signup. Built with HTML, CSS, and vanilla JavaScript. Demo interactions only; no real checkout or email submission.
+
+
+Open: `projects/vera-skin/index.html`
+
+## IRON DISTRICT
+Fitness club landing page concept. Open `projects/iron-district/index.html`.
