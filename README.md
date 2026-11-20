@@ -1,34 +1,36 @@
-# Frontend Portfolio — Concept Projects
+# Web Portfolio — Freelance Frontend
 
-A small portfolio of responsive website concepts built with HTML, CSS, and JavaScript.
+Портфолио услуг по созданию и доработке сайтов для малого бизнеса.
 
+## Что предлагаю
+- Создание лендингов и небольших сайтов компаний.
+- Редизайн и адаптация существующих сайтов.
+- Исправление ошибок, обновление блоков и небольшие JavaScript-доработки.
 
-## Projects
-- `projects/noir-coffee/` — cafe landing page concept
-- `projects/frame-studio/` — creative digital studio concept
+## Демо-проекты
 
+Все работы ниже — самостоятельные концепт-проекты, созданные для демонстрации навыков. Это не коммерческие заказы.
 
-## Run locally
-Open `index.html` in your browser. Each project is a standalone folder with its own `index.html`.
+- [NOIR COFFEE](projects/noir-coffee/) — концепт сайта кофейни.
+- [FRAME STUDIO](projects/frame-studio/) — сайт креативной студии.
+- [IRON DISTRICT](projects/iron-district/) — лендинг фитнес-клуба.
+- [VÉRA SKIN](projects/vera-skin/) — концепт интернет-магазина косметики.
 
+## Структура
+- `index.html` — основное фриланс-портфолио.
+- `projects/` — четыре демонстрационных сайта.
+- `resume/` — отдельная версия портфолио-резюме с переключением RU / EN.
 
-## Publish with GitHub Pages
-1. Create a GitHub repository named `frontend-portfolio`.
-2. Upload the contents of this folder to the repository root (not the enclosing folder).
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose branch `main` and folder `/ (root)`, then Save.
-6. After deployment, your main portfolio and project links will be available at the Pages URL.
+## Технологии
+HTML5, CSS3, JavaScript, адаптивная верстка.
 
+## Запуск локально
+Откройте `index.html` в браузере. Каждый проект — самостоятельная страница в своей папке.
 
-All projects are fictional concept demos created for portfolio presentation; they are not commissioned client work.
+## Публикация через GitHub Pages
+В репозитории откройте **Settings → Pages**:
+1. В разделе **Build and deployment** выберите **Deploy from a branch**.
+2. Укажите ветку `main` и папку `/ (root)`.
+3. Нажмите **Save** и дождитесь завершения публикации.
 
-## VÉRA SKIN — skincare storefront concept
-
-A responsive cosmetic storefront concept featuring product filtering, favorites, an interactive cart, promotional messaging, and newsletter signup. Built with HTML, CSS, and vanilla JavaScript. Demo interactions only; no real checkout or email submission.
-
-
-Open: `projects/vera-skin/index.html`
-
-## IRON DISTRICT
-Fitness club landing page concept. Open `projects/iron-district/index.html`.
+Контакт для запросов по разработке сайтов: **blvxx@ya.ru**.
