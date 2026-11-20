@@ -51,7 +51,7 @@
     .step{padding:20px;background:var(--paper);border:1px solid var(--line);border-radius:11px}
     .step small{color:var(--accent);font-weight:800}.step h3{font-size:15px;margin:8px 0}.step p{font-size:13px;color:var(--muted);margin:0}
     .contact{background:var(--ink);color:white;border-radius:16px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-    .contact p{margin:7px 0 0;color:#c2c9d4;font-size:14px}.contact .btn{background:white;color:var(--ink);white-space:nowrap}
+    .contact p{margin:7px 0 0;color:#c2c9d4;font-size:14px}.contact p a{color:white;text-decoration:underline;text-underline-offset:3px}.contact .btn{background:white;color:var(--ink);white-space:nowrap}
     footer{padding:28px 0 38px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}
     @media(max-width:760px){.hero{grid-template-columns:1fr;gap:35px;padding:75px 0 60px}.hero-side{max-width:420px}.about{grid-template-columns:1fr;gap:18px}.skills{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}header{height:auto;min-height:76px;align-items:flex-start;padding:17px 0;gap:14px;flex-direction:column}nav{width:100%;justify-content:space-between;gap:10px}nav a{display:inline;font-size:12px}}
     @media(max-width:520px){.shell{width:min(100% - 32px,var(--max))}.projects{grid-template-columns:1fr}.visual{height:160px}.section-head{align-items:flex-start;flex-direction:column}h2{font-size:25px}.hero{padding-top:60px}footer{flex-direction:column}nav{flex-wrap:wrap;justify-content:flex-start;column-gap:17px;row-gap:10px}}
@@ -140,7 +140,7 @@
       <section id="contact">
         <div class="contact">
           <div><div class="eyebrow" style="color:#a9baff" data-i18n="contactEyebrow">Открыт к предложениям</div><h2 data-i18n="contactTitle">Давайте обсудим ваш проект.</h2><p data-i18n="contactText">Связаться со мной и посмотреть код работ можно через GitHub.</p></div>
-          <a class="btn" href="https://github.com/blvxx" target="_blank" rel="noreferrer" data-i18n="contactButton">Открыть GitHub ↗</a>
+          <a class="btn" href="mailto:blvxx@ya.ru" data-i18n="contactButton">Написать на почту ↗</a>
         </div>
       </section>
     </main>
@@ -157,7 +157,7 @@
         skillsTitle:"Технологии и навыки",htmlDesc:"Семантическая структура",cssDesc:"Flexbox, Grid, адаптивность",jsDesc:"DOM, события, логика интерфейса",gitDesc:"Контроль версий и публикация",
         projectsTitle:"Избранные проекты",openProject:"Открыть ↗",noirDesc:"Концепт сайта кофейни с выразительной типографикой, адаптивной навигацией и интерактивными элементами меню.",frameDesc:"Сайт креативной студии с акцентом на визуальную подачу, композицию и структуру портфолио.",ironDesc:"Лендинг фитнес-клуба: контрастная визуальная система, ясные блоки и адаптивная компоновка.",veraDesc:"Концепт интернет-магазина косметики с каталогом, фильтрацией, избранным и демонстрационной корзиной.",conceptNote:"Все проекты — самостоятельные концепт-демо, не коммерческие заказы. Интерактивность магазина демонстрационная; backend и реальная оплата не подключены.",
         processTitle:"Подход к работе",step1Title:"Структура",step1Text:"Разбираюсь в задаче, определяю содержание страницы и логику блоков.",step2Title:"Реализация",step2Text:"Собираю интерфейс, настраиваю сетку, типографику и адаптивное поведение.",step3Title:"Проверка",step3Text:"Проверяю отображение на разных размерах экрана и работу интерактивных элементов.",
-        contactEyebrow:"Открыт к предложениям",contactTitle:"Давайте обсудим ваш проект.",contactText:"Связаться со мной и посмотреть код работ можно через GitHub.",contactButton:"Открыть GitHub ↗",footerNote:"Резюме-портфолио · RU / EN"
+        contactEyebrow:"Открыт к предложениям",contactTitle:"Давайте обсудим ваш проект.",contactText:"Почта для связи: <a href=\"mailto:blvxx@ya.ru\">blvxx@ya.ru</a>",contactButton:"Написать на почту ↗",footerNote:"Резюме-портфолио · RU / EN"
       },
       en:{
         navAbout:"About",navSkills:"Skills",navProjects:"Projects",navContact:"Contact",
@@ -168,7 +168,7 @@
         skillsTitle:"Skills & technologies",htmlDesc:"Semantic page structure",cssDesc:"Flexbox, Grid, responsive layouts",jsDesc:"DOM, events, interface logic",gitDesc:"Version control and publishing",
         projectsTitle:"Selected projects",openProject:"View project ↗",noirDesc:"Coffee shop website concept with expressive typography, responsive navigation, and interactive menu elements.",frameDesc:"Creative studio website focused on visual presentation, composition, and portfolio structure.",ironDesc:"Fitness club landing page with a bold visual system, clear content sections, and responsive layout.",veraDesc:"Skincare store concept featuring a product catalogue, filters, favorites, and a demo shopping cart.",conceptNote:"All projects are independent concept demos, not commissioned client work. Store interactions are for demonstration; no backend or real payment processing is connected.",
         processTitle:"Work approach",step1Title:"Structure",step1Text:"Understand the task, define page content, and plan the section hierarchy.",step2Title:"Build",step2Text:"Develop the interface, layout grid, typography, and responsive behavior.",step3Title:"Review",step3Text:"Check the page across screen sizes and test interactive elements.",
-        contactEyebrow:"Open to opportunities",contactTitle:"Let's discuss your project.",contactText:"You can reach me and explore the project code on GitHub.",contactButton:"Visit GitHub ↗",footerNote:"Resume & portfolio · RU / EN"
+        contactEyebrow:"Open to opportunities",contactTitle:"Let's discuss your project.",contactText:"Email me at <a href=\"mailto:blvxx@ya.ru\">blvxx@ya.ru</a>.",contactButton:"Send an email ↗",footerNote:"Resume & portfolio · RU / EN"
       }
     };
     let currentLang = "ru";
