@@ -137,6 +137,7 @@
     '.trust-grid article',
     '.service-card',
     '.price-card',
+    '.project-card',
     '.case-study-layout',
     '.step',
     '.about-layout',
