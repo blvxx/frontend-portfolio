@@ -1491,3 +1491,13 @@ html.motion-ready [data-reveal].is-revealed{
     will-change:auto;
   }
 }
+
+
+/* Telegram bot services callout */
+.automation-callout{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:32px;margin-top:24px;padding:30px 32px;background:linear-gradient(115deg,#292b31,#3a3032);color:#f0ece5;border:1px solid #514447;border-radius:3px}
+.automation-callout>.mono{font-size:9px}
+.automation-callout .mono{font-size:9px;letter-spacing:.12em;color:#d5b99e}
+.automation-callout h3{font-size:clamp(21px,3vw,30px);line-height:1.2;letter-spacing:-.05em;margin:13px 0 8px}
+.automation-callout p{max-width:650px;color:#c9c1bd;font-size:12px;line-height:1.8;margin:0}
+.automation-callout .button{white-space:nowrap}
+@media(max-width:700px){.automation-callout{grid-template-columns:1fr;padding:24px;gap:20px}.automation-callout .button{justify-self:start}}
