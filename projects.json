@@ -22,9 +22,10 @@
     "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/noir-coffee/",
     "demo_label": "Открыть сайт",
     "preview": {
-      "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/noir-coffee/",
-      "alt": "Живое превью сайта NOIR Coffee Studio"
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1554118811-1d30901bba18?auto=format&fit=crop&w=1600&q=85",
+      "alt": "Тёплый современный интерьер городской кофейни",
+      "position": "center 52%"
     },
     "case_goal": "Помочь потенциальному гостю быстро понять формат кофейни, познакомиться с меню и найти контакты.",
     "case_solution": "Собран презентационный сайт с первым экраном и позиционированием, меню с ценами, историей бренда и контактным блоком.",
@@ -53,9 +54,10 @@
     "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/frame-studio/",
     "demo_label": "Открыть сайт",
     "preview": {
-      "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/frame-studio/",
-      "alt": "Живое превью сайта FRAME Digital Studio"
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85",
+      "alt": "Светлое минималистичное рабочее пространство digital-студии",
+      "position": "center 48%"
     },
     "case_goal": "Показать услуги и позиционирование digital-студии через лаконичный сайт, который не перегружает посетителя информацией.",
     "case_solution": "Сделана композиция с выразительной типографикой, акцентом на услугах и понятной последовательностью блоков.",
@@ -84,9 +86,10 @@
     "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/iron-district/",
     "demo_label": "Открыть сайт",
     "preview": {
-      "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/iron-district/",
-      "alt": "Живое превью сайта IRON DISTRICT"
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85",
+      "alt": "Современный тренажёрный зал с оборудованием",
+      "position": "center 50%"
     },
     "case_goal": "Быстро объяснить, чем занимается фитнес-клуб, показать направления тренировок и привести посетителя к сценарию записи.",
     "case_solution": "Собран сайт с чётким первым экраном, карточками направлений и преимуществ, заметными CTA-точками для обращения.",
@@ -115,9 +118,10 @@
     "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/vera-skin/",
     "demo_label": "Открыть сайт",
     "preview": {
-      "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/vera-skin/",
-      "alt": "Живое превью сайта VÉRA SKIN"
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1600&q=85",
+      "alt": "Минималистичная предметная фотография средств по уходу за кожей",
+      "position": "center 52%"
     },
     "case_goal": "Показать ассортимент косметики и понятный пользовательский путь от просмотра каталога до добавления товара в корзину.",
     "case_solution": "Реализована товарная подача, каталог, корзина с отображением суммы заказа, промо-блок и адаптивные состояния.",
@@ -147,9 +151,10 @@
     "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/domforma/",
     "demo_label": "Открыть сайт",
     "preview": {
-      "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/domforma/",
-      "alt": "Живое превью концепта сайта ДОМФОРМА"
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1793361957702-15b55be6d7fd?auto=format&fit=crop&w=1600&q=85",
+      "alt": "Светлая современная гостиная с натуральными материалами",
+      "position": "center 55%"
     },
     "case_goal": "Структурировать услуги ремонтной компании, показать этапы взаимодействия и дать посетителю понятный способ отправить запрос.",
     "case_solution": "Сделаны страницы и блоки услуг, адаптивное меню, FAQ, CSS-иллюстрации интерьеров и форма с HTML-валидацией.",
