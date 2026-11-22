@@ -12,8 +12,8 @@
   <title>Создание и обновление сайтов — Артём Калинин</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261122-motion" type="text/css" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261122-atelier" type="text/css" media="all">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -62,55 +62,117 @@
           </div>
           <div class="hero-meta"><span>Работаю удалённо</span><i></i><span>От задачи до публикации</span></div>
         </div>
-        <aside class="hero-showcase" id="hero-showcase" aria-label="Интерактивная витрина веб-проектов">
-          <div class="hero-showcase-top">
-            <div><span class="mono">SELECTED WORK / 2026</span><strong id="showcase-count">01 / 05</strong></div>
-            <span class="showcase-live"><i></i> LIVE PREVIEW</span>
+        <aside class="hero-atelier" id="hero-atelier" aria-label="Интерактивная схема создания сайта">
+          <div class="atelier-head">
+            <span class="mono">THE MAKING OF A WEBSITE</span>
+            <span class="atelier-counter" id="atelier-counter">01 — 03</span>
           </div>
 
-          <div class="showcase-window" id="showcase-window">
-            <div class="showcase-browserbar">
-              <span class="showcase-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="showcase-address" id="showcase-address">blvxx.github.io / domforma</span>
-              <span class="showcase-browser-mark">SITE / 01</span>
-            </div>
-            <div class="showcase-viewport">
-              <iframe id="showcase-frame"
-                src="https://blvxx.github.io/web-development-portfolio/projects/domforma/"
-                title="Живое превью сайта ДОМФОРМА"
-                loading="eager"
-                referrerpolicy="no-referrer"
-                sandbox="allow-scripts allow-forms"></iframe>
-              <span class="showcase-scanline" aria-hidden="true"></span>
-              <span class="showcase-viewport-label">INTERACTIVE DEMO</span>
+          <div class="atelier-canvas">
+            <div class="atelier-orbit atelier-orbit-one" aria-hidden="true"></div>
+            <div class="atelier-orbit atelier-orbit-two" aria-hidden="true"></div>
+            <div class="atelier-side-note atelier-side-note-top">DESIGN WITH PURPOSE</div>
+            <div class="atelier-side-note atelier-side-note-bottom">BUILT WITH CARE</div>
+
+            <div class="atelier-board">
+              <div class="atelier-board-top">
+                <span class="atelier-brandmark">A<span>.</span></span>
+                <span class="mono">DIGITAL CRAFT / 001</span>
+                <span class="atelier-board-status"><i></i> IN PROGRESS</span>
+              </div>
+
+              <div class="atelier-views">
+                <section class="atelier-view is-active" data-atelier-view="structure" id="atelier-view-structure" aria-hidden="false">
+                  <div class="atelier-view-meta"><span>01 / СТРУКТУРА</span><span>WIREFRAME</span></div>
+                  <div class="wireframe-hero">
+                    <div class="wireframe-copy">
+                      <i class="wireframe-kicker"></i>
+                      <i class="wireframe-line wireframe-line-long"></i>
+                      <i class="wireframe-line wireframe-line-medium"></i>
+                      <i class="wireframe-line wireframe-line-short"></i>
+                      <div class="wireframe-button"></div>
+                    </div>
+                    <div class="wireframe-image">
+                      <span></span><i></i>
+                    </div>
+                  </div>
+                  <div class="wireframe-sections">
+                    <div><i></i><i></i><i></i></div>
+                    <div><i></i><i></i><i></i></div>
+                    <div><i></i><i></i><i></i></div>
+                  </div>
+                  <div class="wireframe-footer"><span>CONTENT HIERARCHY</span><span>USER JOURNEY</span><span>01 / 03</span></div>
+                </section>
+
+                <section class="atelier-view atelier-view-design" data-atelier-view="design" id="atelier-view-design" aria-hidden="true">
+                  <div class="atelier-view-meta"><span>02 / ИНТЕРФЕЙС</span><span>VISUAL DIRECTION</span></div>
+                  <div class="mini-site">
+                    <div class="mini-site-nav"><strong>FORMA<span>.</span></strong><span>ПРОЕКТЫ　 УСЛУГИ　 КОНТАКТЫ</span><i>↗</i></div>
+                    <div class="mini-site-hero">
+                      <div class="mini-site-copy">
+                        <small>ПРОСТРАНСТВО ДЛЯ ЖИЗНИ</small>
+                        <h3>Форма<br><em>ощущения.</em></h3>
+                        <p>Продуманные решения для красивой повседневности.</p>
+                        <b>СМОТРЕТЬ ПРОЕКТЫ ↗</b>
+                      </div>
+                      <div class="mini-site-art" aria-hidden="true">
+                        <div class="mini-art-window"></div>
+                        <div class="mini-art-table"></div>
+                        <div class="mini-art-vase"></div>
+                      </div>
+                    </div>
+                    <div class="mini-site-foot"><span>01 / PRIVATE RESIDENCE</span><span>FORM · LIGHT · BALANCE</span></div>
+                  </div>
+                  <div class="atelier-palette"><i></i><i></i><i></i><i></i><span>TYPE / COLOR / SPACE</span></div>
+                </section>
+
+                <section class="atelier-view atelier-view-code" data-atelier-view="code" id="atelier-view-code" aria-hidden="true">
+                  <div class="atelier-view-meta"><span>03 / РАЗРАБОТКА</span><span>FRONTEND</span></div>
+                  <div class="code-window">
+                    <div class="code-window-top"><span>index.html</span><span>HTML · CSS · JS</span></div>
+                    <div class="code-lines" aria-label="Пример кода">
+                      <div><b>01</b><code><i>&lt;section</i> class=<em>"hero"</em><i>&gt;</i></code></div>
+                      <div><b>02</b><code>　 <i>&lt;div</i> class=<em>"content"</em><i>&gt;</i></code></div>
+                      <div><b>03</b><code>　　 <i>&lt;h1&gt;</i>Ваш сайт<i>&lt;/h1&gt;</i></code></div>
+                      <div><b>04</b><code>　　 <i>&lt;p&gt;</i>Понятно. Удобно.<i>&lt;/p&gt;</i></code></div>
+                      <div><b>05</b><code>　　 <i>&lt;a</i> href=<em>"/contact"</em><i>&gt;</i></code></div>
+                      <div><b>06</b><code>　　　 Обсудить проект</code></div>
+                      <div><b>07</b><code>　　 <i>&lt;/a&gt;</i></code></div>
+                      <div><b>08</b><code>　 <i>&lt;/div&gt;</i></code></div>
+                      <div><b>09</b><code><i>&lt;/section&gt;</i></code></div>
+                      <div class="code-comment"><b>10</b><code>// адаптивность · доступность · детали</code></div>
+                    </div>
+                    <div class="code-window-foot"><span><i></i> READY TO BUILD</span><span>RESPONSIVE / CLEAN</span></div>
+                  </div>
+                  <div class="code-float-chip"><span>✓</span> Чистая структура</div>
+                </section>
+              </div>
+
+              <div class="atelier-board-foot">
+                <span>FROM FIRST IDEA</span>
+                <span class="atelier-board-line"></span>
+                <span>TO LIVE WEBSITE</span>
+              </div>
             </div>
           </div>
 
-          <div class="showcase-caption">
-            <div>
-              <span class="showcase-category mono" id="showcase-category">HOME SERVICES / CONCEPT</span>
-              <h2 id="showcase-title">ДОМФОРМА</h2>
-              <p id="showcase-description">Сайт ремонтной компании с услугами, примерами интерьеров и понятным сценарием обращения.</p>
+          <div class="atelier-caption">
+            <div class="atelier-caption-copy">
+              <span class="mono" id="atelier-stage-kicker">01 / СНАЧАЛА ЛОГИКА</span>
+              <h2 id="atelier-stage-title">Структура</h2>
+              <p id="atelier-stage-description">Продумываю содержание и путь пользователя, чтобы сайт был понятным ещё до начала дизайна.</p>
             </div>
-            <a id="showcase-open" href="https://blvxx.github.io/web-development-portfolio/projects/domforma/" target="_blank" rel="noopener noreferrer">Открыть сайт <span>↗</span></a>
-          </div>
-
-          <div class="showcase-navigation">
-            <div class="showcase-tabs" role="group" aria-label="Выбрать проект">
-              <button type="button" class="showcase-tab is-active" data-showcase-index="0" aria-pressed="true"><span>01</span> ДОМФОРМА</button>
-              <button type="button" class="showcase-tab" data-showcase-index="1" aria-pressed="false"><span>02</span> VÉRA SKIN</button>
-              <button type="button" class="showcase-tab" data-showcase-index="2" aria-pressed="false"><span>03</span> IRON DISTRICT</button>
-              <button type="button" class="showcase-tab" data-showcase-index="3" aria-pressed="false"><span>04</span> NOIR COFFEE</button>
-              <button type="button" class="showcase-tab" data-showcase-index="4" aria-pressed="false"><span>05</span> FRAME STUDIO</button>
-            </div>
-            <div class="showcase-arrows">
-              <button type="button" id="showcase-prev" aria-label="Предыдущий проект">←</button>
-              <button type="button" id="showcase-next" aria-label="Следующий проект">→</button>
+            <div class="atelier-tabs" role="tablist" aria-label="Этапы создания сайта">
+              <button type="button" class="atelier-tab is-active" id="atelier-tab-structure" role="tab" aria-selected="true" aria-controls="atelier-view-structure" data-atelier-tab="structure"><span>01</span> Структура</button>
+              <button type="button" class="atelier-tab" id="atelier-tab-design" role="tab" aria-selected="false" aria-controls="atelier-view-design" data-atelier-tab="design"><span>02</span> Интерфейс</button>
+              <button type="button" class="atelier-tab" id="atelier-tab-code" role="tab" aria-selected="false" aria-controls="atelier-view-code" data-atelier-tab="code"><span>03</span> Код</button>
             </div>
           </div>
 
-          <div class="showcase-progress" aria-hidden="true"><span id="showcase-progress-bar"></span></div>
-          <div class="showcase-bottom"><span>DESIGN / FRONTEND / INTERACTION</span><a href="#work">Все проекты ↓</a></div>
+          <div class="atelier-bottom">
+            <span>THOUGHTFUL DESIGN / SOLID FRONTEND</span>
+            <span>01 — 03</span>
+          </div>
         </aside>
       </div>
       <div class="wrap hero-foot">
@@ -334,7 +396,6 @@
   <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#top">АК<span>.</span></a><span>© <span id="year"></span> Артём Калинин</span><span>Создание и обновление сайтов</span><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a><a href="#top">Наверх ↑</a></div></footer>
   <script src="script.js?v=20261122-compact" defer></script>
   <script src="brief-builder.js?v=20261122-brief" defer></script>
-  <script src="showcase-motion.js?v=20261122-motion" defer></script>
-  <script src="showcase-motion.js?v=20261122-motion" defer></script>
+  <script src="atelier-interaction.js?v=20261122-atelier" defer></script>
 </body>
 </html>
