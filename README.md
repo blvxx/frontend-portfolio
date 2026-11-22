@@ -1,8 +1,8 @@
-# Web Development Portfolio | Freelance
+# Артём Калинин — портфолио веб-разработки
 
-Портфолио сайтов и интерфейсов для малого бизнеса: создание лендингов, редизайн и доработка существующих страниц.
+Основной сайт-портфолио для привлечения заказчиков на создание и доработку сайтов. Здесь собраны услуги, ориентиры по стоимости, процесс работы и пять демонстрационных веб-проектов.
 
-**[Открыть сайт-портфолио](https://blvxx.github.io/web-development-portfolio/)** · **[Основной сайт услуг](https://blvxx.github.io/portfolio/)** · **[Исходный код](https://github.com/blvxx/web-development-portfolio)**
+**[Единственный основной сайт-портфолио](https://blvxx.github.io/web-development-portfolio/)** · **[Исходный код](https://github.com/blvxx/web-development-portfolio)**
 
 ## Услуги
 
