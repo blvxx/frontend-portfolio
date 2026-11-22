@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261122-interactive" type="text/css" media="all">
+  <link rel="stylesheet" href="styles.css?v=20261122-motion" type="text/css" media="all">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -62,20 +62,55 @@
           </div>
           <div class="hero-meta"><span>Работаю удалённо</span><i></i><span>От задачи до публикации</span></div>
         </div>
-        <aside class="hero-aside editorial-showcase" aria-label="Избранные веб-проекты">
-          <div class="showcase-top"><span class="mono">SELECTED WORK / 2026</span><span class="mono">01 — 05</span></div>
-          <div class="showcase-collage">
-            <div class="showcase-frame showcase-frame-main">
-              <iframe src="https://blvxx.github.io/web-development-portfolio/projects/domforma/" title="Превью сайта ДОМФОРМА" loading="lazy" referrerpolicy="no-referrer"></iframe>
-              <span class="showcase-tag">01 / HOME SERVICES</span>
-            </div>
-            <div class="showcase-frame showcase-frame-small">
-              <iframe src="https://blvxx.github.io/web-development-portfolio/projects/vera-skin/" title="Превью магазина VÉRA SKIN" loading="lazy" referrerpolicy="no-referrer"></iframe>
-              <span class="showcase-tag">02 / E-COMMERCE</span>
-            </div>
-            <div class="showcase-stamp">DESIGN<br><em>THAT WORKS</em></div>
+        <aside class="hero-showcase" id="hero-showcase" aria-label="Интерактивная витрина веб-проектов">
+          <div class="hero-showcase-top">
+            <div><span class="mono">SELECTED WORK / 2026</span><strong id="showcase-count">01 / 05</strong></div>
+            <span class="showcase-live"><i></i> LIVE PREVIEW</span>
           </div>
-          <div class="showcase-bottom"><span>WEB DESIGN & DEVELOPMENT</span><a href="#work">Смотреть проекты ↗</a></div>
+
+          <div class="showcase-window" id="showcase-window">
+            <div class="showcase-browserbar">
+              <span class="showcase-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="showcase-address" id="showcase-address">blvxx.github.io / domforma</span>
+              <span class="showcase-browser-mark">SITE / 01</span>
+            </div>
+            <div class="showcase-viewport">
+              <iframe id="showcase-frame"
+                src="https://blvxx.github.io/web-development-portfolio/projects/domforma/"
+                title="Живое превью сайта ДОМФОРМА"
+                loading="eager"
+                referrerpolicy="no-referrer"
+                sandbox="allow-scripts allow-forms"></iframe>
+              <span class="showcase-scanline" aria-hidden="true"></span>
+              <span class="showcase-viewport-label">INTERACTIVE DEMO</span>
+            </div>
+          </div>
+
+          <div class="showcase-caption">
+            <div>
+              <span class="showcase-category mono" id="showcase-category">HOME SERVICES / CONCEPT</span>
+              <h2 id="showcase-title">ДОМФОРМА</h2>
+              <p id="showcase-description">Сайт ремонтной компании с услугами, примерами интерьеров и понятным сценарием обращения.</p>
+            </div>
+            <a id="showcase-open" href="https://blvxx.github.io/web-development-portfolio/projects/domforma/" target="_blank" rel="noopener noreferrer">Открыть сайт <span>↗</span></a>
+          </div>
+
+          <div class="showcase-navigation">
+            <div class="showcase-tabs" role="group" aria-label="Выбрать проект">
+              <button type="button" class="showcase-tab is-active" data-showcase-index="0" aria-pressed="true"><span>01</span> ДОМФОРМА</button>
+              <button type="button" class="showcase-tab" data-showcase-index="1" aria-pressed="false"><span>02</span> VÉRA SKIN</button>
+              <button type="button" class="showcase-tab" data-showcase-index="2" aria-pressed="false"><span>03</span> IRON DISTRICT</button>
+              <button type="button" class="showcase-tab" data-showcase-index="3" aria-pressed="false"><span>04</span> NOIR COFFEE</button>
+              <button type="button" class="showcase-tab" data-showcase-index="4" aria-pressed="false"><span>05</span> FRAME STUDIO</button>
+            </div>
+            <div class="showcase-arrows">
+              <button type="button" id="showcase-prev" aria-label="Предыдущий проект">←</button>
+              <button type="button" id="showcase-next" aria-label="Следующий проект">→</button>
+            </div>
+          </div>
+
+          <div class="showcase-progress" aria-hidden="true"><span id="showcase-progress-bar"></span></div>
+          <div class="showcase-bottom"><span>DESIGN / FRONTEND / INTERACTION</span><a href="#work">Все проекты ↓</a></div>
         </aside>
       </div>
       <div class="wrap hero-foot">
@@ -299,5 +334,6 @@
   <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#top">АК<span>.</span></a><span>© <span id="year"></span> Артём Калинин</span><span>Создание и обновление сайтов</span><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a><a href="#top">Наверх ↑</a></div></footer>
   <script src="script.js?v=20261122-compact" defer></script>
   <script src="brief-builder.js?v=20261122-brief" defer></script>
+  <script src="showcase-motion.js?v=20261122-motion" defer></script>
 </body>
 </html>
