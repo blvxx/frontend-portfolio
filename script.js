@@ -104,6 +104,31 @@ function renderProjects(){
     description.className = 'project-description';
     description.textContent = project.description;
     body.append(kicker,title,description);
+
+    const facts = document.createElement('div');
+    facts.className = 'project-case-facts';
+    [
+      ['Задача', project.case_goal],
+      ['Реализация', project.case_solution],
+      ['Границы проекта', project.case_scope]
+    ].forEach(([labelText,value]) => {
+      if (!value) return;
+      const fact = document.createElement('section');
+      fact.className = 'project-case-fact';
+      const label = document.createElement('span');
+      label.textContent = labelText;
+      const text = document.createElement('p');
+      text.textContent = value;
+      fact.append(label,text);
+      facts.appendChild(fact);
+    });
+    body.appendChild(facts);
+
+    const highlightsLabel = document.createElement('p');
+    highlightsLabel.className = 'project-highlights-label';
+    highlightsLabel.textContent = 'Что реализовано по пунктам';
+    body.appendChild(highlightsLabel);
+
     const list = document.createElement('ul');
     list.className = 'project-highlights';
     project.highlights.forEach(item => {
