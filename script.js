@@ -177,7 +177,7 @@ function renderProjects(){
 }
 async function init(){
   try{
-    const response = await fetch('./projects.json?v=20261122-1');
+    const response = await fetch('./projects.json?v=20261122-2');
     if (!response.ok) throw new Error('HTTP ' + response.status);
     projects = await response.json();
     renderFilters();
