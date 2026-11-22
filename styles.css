@@ -1354,3 +1354,140 @@ body.portfolio-corporate{
   .portfolio-corporate .hero-availability{margin-top:15px;gap:8px}
   .portfolio-corporate .hero-availability strong{font-size:10px}
 }
+
+
+/* Site-wide visual system: consistent type, hierarchy and spacing */
+body.portfolio-corporate{
+  font-family:'Manrope',Arial,sans-serif;
+  font-feature-settings:"kern" 1,"liga" 1;
+}
+.portfolio-corporate p,
+.portfolio-corporate li,
+.portfolio-corporate summary,
+.portfolio-corporate label,
+.portfolio-corporate input,
+.portfolio-corporate button,
+.portfolio-corporate a{
+  font-family:'Manrope',Arial,sans-serif;
+}
+.portfolio-corporate .mono,
+.portfolio-corporate .eyebrow,
+.portfolio-corporate .service-no,
+.portfolio-corporate .project-kicker,
+.portfolio-corporate .project-status,
+.portfolio-corporate .price-card>.mono,
+.portfolio-corporate .step>.mono,
+.portfolio-corporate .promo-kicker,
+.portfolio-corporate .project-count,
+.portfolio-corporate .project-tag,
+.portfolio-corporate .filter-btn,
+.portfolio-corporate .case-study-points article>span,
+.portfolio-corporate .hero-visual-head,
+.portfolio-corporate .hero-visual-foot{
+  font-family:'Manrope',Arial,sans-serif!important;
+  font-weight:600;
+  letter-spacing:.055em;
+}
+.portfolio-corporate .eyebrow,
+.portfolio-corporate .service-no,
+.portfolio-corporate .project-kicker,
+.portfolio-corporate .price-card>.mono,
+.portfolio-corporate .step>.mono,
+.portfolio-corporate .promo-kicker{
+  font-size:9px;
+  line-height:1.5;
+  text-transform:uppercase;
+}
+.portfolio-corporate .section-heading h2,
+.portfolio-corporate .case-study-heading h2,
+.portfolio-corporate .about-layout h2,
+.portfolio-corporate .contact-panel h2{
+  font-family:'Manrope',Arial,sans-serif;
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.055em;
+}
+.portfolio-corporate .section-intro{
+  font:400 13px/1.8 'Manrope',Arial,sans-serif;
+  color:#625B55;
+}
+.portfolio-corporate .service-card p,
+.portfolio-corporate .price-card>p:not(.price-value),
+.portfolio-corporate .project-description,
+.portfolio-corporate .step p,
+.portfolio-corporate .about-copy p,
+.portfolio-corporate .case-study-points article p,
+.portfolio-corporate .faq-list details p{
+  font-family:'Manrope',Arial,sans-serif;
+  font-size:12px;
+  font-weight:400;
+  line-height:1.78;
+}
+.portfolio-corporate .service-card h3,
+.portfolio-corporate .price-card h3,
+.portfolio-corporate .project-title,
+.portfolio-corporate .step h3,
+.portfolio-corporate .case-study-points article h3{
+  font-family:'Manrope',Arial,sans-serif;
+  font-weight:600;
+  letter-spacing:-.035em;
+}
+.portfolio-corporate .button,
+.portfolio-corporate .text-link,
+.portfolio-corporate .service-detail-link,
+.portfolio-corporate .project-link,
+.portfolio-corporate .about-link,
+.portfolio-corporate .case-study-link,
+.portfolio-corporate .contact-actions a{
+  font-family:'Manrope',Arial,sans-serif;
+  font-weight:600;
+  letter-spacing:0;
+}
+.portfolio-corporate .project-tag,
+.portfolio-corporate .filter-btn,
+.portfolio-corporate .project-count{
+  font-size:9px;
+  line-height:1.4;
+}
+.portfolio-corporate .project-status{font-size:9px;line-height:1.4}
+.portfolio-corporate .footer-inner{
+  font-family:'Manrope',Arial,sans-serif;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:0;
+}
+
+/* Elegant scroll reveal: all major page groups enter in a calm sequence */
+html.motion-ready [data-reveal]{
+  opacity:0;
+  transform:translate3d(0,22px,0);
+  filter:blur(2px);
+  transition:
+    opacity .72s cubic-bezier(.2,.72,.2,1),
+    transform .72s cubic-bezier(.2,.72,.2,1),
+    filter .72s cubic-bezier(.2,.72,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+  will-change:opacity,transform,filter;
+}
+html.motion-ready [data-reveal].is-revealed{
+  opacity:1;
+  transform:translate3d(0,0,0);
+  filter:blur(0);
+  will-change:auto;
+}
+@media(max-width:680px){
+  html.motion-ready [data-reveal]{
+    transform:translate3d(0,16px,0);
+    filter:none;
+    transition:opacity .58s ease,transform .58s cubic-bezier(.2,.72,.2,1);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html.motion-ready [data-reveal]{
+    opacity:1;
+    transform:none;
+    filter:none;
+    transition:none;
+    will-change:auto;
+  }
+}
