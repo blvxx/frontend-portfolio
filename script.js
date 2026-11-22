@@ -35,6 +35,8 @@ function makePreview(project){
     image.className = 'preview-image';
     image.src = preview.src;
     image.alt = preview.alt || project.title;
+    image.style.objectPosition = preview.position || 'center center';
+    image.decoding = 'async';
     image.loading = 'lazy';
     shell.appendChild(image);
   }else{
@@ -105,6 +107,12 @@ function renderProjects(){
     description.textContent = project.description;
     body.append(kicker,title,description);
 
+    const details = document.createElement('details');
+    details.className = 'project-details';
+    const summary = document.createElement('summary');
+    summary.textContent = 'Подробнее о проекте';
+    details.appendChild(summary);
+
     const facts = document.createElement('div');
     facts.className = 'project-case-facts';
     [
@@ -122,12 +130,12 @@ function renderProjects(){
       fact.append(label,text);
       facts.appendChild(fact);
     });
-    body.appendChild(facts);
+    details.appendChild(facts);
 
     const highlightsLabel = document.createElement('p');
     highlightsLabel.className = 'project-highlights-label';
     highlightsLabel.textContent = 'Что реализовано по пунктам';
-    body.appendChild(highlightsLabel);
+    details.appendChild(highlightsLabel);
 
     const list = document.createElement('ul');
     list.className = 'project-highlights';
@@ -136,7 +144,8 @@ function renderProjects(){
       li.textContent = item;
       list.appendChild(li);
     });
-    body.appendChild(list);
+    details.appendChild(list);
+    body.appendChild(details);
     const tags = document.createElement('div');
     tags.className = 'project-tags';
     project.tech.forEach(item => {
@@ -177,7 +186,7 @@ function renderProjects(){
 }
 async function init(){
   try{
-    const response = await fetch('./projects.json?v=20261122-2');
+    const response = await fetch('./projects.json?v=20261122-compact');
     if (!response.ok) throw new Error('HTTP ' + response.status);
     projects = await response.json();
     renderFilters();

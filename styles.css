@@ -954,3 +954,76 @@ body.portfolio-corporate .section.work-section .section-heading .eyebrow{color:#
  .project-preview{height:245px}
  .preview-frame,.preview-image{height:218px}
 }
+
+
+/* Compact project cards: let the live demo remain the visual focus */
+.portfolio-corporate .project-preview{
+  height:350px;
+  border-bottom:1px solid #514749;
+}
+.portfolio-corporate .preview-frame{
+  display:block;
+  width:100%;
+  height:calc(100% - 27px);
+  min-height:0;
+}
+.portfolio-corporate .project-body{
+  padding:18px 21px 17px;
+}
+.portfolio-corporate .project-kicker-body{margin-bottom:6px}
+.portfolio-corporate .project-title{font-size:22px;margin-bottom:7px}
+.portfolio-corporate .project-description{
+  min-height:0;
+  margin:0;
+  font-size:11px;
+  line-height:1.6;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-clamp:2;
+  overflow:hidden;
+}
+.portfolio-corporate .project-details{
+  margin-top:11px;
+  border-top:1px solid #514749;
+  border-bottom:1px solid #514749;
+}
+.portfolio-corporate .project-details summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:9px 0;
+  cursor:pointer;
+  list-style:none;
+  color:#D5B99E;
+  font:9px var(--mono);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.portfolio-corporate .project-details summary::-webkit-details-marker{display:none}
+.portfolio-corporate .project-details summary:after{
+  content:"+";
+  color:#D5B99E;
+  font-size:15px;
+}
+.portfolio-corporate .project-details[open] summary:after{content:"−"}
+.portfolio-corporate .project-case-facts{margin:0 0 10px}
+.portfolio-corporate .project-case-fact{padding:9px 0}
+.portfolio-corporate .project-case-fact p{font-size:10px;line-height:1.55}
+.portfolio-corporate .project-highlights-label{margin:10px 0 6px;font-size:8px}
+.portfolio-corporate .project-highlights{margin:0 0 10px;gap:4px}
+.portfolio-corporate .project-highlights li{font-size:10px;line-height:1.5}
+.portfolio-corporate .project-tags{padding-top:10px;gap:5px}
+.portfolio-corporate .project-tag{font-size:8px;padding:4px 6px}
+.portfolio-corporate .project-footer{margin-top:10px;padding-top:10px;gap:8px}
+.portfolio-corporate .project-status{font-size:8px}
+.portfolio-corporate .project-link{font-size:9px}
+.portfolio-corporate .project-link-primary{padding:6px 8px}
+@media(max-width:680px){
+  .portfolio-corporate .projects-grid{grid-template-columns:minmax(0,1fr)}
+  .portfolio-corporate .project-preview{height:245px}
+  .portfolio-corporate .project-body{padding:16px 17px}
+  .portfolio-corporate .project-title{font-size:21px}
+  .portfolio-corporate .project-description{font-size:11px}
+}
