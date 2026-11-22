@@ -931,3 +931,17 @@ body.portfolio-corporate .section.work-section .section-heading .eyebrow{color:#
   .portfolio-corporate .nav a{font-size:10px}
   .portfolio-corporate .header-cta{font-size:11px}
 }
+
+
+/* Structured portfolio case notes: problem, implementation and honest demo scope */
+.project-case-facts{display:grid;gap:0;margin:15px 0 16px;border-top:1px solid #ddd8cd;border-bottom:1px solid #ddd8cd}
+.project-case-fact{padding:10px 0 9px;border-bottom:1px solid #e6e0d7}
+.project-case-fact:last-child{border-bottom:0}
+.project-case-fact>span,.project-highlights-label{display:block;margin:0 0 5px;font:800 9px/1.4 var(--mono,ui-monospace,monospace);letter-spacing:.1em;text-transform:uppercase;color:#744B50}
+.project-case-fact p{margin:0;color:#625A55;font-size:11px;line-height:1.7}
+.project-highlights-label{margin:0 0 8px;color:#744B50}
+.portfolio-corporate .project-case-facts{border-color:#514749}
+.portfolio-corporate .project-case-fact{border-color:#514749}
+.portfolio-corporate .project-case-fact>span,.portfolio-corporate .project-highlights-label{color:#D5B99E}
+.portfolio-corporate .project-case-fact p{color:#D2C8C1}
+@media(max-width:680px){.project-case-facts{margin-top:12px}.project-case-fact{padding:9px 0}.project-case-fact p{font-size:10px;line-height:1.65}}
