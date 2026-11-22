@@ -40,3 +40,10 @@ h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(55px,7vw,92px);line-height:.98;
 .interior-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#1b1b1b55 0%,transparent 42%,transparent 72%,#1b1b1b22 100%);pointer-events:none;z-index:1}
 .interior-visual .scene-label{position:absolute;z-index:2}
 .interior-visual .window-shape,.interior-visual .picture-shape,.interior-visual .couch-shape,.interior-visual .table-shape,.interior-visual .plant-shape,.interior-visual .cabinet-shape,.interior-visual .island-shape,.interior-visual .stool-shape,.interior-visual .lamp-shape,.interior-visual .mirror-shape,.interior-visual .vanity-shape,.interior-visual .basin-shape,.interior-visual .shower-shape{display:none!important}
+
+/* Hero: replace the abstract room illustration with a real interior photograph */
+.hero-visual .room-scene{overflow:hidden;position:relative;background:#d5cfc3}
+.hero-interior-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hero-visual .room-scene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#27251f40 0%,transparent 28%,transparent 62%,#29251e70 100%);pointer-events:none}
+.hero-visual .room-scene>*:not(.hero-interior-photo):not(.room-label){display:none!important}
+.hero-visual .room-label{position:absolute;z-index:2;color:#fff;text-shadow:0 1px 8px #0007}
