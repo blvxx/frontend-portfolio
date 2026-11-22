@@ -1308,3 +1308,27 @@ body.portfolio-corporate{
   html.motion-ready [data-reveal]{opacity:1;transform:none;transition:none}
   .portfolio-corporate .service-card,.portfolio-corporate .price-card,.portfolio-corporate .project-card{transition:none}
 }
+
+
+/* Final typography consistency: all interface labels use Manrope; reserve monospace for code only */
+.portfolio-corporate .mono,
+.portfolio-corporate .preview-toolbar,
+.portfolio-corporate .preview-address,
+.portfolio-corporate .project-count,
+.portfolio-corporate .project-status,
+.portfolio-corporate .project-tag,
+.portfolio-corporate .filter-btn,
+.portfolio-corporate .artifact-label,
+.portfolio-corporate .artifact-footer{
+  font-family:var(--font)!important;
+  font-weight:600;
+  letter-spacing:.045em
+}
+.portfolio-corporate .footer-inner{
+  font:500 10px/1.5 var(--font);
+  letter-spacing:0
+}
+.portfolio-corporate .project-tag{font-size:9px}
+.portfolio-corporate .filter-btn{font-size:10px}
+.portfolio-corporate .project-count{font-size:10px}
+.portfolio-corporate .project-status{font-size:9px}
