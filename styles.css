@@ -1429,7 +1429,7 @@ body.portfolio-corporate{
 .portfolio-corporate .step h3,
 .portfolio-corporate .case-study-points article h3{
   font-family:'Manrope',Arial,sans-serif;
-  font-weight:650;
+  font-weight:600;
   letter-spacing:-.035em;
 }
 .portfolio-corporate .button,
@@ -1440,7 +1440,7 @@ body.portfolio-corporate{
 .portfolio-corporate .case-study-link,
 .portfolio-corporate .contact-actions a{
   font-family:'Manrope',Arial,sans-serif;
-  font-weight:650;
+  font-weight:600;
   letter-spacing:0;
 }
 .portfolio-corporate .project-tag,
