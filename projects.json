@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "category": "web",
+    "kicker": "WEBSITE CONCEPT / COFFEE",
+    "title": "NOIR Coffee Studio",
+    "description": "Концепт сайта городской кофейни: спокойная визуальная подача, меню, история бренда и блок с контактами. Показывает, как сайт может передавать атмосферу заведения и помогать гостю принять решение.",
+    "highlights": [
+      "Первый экран с ясным позиционированием",
+      "Меню с ассортиментом и ценами",
+      "Адаптивная структура и сценарий знакомства с заведением"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive"
+    ],
+    "status": "Концепт · демонстрационный проект",
+    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/noir-coffee",
+    "link": "Код на GitHub",
+    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/noir-coffee/",
+    "demo_label": "Открыть сайт",
+    "preview": {
+      "type": "iframe",
+      "src": "https://blvxx.github.io/web-development-portfolio/projects/noir-coffee/",
+      "alt": "Живое превью сайта NOIR Coffee Studio"
+    }
+  },
+  {
+    "id": 2,
+    "category": "web",
+    "kicker": "WEBSITE CONCEPT / CREATIVE",
+    "title": "FRAME Digital Studio",
+    "description": "Концепт сайта цифровой студии с выразительной типографикой и минималистичной подачей. Подходит как пример презентации услуг креативного или digital-бизнеса.",
+    "highlights": [
+      "Акцент на услугах и позиционировании",
+      "Выразительная типографика и композиция",
+      "Минималистичная структура без лишнего шума"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive"
+    ],
+    "status": "Концепт · вымышленная студия",
+    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/frame-studio",
+    "link": "Код на GitHub",
+    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/frame-studio/",
+    "demo_label": "Открыть сайт",
+    "preview": {
+      "type": "iframe",
+      "src": "https://blvxx.github.io/web-development-portfolio/projects/frame-studio/",
+      "alt": "Живое превью сайта FRAME Digital Studio"
+    }
+  },
+  {
+    "id": 3,
+    "category": "web",
+    "kicker": "WEBSITE CONCEPT / FITNESS",
+    "title": "IRON DISTRICT",
+    "description": "Концепт сайта фитнес-клуба с сильным первым экраном, направлениями тренировок и заметными точками входа в запись. Пример того, как структурировать услуги и мотивировать посетителя оставить заявку.",
+    "highlights": [
+      "Первый экран с чётким предложением клуба",
+      "Карточки направлений и преимуществ",
+      "CTA-запись с пометкой о демонстрационном сценарии"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive"
+    ],
+    "status": "Концепт · заявки демонстрационные",
+    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/iron-district",
+    "link": "Код на GitHub",
+    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/iron-district/",
+    "demo_label": "Открыть сайт",
+    "preview": {
+      "type": "iframe",
+      "src": "https://blvxx.github.io/web-development-portfolio/projects/iron-district/",
+      "alt": "Живое превью сайта IRON DISTRICT"
+    }
+  },
+  {
+    "id": 4,
+    "category": "web",
+    "kicker": "E-COMMERCE CONCEPT / BEAUTY",
+    "title": "VÉRA SKIN",
+    "description": "Концепт интернет-магазина уходовой косметики: продуктовая подача, каталог, корзина и промо-блок. Демонстрирует интерфейсную логику небольшого e-commerce проекта.",
+    "highlights": [
+      "Каталог и продуктовая коммуникация",
+      "Корзина и отображение суммы заказа",
+      "Промо-блок и адаптивная подача"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "E-commerce UI"
+    ],
+    "status": "Концепт · без реальных продаж",
+    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/vera-skin",
+    "link": "Код на GitHub",
+    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/vera-skin/",
+    "demo_label": "Открыть сайт",
+    "preview": {
+      "type": "iframe",
+      "src": "https://blvxx.github.io/web-development-portfolio/projects/vera-skin/",
+      "alt": "Живое превью сайта VÉRA SKIN"
+    }
+  },
+  {
+    "id": 13,
+    "category": "web",
+    "kicker": "WEBSITE CONCEPT / RENOVATION",
+    "title": "ДОМФОРМА — ремонт и отделка",
+    "description": "Концепт сайта локальной ремонтно-отделочной компании: услуги, визуальные концепции помещений, этапы взаимодействия, FAQ и форма запроса с демонстрационным подтверждением.",
+    "highlights": [
+      "Структура коммерческого сайта услуг и понятные точки входа",
+      "Адаптивное меню, FAQ и форма с HTML-валидацией",
+      "CSS-интерьерные иллюстрации без внешних библиотек и изображений"
+    ],
+    "tech": [
+      "HTML5",
+      "CSS3",
+      "Vanilla JavaScript",
+      "Responsive",
+      "Accessibility"
+    ],
+    "status": "Концепт · вымышленная компания",
+    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/domforma",
+    "link": "Код на GitHub",
+    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/domforma/",
+    "demo_label": "Открыть сайт",
+    "preview": {
+      "type": "iframe",
+      "src": "https://blvxx.github.io/web-development-portfolio/projects/domforma/",
+      "alt": "Живое превью концепта сайта ДОМФОРМА"
+    }
+  }
+]
