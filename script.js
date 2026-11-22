@@ -35,6 +35,8 @@ function makePreview(project){
     image.className = 'preview-image';
     image.src = preview.src;
     image.alt = preview.alt || project.title;
+    image.style.objectPosition = preview.position || 'center center';
+    image.decoding = 'async';
     image.loading = 'lazy';
     shell.appendChild(image);
   }else{
