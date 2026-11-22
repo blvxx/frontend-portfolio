@@ -2,7 +2,7 @@
 
 Портфолио сайтов и интерфейсов для малого бизнеса: создание лендингов, редизайн и доработка существующих страниц.
 
-**[Открыть сайт-портфолио](https://blvxx.github.io/frontend-portfolio/)** · **[Основной сайт услуг](https://blvxx.github.io/portfolio/)** · **[Исходный код](https://github.com/blvxx/frontend-portfolio)**
+**[Открыть сайт-портфолио](https://blvxx.github.io/web-development-portfolio/)** · **[Основной сайт услуг](https://blvxx.github.io/portfolio/)** · **[Исходный код](https://github.com/blvxx/web-development-portfolio)**
 
 ## Услуги
 
@@ -33,7 +33,7 @@
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/blvxx/frontend-portfolio.git
+   git clone https://github.com/blvxx/web-development-portfolio.git
    ```
 2. Откройте корневой `index.html` в браузере.
 3. Для отдельного проекта откройте его `index.html` внутри `projects/`.
