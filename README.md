@@ -2,7 +2,7 @@
 
 Основной сайт-портфолио для привлечения заказчиков на создание и доработку сайтов. Здесь собраны услуги, ориентиры по стоимости, процесс работы и пять демонстрационных веб-проектов.
 
-**[Единственный основной сайт-портфолио](https://blvxx.github.io/web-development-portfolio/)** · **[Исходный код](https://github.com/blvxx/web-development-portfolio)**
+**[Веб-портфолио](https://blvxx.github.io/web-development-portfolio/)** · **[Инженерное портфолио](https://blvxx.github.io/portfolio/engineering/)** · **[Исходный код](https://github.com/blvxx/web-development-portfolio)**
 
 ## Услуги
 
