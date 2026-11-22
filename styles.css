@@ -945,3 +945,12 @@ body.portfolio-corporate .section.work-section .section-heading .eyebrow{color:#
 .portfolio-corporate .project-case-fact>span,.portfolio-corporate .project-highlights-label{color:#D5B99E}
 .portfolio-corporate .project-case-fact p{color:#D2C8C1}
 @media(max-width:680px){.project-case-facts{margin-top:12px}.project-case-fact{padding:9px 0}.project-case-fact p{font-size:10px;line-height:1.65}}
+
+/* Larger project previews, less text crowding the visual work */
+.project-preview{height:300px}
+.preview-frame{height:273px}
+.preview-image{height:273px}
+@media(max-width:680px){
+ .project-preview{height:245px}
+ .preview-frame,.preview-image{height:218px}
+}
