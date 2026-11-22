@@ -1027,3 +1027,136 @@ body.portfolio-corporate .section.work-section .section-heading .eyebrow{color:#
   .portfolio-corporate .project-title{font-size:21px}
   .portfolio-corporate .project-description{font-size:11px}
 }
+
+
+/* Availability, proof and interactive brief — keeps the existing graphite / burgundy / champagne identity */
+.portfolio-corporate .hero-availability{
+  display:inline-flex;align-items:center;gap:12px;margin:23px 0 0;padding:10px 14px;
+  border:1px solid #776064;background:#ffffff08;color:#F0ECE5;max-width:420px
+}
+.portfolio-corporate .availability-pulse{
+  width:8px;height:8px;border-radius:50%;background:#83C69C;flex:none;
+  box-shadow:0 0 0 5px #83C69C20;animation:availabilityPulse 2.2s ease-out infinite
+}
+.portfolio-corporate .hero-availability strong{display:block;font-size:11px;letter-spacing:.01em}
+.portfolio-corporate .hero-availability small{display:block;margin-top:2px;color:#C4B9B1;font:9px var(--mono);letter-spacing:.02em}
+@keyframes availabilityPulse{0%,100%{box-shadow:0 0 0 4px #83C69C16}50%{box-shadow:0 0 0 8px #83C69C05}}
+
+.portfolio-corporate .trust-strip{
+  background:#E7DED5;border-top:1px solid #D8CFC5;border-bottom:1px solid #D8CFC5
+}
+.portfolio-corporate .trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.portfolio-corporate .trust-grid article{padding:27px 28px 25px 0;margin-right:28px;border-right:1px solid #D0C5BA;display:flex;flex-direction:column;gap:8px}
+.portfolio-corporate .trust-grid article:last-child{border:0;margin:0}
+.portfolio-corporate .trust-index{font-size:9px;letter-spacing:.1em;color:#744B50}
+.portfolio-corporate .trust-grid strong{font-size:16px;line-height:1.3;letter-spacing:-.04em;color:#242426}
+.portfolio-corporate .trust-grid small{font-size:10px;line-height:1.65;color:#6D625D;max-width:285px}
+
+.portfolio-corporate .brief-section{
+  background:#E9E1D8;border-top:1px solid #D8CFC5;border-bottom:1px solid #D8CFC5
+}
+.portfolio-corporate .brief-section .section-heading{margin-bottom:34px}
+.portfolio-corporate .brief-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:16px;align-items:stretch}
+.portfolio-corporate .brief-controls{
+  margin:0;padding:27px 28px;background:#FAF8F3;border:1px solid #DED5CB;min-width:0
+}
+.portfolio-corporate .brief-fieldset{border:0;border-bottom:1px solid #E3DAD0;margin:0;padding:0 0 22px;min-width:0}
+.portfolio-corporate .brief-fieldset+ .brief-fieldset{padding-top:21px}
+.portfolio-corporate .brief-fieldset legend{display:flex;align-items:center;gap:10px;margin:0 0 13px;padding:0;font-size:13px;font-weight:800;color:#242426}
+.portfolio-corporate .brief-fieldset legend span{font:10px var(--mono);color:#744B50}
+.portfolio-corporate .brief-option{
+  display:grid;grid-template-columns:16px minmax(0,1fr) 16px;align-items:center;gap:11px;
+  padding:12px 13px;margin-top:7px;background:#F5F1EB;border:1px solid #E4DBD1;cursor:pointer;transition:border-color .2s,background .2s
+}
+.portfolio-corporate .brief-option:hover{border-color:#B99C80;background:#fff}
+.portfolio-corporate .brief-option:has(input:checked){border-color:#744B50;background:#F0E7E1;box-shadow:inset 3px 0 #744B50}
+.portfolio-corporate .brief-option input,.portfolio-corporate .brief-choice input{accent-color:#744B50;width:14px;height:14px;margin:0}
+.portfolio-corporate .brief-option-copy strong{display:block;font-size:11px;color:#242426}
+.portfolio-corporate .brief-option-copy small{display:block;margin-top:2px;color:#746B64;font-size:9px;line-height:1.45}
+.portfolio-corporate .brief-option>i{font-style:normal;color:#9A8276;font-size:13px}
+.portfolio-corporate .brief-choice-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.portfolio-corporate .brief-choice{
+  position:relative;display:flex;align-items:center;gap:7px;min-width:0;min-height:42px;
+  padding:8px 9px;border:1px solid #E4DBD1;background:#F5F1EB;cursor:pointer
+}
+.portfolio-corporate .brief-choice:has(input:checked){border-color:#744B50;background:#F0E7E1}
+.portfolio-corporate .brief-choice span{font-size:9px;line-height:1.35;color:#514743}
+.portfolio-corporate .brief-priorities{grid-template-columns:repeat(2,minmax(0,1fr))}
+.portfolio-corporate .brief-url-label{display:flex;justify-content:space-between;gap:10px;margin:19px 0 8px;font-size:10px;font-weight:800;color:#514743}
+.portfolio-corporate .brief-url-label span{font:9px var(--mono);font-weight:400;color:#8A8078}
+.portfolio-corporate .brief-url-input{width:100%;height:43px;padding:0 12px;border:1px solid #DED5CB;background:#fff;color:#242426;font:11px var(--font)}
+.portfolio-corporate .brief-url-input:focus{outline:2px solid #B99C80;outline-offset:2px}
+
+.portfolio-corporate .brief-result{
+  display:flex;flex-direction:column;min-width:0;padding:26px 28px;background:linear-gradient(145deg,#242426,#30292A);
+  color:#F0ECE5;border:1px solid #594448;position:relative;overflow:hidden
+}
+.portfolio-corporate .brief-result:after{
+  content:"";position:absolute;width:250px;height:250px;border:1px solid #FFFFFF14;border-radius:50%;
+  right:-110px;top:115px;box-shadow:0 0 0 25px #ffffff06,0 0 0 50px #ffffff04;pointer-events:none
+}
+.portfolio-corporate .brief-result>*{position:relative;z-index:1}
+.portfolio-corporate .brief-result-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:17px;border-bottom:1px solid #ffffff25}
+.portfolio-corporate .brief-result-top>.mono{font-size:9px;color:#D5B99E;letter-spacing:.1em}
+.portfolio-corporate .brief-result-mark{font-size:20px;font-weight:800;color:#D5B99E;letter-spacing:-.09em}
+.portfolio-corporate .brief-result-kicker{margin:24px 0 8px;font:9px var(--mono);letter-spacing:.12em;color:#C3A18F}
+.portfolio-corporate .brief-result h3{font-size:clamp(22px,2.5vw,29px);letter-spacing:-.055em;line-height:1.15;margin:0 0 11px;color:#fff}
+.portfolio-corporate .brief-result-description{max-width:440px;color:#D2C8C1;font-size:11px;line-height:1.75;margin:0}
+.portfolio-corporate .brief-result-price{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:24px;padding:15px 0;border-top:1px solid #ffffff25;border-bottom:1px solid #ffffff25}
+.portfolio-corporate .brief-result-price span{font-size:10px;color:#C4B9B1}
+.portfolio-corporate .brief-result-price strong{font-size:21px;color:#fff;white-space:nowrap;letter-spacing:-.04em}
+.portfolio-corporate .brief-result-note{font-size:9px;line-height:1.7;color:#BDB2AA;margin:11px 0 0}
+.portfolio-corporate .brief-result-summary{margin-top:20px;padding:14px 15px;background:#ffffff0A;border:1px solid #ffffff1c}
+.portfolio-corporate .brief-result-summary>.mono{font-size:8px;letter-spacing:.12em;color:#D5B99E}
+.portfolio-corporate .brief-result-summary p{margin:7px 0 0;color:#EEE6DF;font-size:10px;line-height:1.65}
+.portfolio-corporate .brief-result-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:19px}
+.portfolio-corporate .brief-copy-button{min-height:43px;padding:0 14px;border:0;cursor:pointer;font-size:10px}
+.portfolio-corporate .brief-copy-button span{color:#744B50;margin-left:9px}
+.portfolio-corporate .brief-email-button{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:0 14px;border:1px solid #B99C80;color:#F0ECE5;font-size:10px;font-weight:800}
+.portfolio-corporate .brief-email-button:hover{background:#744B50;border-color:#744B50}
+.portfolio-corporate .brief-copy-status{min-height:14px;margin:8px 0 0;color:#C7D9C8;font-size:9px}
+.portfolio-corporate .brief-fieldset[hidden]{display:none!important}
+
+.portfolio-corporate .faq-section{background:#F0ECE5}
+.portfolio-corporate .faq-list{max-width:900px;border-top:1px solid #D8CFC5}
+.portfolio-corporate .faq-list details{border-bottom:1px solid #D8CFC5}
+.portfolio-corporate .faq-list summary{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;padding:19px 2px;
+  cursor:pointer;list-style:none;font-size:13px;font-weight:800;color:#242426
+}
+.portfolio-corporate .faq-list summary::-webkit-details-marker{display:none}
+.portfolio-corporate .faq-list summary span{font-size:18px;font-weight:400;color:#744B50;transition:transform .2s}
+.portfolio-corporate .faq-list details[open] summary span{transform:rotate(45deg)}
+.portfolio-corporate .faq-list details p{max-width:780px;margin:0;padding:0 30px 20px 2px;color:#6D625D;font-size:11px;line-height:1.85}
+.portfolio-corporate .contact-brief-link{display:inline-block;margin-top:16px;color:#D5B99E;font-size:11px;font-weight:800;border-bottom:1px solid #745C5B;padding-bottom:5px}
+.portfolio-corporate .contact-brief-link:hover{color:#fff;border-color:#fff}
+
+@media(max-width:900px){
+  .portfolio-corporate .brief-layout{grid-template-columns:1fr}
+  .portfolio-corporate .brief-result{min-height:420px}
+  .portfolio-corporate .trust-grid article{padding-right:18px;margin-right:18px}
+}
+@media(max-width:680px){
+  .portfolio-corporate .hero-availability{max-width:100%;padding:9px 11px;margin-top:19px}
+  .portfolio-corporate .hero-availability small{font-size:8px}
+  .portfolio-corporate .trust-grid{grid-template-columns:1fr}
+  .portfolio-corporate .trust-grid article,.portfolio-corporate .trust-grid article:last-child{
+    margin:0;padding:17px 0;border-right:0;border-bottom:1px solid #D0C5BA
+  }
+  .portfolio-corporate .trust-grid article:last-child{border-bottom:0}
+  .portfolio-corporate .trust-grid strong{font-size:15px}
+  .portfolio-corporate .brief-section{padding:68px 0}
+  .portfolio-corporate .brief-controls,.portfolio-corporate .brief-result{padding:20px 17px}
+  .portfolio-corporate .brief-choice-row{grid-template-columns:1fr}
+  .portfolio-corporate .brief-priorities{grid-template-columns:1fr 1fr}
+  .portfolio-corporate .brief-choice{min-height:39px}
+  .portfolio-corporate .brief-result-price strong{font-size:19px}
+  .portfolio-corporate .brief-result-actions{flex-direction:column}
+  .portfolio-corporate .brief-copy-button,.portfolio-corporate .brief-email-button{width:100%}
+  .portfolio-corporate .faq-section{padding:68px 0}
+  .portfolio-corporate .faq-list summary{font-size:12px;padding:17px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .portfolio-corporate .availability-pulse{animation:none}
+  .portfolio-corporate .brief-option,.portfolio-corporate .brief-choice{transition:none}
+}
