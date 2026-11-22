@@ -1332,3 +1332,25 @@ body.portfolio-corporate{
 .portfolio-corporate .filter-btn{font-size:10px}
 .portfolio-corporate .project-count{font-size:10px}
 .portfolio-corporate .project-status{font-size:9px}
+
+
+/* Calm hero availability indicator — remove the boxed label treatment */
+.portfolio-corporate .hero-availability{
+  display:inline-flex;align-items:center;gap:9px;
+  margin:19px 0 0;padding:0;border:0;background:transparent;
+  color:#E8DED5;max-width:none
+}
+.portfolio-corporate .availability-pulse{
+  display:block;flex:none;width:7px;height:7px;border-radius:50%;
+  background:#91B49A;box-shadow:0 0 0 4px #91B49A18;
+  animation:none
+}
+.portfolio-corporate .hero-availability strong{
+  display:inline-block;color:#E8DED5;font-family:var(--font);
+  font-size:10px;font-weight:600;letter-spacing:.015em;line-height:1.4
+}
+.portfolio-corporate .hero-meta{display:none!important}
+@media(max-width:680px){
+  .portfolio-corporate .hero-availability{margin-top:15px;gap:8px}
+  .portfolio-corporate .hero-availability strong{font-size:10px}
+}
