@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261122-1">
-  <link rel="stylesheet" href="website-service.css?v=20261122-1">
+  <link rel="stylesheet" href="styles.css?v=20261122-2">
+  <link rel="stylesheet" href="website-service.css?v=20261122-2">
 </head>
 <body class="portfolio-corporate">
   <header class="header">
@@ -20,7 +20,11 @@
         <a href="#services">Что делаю</a><a href="#pricing">Стоимость</a><a href="#examples">Примеры</a><a href="#process">Этапы</a><a href="#terms">Правила</a><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a>
       </nav>
       <a class="header-cta" href="#contact">Обсудить сайт <span>↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="service-mobile-nav">☰</button>
     </div>
+    <nav class="mobile-nav" id="service-mobile-nav" aria-label="Мобильная навигация">
+      <a href="#services">Что делаю</a><a href="#pricing">Стоимость</a><a href="#examples">Примеры</a><a href="#process">Этапы</a><a href="#terms">Правила</a><a href="#contact">Контакты</a><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a>
+    </nav>
   </header>
 
   <main>
@@ -135,6 +139,19 @@
     </section>
   </main>
   <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="index.html">АК<span>.</span></a><span>© <span id="year"></span> Артём Калинин</span><span>Создание и доработка сайтов</span><a href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a><a href="#top">Наверх ↑</a></div></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuButton = document.querySelector(".menu-toggle");
+    const mobileNav = document.querySelector("#service-mobile-nav");
+    menuButton.addEventListener("click", () => {
+      const open = mobileNav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
+    });
+    mobileNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      mobileNav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }));
+  </script>
 </body>
 </html>
