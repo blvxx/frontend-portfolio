@@ -1325,3 +1325,10 @@ html.motion-ready [data-reveal].is-revealed{opacity:1;transform:translate3d(0,0,
   .portfolio-corporate .hero-showcase:before,.portfolio-corporate .showcase-scanline{animation:none}
   .portfolio-corporate .button-dark:after{display:none}
 }
+
+@media(max-width:680px){
+  .portfolio-corporate .showcase-navigation{align-items:stretch}
+  .portfolio-corporate .showcase-tabs{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;padding-bottom:3px}
+  .portfolio-corporate .showcase-tabs::-webkit-scrollbar{display:none}
+  .portfolio-corporate .showcase-tab{flex:0 0 auto;min-width:78px}
+}
