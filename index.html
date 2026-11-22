@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261122-compact" type="text/css" media="all">
+  <link rel="stylesheet" href="styles.css?v=20261122-interactive" type="text/css" media="all">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -37,14 +37,14 @@
         <a href="#pricing">Стоимость</a>
         <a href="#work">Проекты</a>
         <a href="#approach">Подход</a>
-        <a href="#about">Обо мне</a>
+        <a href="#brief">Подобрать формат</a><a href="#about">Обо мне</a>
         <a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a>
       </nav>
       <a class="header-cta" href="#contact">Обсудить задачу <span>↗</span></a>
       <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
     </div>
     <nav class="mobile-nav" aria-label="Мобильная навигация">
-      <a href="#services">Услуги</a><a href="#pricing">Стоимость</a><a href="#work">Проекты</a><a href="#approach">Подход</a><a href="#about">Обо мне</a><a href="#contact">Контакты</a><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a>
+      <a href="#services">Услуги</a><a href="#pricing">Стоимость</a><a href="#work">Проекты</a><a href="#approach">Подход</a><a href="#brief">Подобрать формат</a><a href="#about">Обо мне</a><a href="#contact">Контакты</a><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a>
     </nav>
   </header>
 
@@ -53,6 +53,7 @@
       <div class="wrap hero-layout">
         <div class="hero-copy">
           <p class="eyebrow"><span class="eyebrow-dot"></span> Веб-разработка для малого бизнеса</p>
+          <div class="hero-availability" role="status"><span class="availability-pulse"></span><div><strong>Открыт для новых проектов</strong><small>Создание сайтов · обновление · доработки</small></div></div>
           <h1>Сайты с характером.<br><span>Код —</span><br>с головой.</h1>
           <p class="hero-lead">Создаю сайты для малого бизнеса и помогаю привести в порядок уже существующие. Продумываю структуру, аккуратный визуальный стиль и удобный путь клиента до обращения.</p>
           <div class="hero-actions">
@@ -80,6 +81,15 @@
       <div class="wrap hero-foot">
         <span class="mono">ОСНОВНОЙ СТЕК</span>
         <div class="stack-line"><span>HTML / CSS</span><span>JavaScript</span><span>Адаптивная вёрстка</span><span>Формы и интеграции</span><span>Базовое SEO</span></div>
+      </div>
+    </section>
+
+
+    <section class="trust-strip" aria-label="Факты о работе">
+      <div class="wrap trust-grid">
+        <article><span class="trust-index mono">01 / PORTFOLIO</span><strong>5 демонстрационных проектов</strong><small>Можно открыть каждый сайт и посмотреть его в работе</small></article>
+        <article><span class="trust-index mono">02 / STACK</span><strong>HTML · CSS · JavaScript</strong><small>Понятный стек и исходный код без закрытой платформы</small></article>
+        <article><span class="trust-index mono">03 / CONTACT</span><strong>Работа напрямую</strong><small>Общаетесь с разработчиком от первого обсуждения до передачи</small></article>
       </div>
     </section>
 
@@ -139,6 +149,66 @@
       </div>
     </section>
 
+
+    <section class="section brief-section" id="brief">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / Интерактивный бриф</p><h2>Соберём задачу<br>вместе</h2></div>
+          <p class="section-intro">Ответьте на несколько вопросов — получите предварительный формат работ, ориентир по стартовой стоимости и готовый текст запроса. Это займёт около минуты.</p>
+        </div>
+        <div class="brief-layout">
+          <form class="brief-controls" id="project-brief">
+            <fieldset class="brief-fieldset">
+              <legend><span>01</span> Что сейчас нужно?</legend>
+              <label class="brief-option"><input type="radio" name="brief-task" value="new" checked><span class="brief-option-copy"><strong>Создать сайт с нуля</strong><small>Нужен сайт для бизнеса или услуги</small></span><i>↗</i></label>
+              <label class="brief-option"><input type="radio" name="brief-task" value="redesign"><span class="brief-option-copy"><strong>Обновить существующий</strong><small>Сайт устарел или неудобен</small></span><i>↗</i></label>
+              <label class="brief-option"><input type="radio" name="brief-task" value="fix"><span class="brief-option-copy"><strong>Исправить отдельные проблемы</strong><small>Вёрстка, мобильная версия, формы</small></span><i>↗</i></label>
+            </fieldset>
+
+            <fieldset class="brief-fieldset" data-format-fieldset>
+              <legend><span>02</span> Какой формат ближе?</legend>
+              <div class="brief-choice-row">
+                <label class="brief-choice"><input type="radio" name="brief-format" value="landing" checked><span>Лендинг</span></label>
+                <label class="brief-choice"><input type="radio" name="brief-format" value="company"><span>Сайт компании</span></label>
+                <label class="brief-choice"><input type="radio" name="brief-format" value="unknown"><span>Пока не знаю</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="brief-fieldset">
+              <legend><span data-priority-number>03</span> Что важнее всего?</legend>
+              <div class="brief-choice-row brief-priorities">
+                <label class="brief-choice"><input type="radio" name="brief-priority" value="leads" checked><span>Больше обращений</span></label>
+                <label class="brief-choice"><input type="radio" name="brief-priority" value="presentation"><span>Показать услуги и работы</span></label>
+                <label class="brief-choice"><input type="radio" name="brief-priority" value="mobile"><span>Удобство на телефоне</span></label>
+                <label class="brief-choice"><input type="radio" name="brief-priority" value="quality"><span>Исправить ошибки</span></label>
+              </div>
+            </fieldset>
+
+            <label class="brief-url-label" for="brief-site-url">Ссылка на текущий сайт <span>необязательно</span></label>
+            <input class="brief-url-input" id="brief-site-url" name="site-url" type="url" placeholder="https://example.ru" autocomplete="url">
+          </form>
+
+          <aside class="brief-result" aria-live="polite" aria-atomic="true">
+            <div class="brief-result-top"><span class="mono">ВАШ ПРЕДВАРИТЕЛЬНЫЙ ПЛАН</span><span class="brief-result-mark">АК.</span></div>
+            <p class="brief-result-kicker">РЕКОМЕНДУЕМЫЙ ФОРМАТ</p>
+            <h3 id="brief-result-title">Лендинг для бизнеса</h3>
+            <p class="brief-result-description" id="brief-result-description">Одностраничный сайт с ясным предложением, описанием услуги и удобными точками связи.</p>
+            <div class="brief-result-price"><span>Стартовая стоимость</span><strong id="brief-result-price">от 8 000 ₽</strong></div>
+            <p class="brief-result-note" id="brief-result-note">Точная цена и сроки зависят от структуры, материалов и функций. Их согласуем до начала работы.</p>
+            <div class="brief-result-summary">
+              <span class="mono">ВАШ ЗАПРОС</span>
+              <p id="brief-result-summary">Новый сайт · Лендинг · Больше обращений</p>
+            </div>
+            <div class="brief-result-actions">
+              <button class="button button-light brief-copy-button" id="brief-copy" type="button">Скопировать запрос <span>＋</span></button>
+              <a class="brief-email-button" id="brief-email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=blvx8x%40gmail.com" target="_blank" rel="noopener noreferrer">Отправить на почту ↗</a>
+            </div>
+            <p class="brief-copy-status" id="brief-copy-status" role="status" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section class="section work-section" id="work">
       <div class="wrap">
         <div class="section-heading">
@@ -172,13 +242,13 @@
       <div class="wrap">
         <div class="section-heading">
           <div><p class="eyebrow">04 / Процесс</p><h2>Понятно на каждом этапе</h2></div>
-          <p class="section-intro">Без неопределённости в объёме работ: сначала разбираемся с задачей, затем согласуем результат.</p>
+          <p class="section-intro">На каждом этапе понятно, что уже сделано, что проверяется и какое решение нужно согласовать дальше.</p>
         </div>
         <div class="steps-grid">
-          <article class="step"><span class="mono">01</span><h3>Разбираю задачу</h3><p>Изучаю текущий сайт или идею, уточняю аудиторию, цель и необходимые функции.</p></article>
-          <article class="step"><span class="mono">02</span><h3>Фиксируем план</h3><p>Согласуем структуру, состав работ, сроки и стоимость до начала разработки.</p></article>
-          <article class="step"><span class="mono">03</span><h3>Разрабатываю</h3><p>Собираю страницы, добавляю нужные сценарии и проверяю адаптивность.</p></article>
-          <article class="step"><span class="mono">04</span><h3>Передаю результат</h3><p>Проверяю основные сценарии, публикую сайт или передаю готовые изменения.</p></article>
+          <article class="step"><span class="mono">01</span><h3>Изучаю задачу</h3><p>Смотрю текущий сайт или вводные, уточняю аудиторию, цель и главные проблемы.</p></article>
+          <article class="step"><span class="mono">02</span><h3>Согласуем решение</h3><p>Фиксируем страницы, функции, материалы, сроки и стоимость до предоплаты.</p></article>
+          <article class="step"><span class="mono">03</span><h3>Разрабатываю и показываю</h3><p>Собираю сайт или изменения, показываю промежуточный результат и вношу согласованные правки.</p></article>
+          <article class="step"><span class="mono">04</span><h3>Проверяю и передаю</h3><p>Проверяю мобильную версию, ссылки и формы, затем передаю исходники или помогаю с публикацией.</p></article>
         </div>
       </div>
     </section>
@@ -195,9 +265,28 @@
       </div>
     </section>
 
+
+    <section class="section faq-section" id="faq">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">06 / Частые вопросы</p><h2>До начала работы<br>всё понятно</h2></div>
+          <p class="section-intro">Коротко отвечаю на то, что обычно хочется узнать до первого обсуждения и согласования проекта.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>Сколько стоит создание или обновление сайта?<span>＋</span></summary><p>Стартовые ориентиры: лендинг — от 8 000 ₽, сайт компании — от 15 000 ₽, редизайн и доработка — от 5 000 ₽, небольшие исправления — от 1 500 ₽. Финальная стоимость зависит от согласованного объёма и фиксируется до начала работ.</p></details>
+          <details><summary>Сколько времени занимает разработка?<span>＋</span></summary><p>Срок зависит от количества страниц, функций, готовности материалов и скорости согласований. Я называю срок после изучения задачи и фиксирую его вместе со стоимостью до старта.</p></details>
+          <details><summary>Можно обновить только одну страницу или отдельный блок?<span>＋</span></summary><p>Да. Не обязательно переделывать сайт целиком: можно начать с мобильной версии, первого экрана, навигации, формы или конкретной ошибки.</p></details>
+          <details><summary>Что нужно подготовить для первого разговора?<span>＋</span></summary><p>Достаточно ссылки на текущий сайт (если он есть) и пары предложений о бизнесе и задаче. Логотип, фотографии и тексты можно обсудить отдельно — готовое техническое задание не обязательно.</p></details>
+          <details><summary>Как происходит оплата и приёмка?<span>＋</span></summary><p>После согласования объёма, цены и сроков — 50% предоплата. Оставшиеся 50% после демонстрации и приёмки результата, до передачи финальных файлов или публикации на аккаунтах заказчика. В согласованный объём входят до двух раундов правок.</p></details>
+          <details><summary>Показанные в портфолио проекты — реальные клиентские сайты?<span>＋</span></summary><p>Сейчас в разделе работ представлены самостоятельные демонстрационные концепты. Они показывают подход к структуре, дизайну и реализации, но не выдаются за коммерческие внедрения или реальные результаты клиентов.</p></details>
+          <details><summary>Кому принадлежат исходные файлы?<span>＋</span></summary><p>После полной оплаты передаю согласованный результат и исходные файлы либо публикую сайт на аккаунтах заказчика — в зависимости от выбранного формата.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
       <div class="wrap contact-panel">
-        <div><p class="eyebrow">06 / Контакты</p><h2>Есть задача?<br><span>Давайте обсудим.</span></h2><p>Напишите пару слов о проекте. Отвечу и предложу реалистичный следующий шаг.</p></div>
+        <div><p class="eyebrow">06 / Контакты</p><h2>Есть задача?<br><span>Давайте обсудим.</span></h2><p>Можно начать без технического задания: расскажите, чем занимается бизнес и что хотелось бы улучшить. Или соберите короткий запрос в интерактивном брифе.</p><a class="contact-brief-link" href="#brief">Собрать запрос за минуту ↑</a></div>
         <div class="contact-actions">
           <a class="button button-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=blvx8x%40gmail.com&su=Запрос%20по%20разработке%20сайта" target="_blank" rel="noopener noreferrer">Написать на почту <span>↗</span></a>
           <a href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
@@ -209,5 +298,6 @@
   </main>
   <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#top">АК<span>.</span></a><span>© <span id="year"></span> Артём Калинин</span><span>Создание и обновление сайтов</span><a class="portfolio-switch" href="https://blvxx.github.io/portfolio/engineering/">Инженерное портфолио ↗</a><a href="#top">Наверх ↑</a></div></footer>
   <script src="script.js?v=20261122-compact" defer></script>
+  <script src="brief-builder.js?v=20261122-brief" defer></script>
 </body>
 </html>
