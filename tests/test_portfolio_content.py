@@ -79,7 +79,7 @@ class PortfolioContentTests(unittest.TestCase):
 
                 html = page.read_text(encoding="utf-8")
                 self.assertRegex(html, re.compile(r"<title[^>]*>.+?</title>", re.I | re.S))
-                self.assertRegex(html, re.compile(r'name=["']viewport["']', re.I))
+                self.assertRegex(html, re.compile(r"name=['\"]viewport['\"]", re.I))
 
                 preview = project.get("preview", {})
                 self.assertEqual(preview.get("type"), "iframe")
