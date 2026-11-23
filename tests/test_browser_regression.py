@@ -77,7 +77,7 @@ def test_main_portfolio_renders_projects_and_recalculates_brief(
 
         page.locator('input[name="brief-format"][value="company"]').check()
         assert page.locator("#brief-result-price").inner_text() == "от 15 000 ₽"
-        assert "многостраничный" in page.locator("#brief-result-description").inner_text().lower()
+        assert "до четырёх страниц" in page.locator("#brief-result-description").inner_text().lower()
 
         page.locator('input[name="brief-task"][value="redesign"]').check()
         assert page.locator("#brief-result-title").inner_text() == "Редизайн и доработка"
