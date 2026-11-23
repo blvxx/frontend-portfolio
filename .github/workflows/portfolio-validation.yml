@@ -3,6 +3,7 @@ name: Web Portfolio Validation
 on:
   push:
     paths:
+      - "README.md"
       - "index.html"
       - "styles.css"
       - "script.js"
