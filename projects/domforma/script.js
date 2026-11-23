@@ -7,16 +7,24 @@ const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
 
 if (menuButton && navigation) {
+  const closeNavigation = (restoreFocus = false) => {
+    menuButton.setAttribute('aria-expanded', 'false');
+    navigation.classList.remove('is-open');
+    if (restoreFocus) menuButton.focus();
+  };
+
   menuButton.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isOpen));
     navigation.classList.toggle('is-open', !isOpen);
   });
   navigation.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menuButton.setAttribute('aria-expanded', 'false');
-      navigation.classList.remove('is-open');
-    });
+    link.addEventListener('click', () => closeNavigation());
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+      closeNavigation(true);
+    }
   });
 }
 
