@@ -53,6 +53,8 @@ GitHub Actions запускает проверки на Python 3.12 без ст�
 - существование локальных CSS, JavaScript и HTML-ссылок главной страницы;
 - безопасные настройки iframe-превью и внешних ссылок.
 
+GitHub Actions уже успешно выполнил все пять проверок на Python 3.12: [последний успешный запуск](https://github.com/blvxx/web-development-portfolio/actions/runs/45100920151).
+
 Запуск локально:
 
 ```bash
