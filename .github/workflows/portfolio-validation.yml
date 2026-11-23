@@ -30,6 +30,7 @@ on:
       - "telegram-bots.html"
       - "projects/**"
       - "tests/**"
+      - "requirements-test.txt"
       - ".github/workflows/portfolio-validation.yml"
   workflow_dispatch:
 
@@ -49,7 +50,7 @@ jobs:
           python-version: "3.12"
 
       - name: Validate project data, demo pages and local links
-        run: python -m unittest discover -s tests -v
+        run: python -m unittest discover -s tests -p 'test_portfolio_content.py' -v
 
   browser-regression:
     runs-on: ubuntu-latest
