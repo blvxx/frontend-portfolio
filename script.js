@@ -198,14 +198,26 @@ async function init(){
 }
 const menuButton = $('.menu-toggle');
 const mobileNav = $('.mobile-nav');
+
+function closeMobileNav(restoreFocus = false) {
+  mobileNav.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Открыть меню');
+  if (restoreFocus) menuButton.focus();
+}
+
 menuButton.addEventListener('click', () => {
   const open = mobileNav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(open));
   menuButton.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
 });
 mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded','false');
+  closeMobileNav();
 }));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && mobileNav.classList.contains('open')) {
+    closeMobileNav(true);
+  }
+});
 $('#year').textContent = new Date().getFullYear();
 init();
