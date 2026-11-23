@@ -53,7 +53,7 @@ GitHub Actions запускает два уровня проверок. Стат
 - существование локальных CSS, JavaScript и HTML-ссылок главной страницы;
 - безопасные настройки iframe-превью и внешних ссылок.
 
-GitHub Actions уже успешно выполнил все пять проверок на Python 3.12: [последний успешный запуск](https://github.com/blvxx/web-development-portfolio/actions/runs/45100968980).
+Статические проверки: **5 passed**. Playwright на Chromium: **10 passed** — последний успешный прогон от 23 ноября 2026 года включает проверку всех пяти демо-сайтов на мобильном viewport и интерактивные пользовательские сценарии. [Открыть успешный CI-запуск](https://github.com/blvxx/web-development-portfolio/actions/runs/45103113568) · [JUnit-отчёт браузерных тестов](https://github.com/blvxx/web-development-portfolio/actions/runs/45103113568/artifacts/14786307014).
 
 Запуск локально:
 
