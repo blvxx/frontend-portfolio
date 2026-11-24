@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Демонстрационный кейс локального продвижения двух филиалов клиники в Яндекс Бизнесе и Яндекс Картах: аудит карточек, репутация, контент и отчётность.">
+  <meta name="theme-color" content="#f7faf7">
+  <title>Яндекс Бизнес и локальное продвижение клиники — Артём Калинин</title>
+  <style>
+    :root{--ink:#17211b;--muted:#68766d;--line:#e3ebe3;--green:#dff2d1;--green-dark:#41663a;--surface:#fff;--page:#f7faf7;--max:1080px}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font:15px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit}
+    .shell{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    header{background:#fff;border-bottom:1px solid var(--line)}
+    header .shell{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:850;text-decoration:none;letter-spacing:-.04em}
+    .back{font-size:13px;color:var(--green-dark);font-weight:700;text-decoration:none}
+    .hero{padding:72px 0 55px}
+    .eyebrow{display:inline-flex;padding:7px 12px;border-radius:99px;background:var(--green);color:var(--green-dark);font-size:11px;font-weight:800;letter-spacing:.04em}
+    h1{max-width:850px;margin:20px 0 14px;font-size:clamp(38px,6vw,64px);line-height:1.02;letter-spacing:-.065em}
+    h2{font-size:clamp(25px,3.5vw,36px);line-height:1.1;letter-spacing:-.05em;margin:0 0 14px}
+    h3{font-size:18px;margin:0 0 8px}
+    p{color:var(--muted);margin:0 0 12px}
+    .lead{max-width:760px;font-size:18px;line-height:1.7}
+    .notice{margin-top:25px;padding:17px 19px;border:1px solid #ecdcc3;border-left:4px solid #d7a66e;border-radius:14px;background:#fff9f1;color:#7c654a;font-size:13px}
+    section{padding:48px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:0 10px 28px #243b2608}
+    .card p{font-size:13px}
+    .number{display:inline-grid;width:31px;height:31px;place-items:center;margin-bottom:13px;border-radius:10px;background:#edf7e8;color:#4b7543;font-weight:850}
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .step{padding:18px;border-radius:17px;background:#fff;border:1px solid var(--line)}
+    .step b{display:block;margin-bottom:7px}
+    .step span{font-size:12px;color:var(--muted)}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+    table{width:100%;border-collapse:collapse;min-width:620px}
+    th,td{text-align:left;vertical-align:top;padding:13px 15px;border-bottom:1px solid var(--line);font-size:13px}
+    th{background:#f0f6ed;color:#435d3d}
+    tr:last-child td{border-bottom:0}
+    .metric{font-weight:800;color:#3e6238}
+    .footer{padding:28px 0;background:#fff;border-top:1px solid var(--line);font-size:12px;color:#89958d}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.hero{padding:50px 0 35px}section{padding:35px 0}}
+    @media(max-width:390px){.steps{grid-template-columns:1fr}.shell{width:calc(100% - 28px)}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="shell">
+    <a class="brand" href="index.html">Артём Калинин · SMM & Content</a>
+    <a class="back" href="index.html">← К портфолио</a>
+  </div>
+</header>
+<main>
+  <div class="shell hero">
+    <span class="eyebrow">LOCAL SEO · ЯНДЕКС БИЗНЕС · ДЕМО-КЕЙС</span>
+    <h1>Локальное продвижение клиники с двумя филиалами</h1>
+    <p class="lead">Как я бы выстроил работу с карточками организации в Яндекс Бизнесе и Яндекс Картах: от аудита и актуальности информации до отзывов, контента и регулярной отчётности.</p>
+    <div class="notice"><strong>Демонстрационный сценарий.</strong> Клиника, филиалы, исходные условия и план работ вымышлены. Это проектная проработка подхода, а не выполненная работа для медицинской организации и не заявка на реальные KPI.</div>
+  </div>
+
+  <section>
+    <div class="shell">
+      <h2>Задача и ожидаемый результат</h2>
+      <p>У премиальной клиники два филиала в Москве. Важно, чтобы пользователь видел правильную информацию по ближайшему адресу, мог быстро понять специализацию филиала, оценить репутацию и связаться с клиникой.</p>
+      <div class="grid">
+        <article class="card"><span class="number">01</span><h3>Корректность карточек</h3><p>Два самостоятельных филиала с отдельными адресами, телефонами, расписанием, услугами и маршрутами.</p></article>
+        <article class="card"><span class="number">02</span><h3>Репутация и доверие</h3><p>Регулярная работа с обратной связью, корректные ответы и передача чувствительных вопросов в приватный официальный канал.</p></article>
+        <article class="card"><span class="number">03</span><h3>Обращения и аналитика</h3><p>Понимание, какие действия пользователи совершают в карточках и как меняется динамика обращений.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <h2>План на первые 30 дней</h2>
+      <div class="steps">
+        <div class="step"><b>Неделя 1 · Аудит</b><span>Проверить карточки, категории, контакты, часы, услуги, фото, сайт, дубли и текущие метрики. Зафиксировать baseline.</span></div>
+        <div class="step"><b>Неделя 2 · Оптимизация</b><span>Исправить информацию по филиалам, описания, категории, услуги, ссылки с UTM-метками и визуальные материалы.</span></div>
+        <div class="step"><b>Неделя 3 · Репутация</b><span>Согласовать регламент ответов, тон коммуникации, SLA обработки отзывов и маршрут эскалации жалоб.</span></div>
+        <div class="step"><b>Неделя 4 · Отчёт</b><span>Сверить показатели с baseline, проверить качество обращений, отметить проблемы и составить следующий backlog.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <h2>Контрольная матрица для двух филиалов</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Область</th><th>Что проверяю</th><th>Результат</th></tr></thead>
+          <tbody>
+            <tr><td>Контакты и география</td><td>Адрес, вход, телефон, сайт, время работы, праздники, маршрут</td><td>Корректная карточка каждого филиала</td></tr>
+            <tr><td>Категории и услуги</td><td>Основная категория, релевантные услуги, описания, соответствие фактическому профилю</td><td>Понятная специализация без нерелевантных ключевых слов</td></tr>
+            <tr><td>Контент и фото</td><td>Обложка, интерьер, вход, команда при наличии согласия, актуальность изображений</td><td>Актуальное представление филиала</td></tr>
+            <tr><td>Репутация</td><td>Новые отзывы, тональность, повторяющиеся темы, скорость и полнота ответа</td><td>Регламент ответов и эскалации</td></tr>
+            <tr><td>Измерение</td><td>Показы, переходы на сайт, звонки/действия, маршруты — по доступным данным сервиса</td><td>Еженедельная динамика и список гипотез</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <h2>Примеры работы с отзывами</h2>
+      <div class="grid">
+        <article class="card"><h3>Положительный отзыв</h3><p>«Спасибо, что поделились впечатлением. Передадим вашу благодарность команде филиала. Будем рады видеть вас снова».</p><p><strong>Принцип:</strong> персональный, спокойный ответ без шаблонной рекламы.</p></article>
+        <article class="card"><h3>Негативный отзыв</h3><p>«Сожалеем, что ваш опыт не оправдал ожиданий. Хотим разобраться в ситуации. Пожалуйста, свяжитесь с нами через официальный канал клиники, указав дату визита и удобный способ обратной связи».</p><p><strong>Принцип:</strong> признать проблему и перевести детали в приватный канал.</p></article>
+        <article class="card"><h3>Чувствительная информация</h3><p>Не обсуждать публично диагнозы, процедуры, персональные данные, детали лечения и медицинские документы. Не подтверждать публично факт обращения человека в клинику.</p><p><strong>Принцип:</strong> уважение к конфиденциальности и эскалация ответственному сотруднику.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <h2>Шаблон ежемесячного отчёта</h2>
+      <p>Числа здесь намеренно не заполнены: их нужно брать из фактической статистики Яндекс Бизнеса и систем учёта обращений, а не придумывать.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Метрика</th><th>Филиал A</th><th>Филиал B</th><th>Комментарий</th></tr></thead>
+          <tbody>
+            <tr><td>Показы карточки</td><td>Заполняется из статистики</td><td>Заполняется из статистики</td><td>Динамика к прошлому периоду</td></tr>
+            <tr><td>Переходы на сайт</td><td>Заполняется из статистики</td><td>Заполняется из статистики</td><td>Проверить UTM и посадочные страницы</td></tr>
+            <tr><td>Звонки / целевые действия</td><td>Заполняется из статистики</td><td>Заполняется из статистики</td><td>Сопоставить с CRM, если доступно</td></tr>
+            <tr><td>Построение маршрутов</td><td>Заполняется из статистики</td><td>Заполняется из статистики</td><td>Сравнить сезонность и локальный спрос</td></tr>
+            <tr><td>Отзывы и рейтинг</td><td>Кол-во, динамика, темы</td><td>Кол-во, динамика, темы</td><td>Учитывать качество и контекст, не только средний балл</td></tr>
+            <tr><td>Обращения в клинику</td><td>Из внутренней системы</td><td>Из внутренней системы</td><td>Квалификация обращений и конверсия</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="shell">Артём Калинин · <a href="mailto:blvx8x@gmail.com">blvx8x@gmail.com</a> · <a href="https://t.me/blvlxx">Telegram</a> · Самостоятельный демонстрационный кейс</div></footer>
+</body>
+</html>
