@@ -287,7 +287,16 @@ def test_core_pages_meet_responsive_and_accessibility_basics(
                 images: Array.from(document.images).map(image => ({
                     alt: image.getAttribute('alt'),
                     hasAlt: image.hasAttribute('alt')
-                }))
+                })),
+                overflowNodes: Array.from(document.querySelectorAll('body *')).map(element => {
+                    const rect = element.getBoundingClientRect();
+                    return {
+                        tag: element.tagName.toLowerCase(),
+                        className: typeof element.className === 'string' ? element.className : '',
+                        right: Math.round(rect.right),
+                        width: Math.round(rect.width)
+                    };
+                }).filter(item => item.right > window.innerWidth + 1 && item.width > 1).slice(0, 8)
             })"""
         )
 
@@ -297,7 +306,7 @@ def test_core_pages_meet_responsive_and_accessibility_basics(
         assert quality["h1Count"] == 1, f"{page_path} must expose one primary heading"
         assert quality["mainCount"] == 1, f"{page_path} must expose one main landmark"
         assert quality["scrollWidth"] <= quality["clientWidth"] + 1, (
-            f"{page_path} has horizontal overflow at {width}px"
+            f"{page_path} has horizontal overflow at {width}px: {quality['overflowNodes']}"
         )
         assert all(image["hasAlt"] and str(image["alt"] or "").strip() for image in quality["images"]), (
             f"{page_path} contains an image without meaningful alt text"
