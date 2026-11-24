@@ -206,3 +206,34 @@ def test_domforma_request_form_validates_and_shows_demo_confirmation(
         assert page.locator('input[name="name"]').input_value() == ""
     finally:
         context.close()
+
+def test_smm_profile_renders_on_mobile_and_navigation_works(
+    browser: Browser,
+    site_url: str,
+) -> None:
+    context, page = open_local_page(browser, width=390, height=844)
+    page_errors: list[str] = []
+    page.on("pageerror", lambda error: page_errors.append(str(error)))
+    try:
+        page.goto(f"{site_url}/smm/", wait_until="domcontentloaded")
+        page.locator("h1").first.wait_for(state="visible")
+
+        assert "SMM-специалист" in page.title()
+        assert "East West Fitness" in page.locator("#experience").inner_text()
+        assert "Delivery Club" in page.locator("#experience").inner_text()
+
+        has_horizontal_overflow = page.evaluate(
+            "document.documentElement.scrollWidth > document.documentElement.clientWidth + 1"
+        )
+        assert not has_horizontal_overflow, "SMM page overflows a 390px viewport"
+
+        toggle = page.locator(".menu")
+        menu = page.locator("#mobile-menu")
+        toggle.click()
+        assert toggle.get_attribute("aria-expanded") == "true"
+        assert menu.is_visible()
+        menu.locator('a[href="#experience"]').click()
+        assert toggle.get_attribute("aria-expanded") == "false"
+        assert page_errors == []
+    finally:
+        context.close()
