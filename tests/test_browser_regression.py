@@ -218,9 +218,11 @@ def test_smm_profile_renders_on_mobile_and_navigation_works(
         page.goto(f"{site_url}/smm/", wait_until="domcontentloaded")
         page.locator("h1").first.wait_for(state="visible")
 
-        assert "SMM-специалист" in page.title()
+        assert "Контент-менеджер" in page.title()
+        assert "Independent Digital Practice" in page.locator("#experience").inner_text()
         assert "East West Fitness" in page.locator("#experience").inner_text()
-        assert "Delivery Club" in page.locator("#experience").inner_text()
+        assert "Delivery Club" not in page.locator("#experience").inner_text()
+        assert "МГКИТ" in page.locator("#analytics").inner_text()
 
         has_horizontal_overflow = page.evaluate(
             "document.documentElement.scrollWidth > document.documentElement.clientWidth + 1"
