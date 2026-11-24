@@ -88,6 +88,15 @@ Browser tests используют локальный HTTP-сервер; вне�
 
 **Артём Калинин** · [GitHub](https://github.com/blvxx)
 
+## SMM portfolio
+
+A separate SMM profile page is published as a route inside this existing GitHub Pages site; it does not create another Pages repository:
+
+**[SMM-специалист / Контент-стратег — опыт и кейс East West Fitness](https://blvxx.github.io/web-development-portfolio/smm/)**
+
+The page presents experience at Independent Digital Practice, Delivery Club and East West Fitness. The East West Fitness case is reconstructed from the described work because original source files and historical metrics are unavailable; visual examples and content matrix are labelled as demonstrations, and no unverified performance figures are claimed.
+
+
 ## Новый кейс: ДОМФОРМА
 
 [Открыть сайт](https://blvxx.github.io/web-development-portfolio/projects/domforma/) · [Описание проекта](./projects/domforma/README.md)
