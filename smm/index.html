@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11130f">
+  <meta name="description" content="Артём Калинин — SMM-специалист и контент-стратег. Опыт East West Fitness, Delivery Club, контент, локальный SMM и аналитика digital-каналов.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Артём Калинин — SMM и контент-стратег">
+  <meta property="og:description" content="Контент-стратегия, community management, локальный SMM и аналитика digital-каналов.">
+  <meta property="og:url" content="https://blvxx.github.io/web-development-portfolio/smm/">
+  <title>Артём Калинин — SMM-специалист / Контент-стратег</title>
+  <style>
+    :root{
+      --bg:#11130f;--bg2:#191c16;--panel:#20241d;--ink:#f3f2e9;--muted:#aaa99c;
+      --line:#34392d;--acid:#c8f169;--orange:#ff815e;--sand:#e8e1cd;--max:1160px;
+      --sans:Inter,Manrope,Arial,sans-serif;--mono:"SFMono-Regular",Consolas,monospace
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 52px));margin:auto}
+    .skip{position:absolute;left:-9999px;top:10px;background:var(--acid);color:#111;padding:10px;z-index:99}
+    .skip:focus{left:10px}
+    .header{position:sticky;top:0;z-index:30;background:#11130feF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+    .header-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:900;letter-spacing:-.07em;font-size:20px}
+    .brand i{font-style:normal;color:var(--acid)}
+    .nav{display:flex;gap:28px;margin-left:auto}
+    .nav a{font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .nav a:hover{color:var(--acid)}
+    .header-cta{font-size:11px;font-weight:800;border:1px solid #68734b;padding:10px 15px;border-radius:3px}
+    .header-cta:hover{background:var(--acid);color:#111;border-color:var(--acid)}
+    .menu{display:none;background:transparent;color:var(--ink);border:1px solid var(--line);padding:8px 11px}
+    .hero{padding:86px 0 54px;overflow:hidden;position:relative}
+    .hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-190px;top:-250px;background:radial-gradient(circle,#c8f16917,transparent 68%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:74px;align-items:center;position:relative}
+    .eyebrow{font:10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--acid);margin:0 0 22px}
+    .eyebrow:before{content:"";display:inline-block;width:24px;height:1px;background:var(--acid);vertical-align:middle;margin:0 10px 3px 0}
+    h1{font-size:clamp(48px,6.6vw,82px);line-height:.98;letter-spacing:-.075em;margin:0;max-width:690px}
+    h1 span{color:var(--acid)}
+    .hero-lead{max-width:590px;color:#c2c1b5;font-size:16px;line-height:1.85;margin:28px 0 0}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border:1px solid var(--acid);background:var(--acid);color:#171b10;font-size:11px;font-weight:900;letter-spacing:.04em}
+    .btn:hover{background:#d9ff8c;border-color:#d9ff8c}
+    .btn-ghost{background:transparent;color:var(--ink);border-color:#555d45}
+    .btn-ghost:hover{color:#111}
+    .hero-note{font:9px var(--mono);letter-spacing:.08em;color:#7f8575;margin-top:25px;text-transform:uppercase}
+    .visual{background:var(--acid);color:#171b10;min-height:450px;padding:23px;position:relative;overflow:hidden}
+    .visual:after{content:"";position:absolute;width:350px;height:350px;border:1px solid #1113;border-radius:50%;right:-80px;top:95px;box-shadow:0 0 0 34px #11108,0 0 0 68px #11106}
+    .visual-top{display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;position:relative;z-index:1}
+    .visual-main{position:relative;z-index:1;margin-top:68px}
+    .visual-mark{font-size:clamp(54px,8vw,105px);font-weight:950;letter-spacing:-.12em;line-height:.88}
+    .visual-mark span{color:var(--orange)}
+    .visual-caption{font:10px var(--mono);letter-spacing:.12em;margin-top:20px}
+    .visual-bottom{position:absolute;z-index:2;left:23px;right:23px;bottom:22px;border-top:1px solid #18200c55;padding-top:15px;display:flex;justify-content:space-between;gap:12px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+    .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
+    .tag{border:1px solid #3c4334;color:#c5c8b7;padding:7px 10px;font:9px var(--mono);letter-spacing:.05em}
+    section{padding:92px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:38px;margin-bottom:38px}
+    .section-index{font:9px var(--mono);letter-spacing:.17em;color:var(--acid);text-transform:uppercase;margin:0 0 13px}
+    h2{font-size:clamp(34px,4.6vw,56px);line-height:1.03;letter-spacing:-.065em;margin:0}
+    .section-intro{max-width:430px;margin:0;color:var(--muted);font-size:12px;line-height:1.9}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .pillar{background:var(--bg2);border:1px solid var(--line);padding:24px;min-height:220px}
+    .pillar-no{font:10px var(--mono);color:var(--acid)}
+    .pillar h3{font-size:20px;letter-spacing:-.04em;margin:28px 0 10px}
+    .pillar p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
+    .experience{background:#e9e5d9;color:#171912}
+    .experience .section-index{color:#596b28}
+    .experience .section-intro{color:#636357}
+    .timeline{display:grid;gap:13px}
+    .job{display:grid;grid-template-columns:220px 1fr;gap:34px;padding:27px 0;border-top:1px solid #c9c6b8}
+    .job-date{font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#626653}
+    .job-company{font-size:21px;letter-spacing:-.045em;font-weight:900;margin:0 0 5px}
+    .job-role{font-size:11px;font-weight:800;color:#65733b;margin:0 0 15px}
+    .job ul{margin:0;padding-left:18px;display:grid;gap:7px;color:#55574e;font-size:12px;line-height:1.75}
+    .job li::marker{color:#758a35}
+    .case{background:var(--bg2)}
+    .case-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:16px}
+    .case-poster{background:#d3ef8b;color:#1c2412;padding:28px;min-height:440px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .case-poster:after{content:"";position:absolute;width:340px;height:340px;border:1px solid #17220c55;border-radius:50%;right:-115px;top:90px;box-shadow:0 0 0 32px #17220c0b,0 0 0 64px #17220c08}
+    .poster-top,.poster-bottom,.poster-content{position:relative;z-index:1}
+    .poster-top{display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+    .poster-label{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase}
+    .poster-title{font-size:clamp(46px,6vw,75px);font-weight:950;line-height:.88;letter-spacing:-.095em;margin:15px 0}
+    .poster-sub{font-size:12px;font-weight:700;max-width:200px}
+    .poster-bottom{border-top:1px solid #1c24125c;padding-top:13px;font:9px var(--mono);letter-spacing:.07em}
+    .case-content{border:1px solid var(--line);padding:29px}
+    .case-kicker{font:9px var(--mono);letter-spacing:.15em;color:var(--acid);text-transform:uppercase}
+    .case-content h3{font-size:27px;line-height:1.12;letter-spacing:-.06em;margin:17px 0}
+    .case-content>p{font-size:12px;color:var(--muted);line-height:1.85}
+    .case-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+    .case-item{border-top:1px solid var(--line);padding-top:11px}
+    .case-item b{display:block;font-size:11px;color:var(--ink);margin-bottom:5px}
+    .case-item span{display:block;color:var(--muted);font-size:10px;line-height:1.7}
+    .rebuild-note{border-left:2px solid var(--orange);padding:12px 14px;background:#ff815e12;color:#c9b7aa;font-size:10px;line-height:1.8;margin-top:23px}
+    .content-system{background:#e9e5d9;color:#171912}
+    .content-system .section-index{color:#596b28}
+    .content-system .section-intro{color:#636357}
+    .content-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .content-card{background:#f6f3e9;border:1px solid #d2cdbd;padding:19px;min-height:215px}
+    .content-card small{font:9px var(--mono);letter-spacing:.1em;color:#687a36}
+    .content-card h3{font-size:16px;line-height:1.2;letter-spacing:-.035em;margin:24px 0 9px}
+    .content-card p{font-size:10px;line-height:1.75;color:#66665b;margin:0}
+    .content-label{display:inline-block;margin-top:15px;font:8px var(--mono);color:#515f2b;border:1px solid #c5cba9;padding:5px 7px}
+    .analytics-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .analytics-card{border:1px solid var(--line);padding:24px}
+    .analytics-card h3{font-size:19px;margin:0 0 8px;letter-spacing:-.04em}
+    .analytics-card p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}
+    .metric-list{display:grid;gap:9px;margin-top:20px}
+    .metric{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:9px;font-size:10px}
+    .metric span:first-child{color:#dce2d0}.metric span:last-child{color:#98a084;text-align:right}
+    .bar-list{display:grid;gap:14px;margin-top:21px}
+    .bar-row{display:grid;grid-template-columns:112px 1fr;align-items:center;gap:12px;font-size:10px;color:#c4c7b9}
+    .bar-track{height:7px;background:#363d30;position:relative;overflow:hidden}
+    .bar-fill{height:100%;background:var(--acid)}
+    .bar-row:nth-child(2) .bar-fill{width:78%}.bar-row:nth-child(3) .bar-fill{width:60%}.bar-row:nth-child(4) .bar-fill{width:45%}
+    .bar-row:first-child .bar-fill{width:92%}
+    .bar-note{font:9px var(--mono);color:#7e8872;margin-top:17px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:29px}
+    .skill{border:1px solid #46503a;padding:9px 12px;color:#d5d9c9;font-size:10px}
+    .contact{background:var(--acid);color:#171b10;border:0;padding:76px 0}
+    .contact .section-index{color:#465725}
+    .contact-layout{display:flex;justify-content:space-between;align-items:end;gap:32px}
+    .contact h2{max-width:650px}
+    .contact p{max-width:410px;color:#485238;font-size:12px;line-height:1.8}
+    .contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}
+    .contact-link{display:inline-flex;padding:11px 14px;border:1px solid #5f7042;font-size:10px;font-weight:900}
+    .contact-link:hover{background:#171b10;color:var(--acid);border-color:#171b10}
+    footer{padding:23px 0;color:#777c70;font:9px var(--mono);letter-spacing:.05em}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .mobile-menu{display:none}
+    @media(max-width:900px){
+      .hero-grid{gap:35px}.nav{gap:15px}.job{grid-template-columns:170px 1fr}.content-grid{grid-template-columns:repeat(2,1fr)}
+      .case-grid{grid-template-columns:.8fr 1.2fr}
+    }
+    @media(max-width:700px){
+      .wrap{width:min(var(--max),calc(100% - 34px))}
+      .header-inner{height:66px}.nav,.header-cta{display:none}.menu{display:block}
+      .mobile-menu{display:none;position:absolute;top:66px;left:0;right:0;background:#171a14;border-bottom:1px solid var(--line);padding:12px 17px}
+      .mobile-menu.open{display:grid;gap:0}
+      .mobile-menu a{padding:12px 3px;border-bottom:1px solid var(--line);font:10px var(--mono);text-transform:uppercase;color:var(--muted)}
+      .hero{padding:61px 0 38px}.hero-grid{grid-template-columns:1fr;gap:34px}h1{font-size:clamp(47px,13vw,72px)}
+      .hero-lead{font-size:14px}.visual{min-height:340px}.visual-main{margin-top:50px}
+      section{padding:68px 0}.section-head{display:block;margin-bottom:27px}.section-intro{margin-top:16px}
+      .pillars{grid-template-columns:1fr}.pillar{min-height:0}.pillar h3{margin-top:18px}
+      .job{grid-template-columns:1fr;gap:10px;padding:22px 0}.job-company{font-size:19px}
+      .case-grid{grid-template-columns:1fr}.case-poster{min-height:320px}.case-content{padding:22px}
+      .content-grid{grid-template-columns:1fr 1fr}.content-card{min-height:200px;padding:15px}
+      .analytics-grid{grid-template-columns:1fr}.contact-layout{display:block}.contact p{margin-top:18px}
+    }
+    @media(max-width:420px){
+      .content-grid,.case-list{grid-template-columns:1fr}.content-card{min-height:170px}
+      .visual-bottom{font-size:8px}.bar-row{grid-template-columns:94px 1fr}
+      .hero-actions .btn{width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Артём Калинин">АК<i>.</i></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about">Подход</a><a href="#experience">Опыт</a><a href="#case">East West Fitness</a><a href="#content">Контент</a><a href="#analytics">Аналитика</a>
+      </nav>
+      <a class="header-cta" href="#contact">Обсудить сотрудничество ↗</a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">☰</button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация">
+      <a href="#about">Подход</a><a href="#experience">Опыт</a><a href="#case">East West Fitness</a><a href="#content">Контент</a><a href="#analytics">Аналитика</a><a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">SMM specialist / content strategy / digital analytics</p>
+            <h1>Контент,<br>который знает,<br><span>зачем он выходит.</span></h1>
+            <p class="hero-lead">Я Артём Калинин. Разрабатываю контентные подходы, работаю с аудиторией и репутацией бренда, использую аналитику и автоматизацию, чтобы принимать решения не только на уровне вкуса, но и на основе данных.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#case">Смотреть кейс East West Fitness ↘</a>
+              <a class="btn btn-ghost" href="#experience">Мой опыт</a>
+            </div>
+            <div class="hero-tags"><span class="tag">SMM & CONTENT</span><span class="tag">COMMUNITY</span><span class="tag">LOCAL MARKETING</span><span class="tag">ANALYTICS</span></div>
+            <p class="hero-note">Открыт к проектам и предложениям о сотрудничестве</p>
+          </div>
+          <div class="visual" aria-label="Визуальная концепция SMM и аналитики">
+            <div class="visual-top"><span>Digital presence / 2026</span><span>01 — 04</span></div>
+            <div class="visual-main">
+              <div class="visual-mark">SOC<span>·</span><br>IAL</div>
+              <div class="visual-caption">STRATEGY / CONTENT / COMMUNITY / DATA</div>
+            </div>
+            <div class="visual-bottom"><span>IDEA → PUBLICATION</span><span>CONTENT WITH PURPOSE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-index">01 / What I do</p><h2>От идеи —<br>до понимания результата.</h2></div>
+          <p class="section-intro">Мой подход объединяет три взаимосвязанные задачи: понять аудиторию, подготовить релевантный контент и оценить, как люди на него реагируют. Важны не только публикации, но и обратная связь, путь пользователя и качество digital-точек контакта.</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar"><span class="pillar-no">01 / STRATEGY</span><h3>Стратегия и аудитория</h3><p>Исследование ниши и конкурентов, сегментация аудитории, поиск тем и форматов, формирование контентных гипотез и рубрикатора.</p></article>
+          <article class="pillar"><span class="pillar-no">02 / CONTENT & COMMUNITY</span><h3>Контент и коммуникация</h3><p>Тексты, визуальные материалы, публикации, работа с отзывами и обратной связью. AI-инструменты помогают ускорять подготовку, сохраняя редакторскую проверку.</p></article>
+          <article class="pillar"><span class="pillar-no">03 / ANALYTICS</span><h3>Метрики и улучшения</h3><p>Сбор показателей, анализ вовлечённости и трафика, поиск повторяющихся вопросов и точек потери пользователя, рекомендации по улучшению контента и конверсии.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-index">02 / Experience</p><h2>Опыт работы</h2></div>
+          <p class="section-intro">Практика в локальном digital-продвижении фитнес-клуба, коммуникации с клиентами и самостоятельной контент-работе с аналитическим подходом.</p>
+        </div>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-date">Апрель 2026 — настоящее время</div>
+            <div>
+              <h3 class="job-company">Independent Digital Practice</h3>
+              <p class="job-role">SMM-специалист / Контент-стратег · Фриланс</p>
+              <ul>
+                <li>Разрабатываю контент-стратегии для собственных проектов в сфере GameDev.</li>
+                <li>Провожу анализ конкурентов и целевой аудитории с помощью парсинга данных на Python.</li>
+                <li>Создаю визуальные материалы — баннеры и афиши — с помощью Midjourney, DALL·E и графических редакторов.</li>
+                <li>Готовлю тексты для публикаций и использую ChatGPT и Claude для генерации и развития идей.</li>
+                <li>Отслеживаю ER и другие показатели публикаций, анализирую динамику в Google Sheets.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">Сентябрь 2024 — ноябрь 2024</div>
+            <div>
+              <h3 class="job-company">Delivery Club</h3>
+              <p class="job-role">Community Manager / Специалист по работе с клиентами · функции аналитики</p>
+              <ul>
+                <li>Работал с пользовательской аудиторией в чатах и социальных каналах.</li>
+                <li>Отвечал на отзывы, обрабатывал негативные обращения и помогал поддерживать лояльность к бренду.</li>
+                <li>Анализировал обратную связь, выявлял повторяющиеся проблемы и передавал рекомендации по улучшению продукта.</li>
+                <li>Проверял корректность маркетинговых активностей, включая акции и промокоды.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="job">
+            <div class="job-date">Декабрь 2022 — май 2024</div>
+            <div>
+              <h3 class="job-company">East West Fitness</h3>
+              <p class="job-role">SMM-менеджер / Администратор digital-каналов</p>
+              <ul>
+                <li>Администрировал карточку организации на Яндекс Картах: обновлял информацию, работал с отзывами и рейтингом.</li>
+                <li>Создавал и публиковал контент на корпоративном сайте клуба.</li>
+                <li>Настраивал автоматическую выгрузку данных и метрик с сайта с помощью Python-скриптов.</li>
+                <li>Анализировал трафик и поведение пользователей, формулировал предложения по улучшению конверсии.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="case">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-index">03 / Featured experience</p><h2>East West Fitness</h2></div>
+          <p class="section-intro">Локальное присутствие, digital-контент и аналитика сайта. Кейс показывает сочетание ежедневной работы с digital-каналами и технического подхода к данным.</p>
+        </div>
+        <div class="case-grid">
+          <div class="case-poster" aria-label="Демонстрационная визуальная концепция кейса East West Fitness">
+            <div class="poster-top"><span>LOCAL FITNESS / DIGITAL</span><span>CASE 01</span></div>
+            <div class="poster-content">
+              <div class="poster-label">East West</div>
+              <div class="poster-title">FIT<br>NESS.</div>
+              <div class="poster-sub">Локальное присутствие. Контент. Аналитика.</div>
+            </div>
+            <div class="poster-bottom">SMM MANAGEMENT · YANDEX MAPS · WEB CONTENT · PYTHON</div>
+          </div>
+          <div class="case-content">
+            <span class="case-kicker">Role / SMM-manager & digital channels</span>
+            <h3>Сделать digital-присутствие клуба актуальным, понятным и измеримым.</h3>
+            <p>В East West Fitness моя работа была связана с несколькими точками контакта с аудиторией: карточкой клуба в Яндекс Картах, корпоративным сайтом и данными о поведении пользователей. Это позволяло сочетать актуализацию информации и коммуникацию с анализом того, как люди взаимодействуют с digital-ресурсами.</p>
+            <div class="case-list">
+              <div class="case-item"><b>Локальный SMM</b><span>Обновление карточки на Яндекс Картах, работа с отзывами и репутацией.</span></div>
+              <div class="case-item"><b>Контент сайта</b><span>Подготовка и публикация материалов на корпоративном сайте клуба.</span></div>
+              <div class="case-item"><b>Автоматизация</b><span>Python-скрипты для автоматической выгрузки данных и метрик сайта.</span></div>
+              <div class="case-item"><b>Аналитика</b><span>Изучение трафика и поведения пользователей, идеи по улучшению конверсии.</span></div>
+            </div>
+            <div class="rebuild-note"><b>О реконструкции кейса.</b> Оригинальные исходники, публикации и архив статистики не сохранились. Эта страница восстановлена по описанию моего опыта. Визуальная подача и примеры контента ниже — демонстрационные материалы, а не архивные публикации клуба. Количественные результаты не заявляются без подтверждающих данных.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-system" id="content">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-index">04 / Content thinking</p><h2>Как может выглядеть<br>контентная система клуба</h2></div>
+          <p class="section-intro">Пример демонстрационной контент-матрицы для фитнес-клуба. Это реконструкция подхода для портфолио, а не утверждение, что именно эти публикации выходили в East West Fitness.</p>
+        </div>
+        <div class="content-grid">
+          <article class="content-card"><small>01 / EXPERTISE</small><h3>Тренер объясняет</h3><p>Короткие советы по технике, ответы на частые вопросы новичков, знакомство с тренерской командой.</p><span class="content-label">REELS / SHORT VIDEO</span></article>
+          <article class="content-card"><small>02 / PRODUCT</small><h3>Форматы тренировок</h3><p>Показывать отличия направлений, кому они подходят и как выбрать занятие под свою цель.</p><span class="content-label">CAROUSEL / POST</span></article>
+          <article class="content-card"><small>03 / COMMUNITY</small><h3>Жизнь клуба</h3><p>Атмосфера, события и ответы на вопросы аудитории. Истории клиентов — только с их согласием.</p><span class="content-label">STORIES / COMMUNITY</span></article>
+          <article class="content-card"><small>04 / CONVERSION</small><h3>Первое посещение</h3><p>Понятный маршрут нового гостя: как записаться, что взять с собой и чего ожидать на первой тренировке.</p><span class="content-label">FAQ / CTA</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="analytics">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="section-index">05 / Analytics & tools</p><h2>Контент — это гипотеза.<br>Данные помогают её проверить.</h2></div>
+          <p class="section-intro">Смотрю не на одну цифру, а на связку показателей. Для каждой площадки важно заранее определить цель публикации и одинаково считать метрики в динамике.</p>
+        </div>
+        <div class="analytics-grid">
+          <article class="analytics-card">
+            <h3>Что анализирую</h3>
+            <p>Набор метрик зависит от цели публикации и доступной аналитики площадки.</p>
+            <div class="metric-list">
+              <div class="metric"><span>Охват и показы</span><span>Видимость контента</span></div>
+              <div class="metric"><span>ER и реакции</span><span>Вовлечённость</span></div>
+              <div class="metric"><span>Сохранения и репосты</span><span>Полезность / интерес</span></div>
+              <div class="metric"><span>Переходы на сайт</span><span>Трафик</span></div>
+              <div class="metric"><span>Действия и обращения</span><span>Целевой отклик</span></div>
+            </div>
+            <div class="bar-note">Визуальные полосы не отображают реальные KPI или результаты клуба.</div>
+          </article>
+          <article class="analytics-card">
+            <h3>Инструменты в работе</h3>
+            <p>Соединяю контентную работу с аналитикой и автоматизацией там, где это сокращает ручные операции.</p>
+            <div class="bar-list">
+              <div class="bar-row"><span>Google Sheets</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+              <div class="bar-row"><span>Python</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+              <div class="bar-row"><span>ChatGPT / Claude</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+              <div class="bar-row"><span>Midjourney / DALL·E</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+            </div>
+            <div class="bar-note">Полосы — декоративная схема направлений, не оценка уровня владения.</div>
+          </article>
+        </div>
+        <div class="skills">
+          <span class="skill">Контент-стратегия</span><span class="skill">Анализ аудитории</span><span class="skill">Конкурентный анализ</span><span class="skill">Copywriting</span><span class="skill">Community Management</span><span class="skill">Яндекс Карты</span><span class="skill">Python data parsing</span><span class="skill">ER / Google Sheets</span><span class="skill">AI-assisted visuals</span><span class="skill">Website content</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-layout">
+          <div>
+            <p class="section-index">06 / Contact</p>
+            <h2>Давайте усилим<br>digital-присутствие.</h2>
+            <p>Открыт к задачам по SMM, контенту, community management и аналитике digital-каналов. Готов обсудить цели проекта и предложить подход, который можно измерять.</p>
+            <div class="contact-links"><a class="contact-link" href="mailto:blvx8x@gmail.com">Написать на email ↗</a><a class="contact-link" href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">Telegram ↗</a></div>
+          </div>
+          <p><b>Артём Калинин</b><br>SMM-специалист / Контент-стратег<br><br>Также доступны отдельные портфолио по веб-разработке и инженерным направлениям.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 ARTEM KALININ / SMM & DIGITAL</span><span><a href="https://github.com/blvxx">GITHUB</a> · <a href="https://blvxx.github.io/web-development-portfolio/">WEB PORTFOLIO</a></span></div></footer>
+  <script>
+    const menuButton=document.querySelector('.menu');
+    const mobileMenu=document.querySelector('.mobile-menu');
+    menuButton.addEventListener('click',()=>{
+      const open=mobileMenu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded',String(open));
+      menuButton.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+      mobileMenu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Открыть меню');
+    }));
+  </script>
+</body>
+</html>
