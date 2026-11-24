@@ -224,9 +224,11 @@ def test_smm_profile_renders_on_mobile_and_navigation_works(
         assert page.locator(".service-card").count() == 3
         assert page.locator(".portfolio-card").count() == 3
         portfolio = page.locator("#portfolio").inner_text()
-        assert "Пример поста" in portfolio
-        assert "Макет карусели" in portfolio
-        assert "Обложка для Reels" in portfolio
+        assert "Концепт поста для фитнеса" in portfolio
+        assert "Карусель для beauty-бренда" in portfolio
+        assert "Обложка Reels для GameDev" in portfolio
+        assert page.locator("#portfolio .portfolio-image img").count() == 3
+        assert page.locator("#portfolio .portfolio-image img[alt]").count() == 3
         assert "Independent Digital Practice" in page.locator("#about").inner_text()
         assert "East West Fitness" in page.locator("#about").inner_text()
         case_text = page.locator("#case").inner_text()
