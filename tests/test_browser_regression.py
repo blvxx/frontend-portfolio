@@ -55,7 +55,7 @@ def open_local_page(
         reduced_motion="reduce",
     )
     page = context.new_page()
-    # External fonts and stock images are not part of the local UI regression.
+    # External fonts, scripts and stock images are not part of the local UI regression.
     page.route("https://**/*", lambda route: route.abort())
     return context, page
 
@@ -207,6 +207,7 @@ def test_domforma_request_form_validates_and_shows_demo_confirmation(
     finally:
         context.close()
 
+
 def test_smm_profile_renders_on_mobile_and_navigation_works(
     browser: Browser,
     site_url: str,
@@ -218,23 +219,30 @@ def test_smm_profile_renders_on_mobile_and_navigation_works(
         page.goto(f"{site_url}/smm/", wait_until="domcontentloaded")
         page.locator("h1").first.wait_for(state="visible")
 
-        assert "Контент-менеджер" in page.title()
-        assert "Independent Digital Practice" in page.locator("#experience").inner_text()
-        assert "East West Fitness" in page.locator("#experience").inner_text()
-        assert "Delivery Club" not in page.locator("#experience").inner_text()
-        assert "МГКИТ" in page.locator("#analytics").inner_text()
+        assert "SMM-специалист" in page.title()
+        assert "бренду расти" in page.locator("h1").inner_text()
+        assert page.locator(".service-card").count() == 3
+        assert page.locator(".portfolio-card").count() == 3
+        portfolio = page.locator("#portfolio").inner_text()
+        assert "Пример поста" in portfolio
+        assert "Макет карусели" in portfolio
+        assert "Обложка для Reels" in portfolio
+        assert "Independent Digital Practice" in page.locator("#about").inner_text()
+        assert "East West Fitness" in page.locator("#about").inner_text()
+        assert "20%" not in page.locator("#case").inner_text()
+        assert "5 часов" not in page.locator("#case").inner_text()
 
         has_horizontal_overflow = page.evaluate(
             "document.documentElement.scrollWidth > document.documentElement.clientWidth + 1"
         )
         assert not has_horizontal_overflow, "SMM page overflows a 390px viewport"
 
-        toggle = page.locator(".menu")
-        menu = page.locator("#mobile-menu")
+        toggle = page.locator(".menu-toggle")
+        menu = page.locator("#mobile-nav")
         toggle.click()
         assert toggle.get_attribute("aria-expanded") == "true"
         assert menu.is_visible()
-        menu.locator('a[href="#experience"]').click()
+        menu.locator('a[href="#portfolio"]').click()
         assert toggle.get_attribute("aria-expanded") == "false"
         assert page_errors == []
     finally:
