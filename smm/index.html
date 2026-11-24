@@ -3,389 +3,532 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#11130f">
-  <meta name="description" content="Артём Калинин — контент-менеджер и SMM-специалист. Контент-планы, тексты, визуальные материалы, администрирование сайтов и аналитика digital-каналов.">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Артём Калинин — SMM-специалист и контент-менеджер. Контент-стратегия, визуальные материалы, digital-каналы и аналитика.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Артём Калинин — Контент-менеджер / SMM-специалист">
-  <meta property="og:description" content="Контент-планы, тексты и визуалы, публикации на сайте, администрирование digital-каналов и анализ данных.">
+  <meta property="og:title" content="Артём Калинин — SMM и контент">
+  <meta property="og:description" content="Создаю контент, развиваю digital-каналы и оцениваю результат с помощью аналитики.">
   <meta property="og:url" content="https://blvxx.github.io/web-development-portfolio/smm/">
-  <title>Артём Калинин — Контент-менеджер / SMM-специалист</title>
+  <title>Артём Калинин — SMM-специалист / Контент-менеджер</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
-    :root{
-      --bg:#11130f;--bg2:#191c16;--panel:#20241d;--ink:#f3f2e9;--muted:#aaa99c;
-      --line:#34392d;--acid:#c8f169;--orange:#ff815e;--sand:#e8e1cd;--max:1160px;
-      --sans:Inter,Manrope,Arial,sans-serif;--mono:"SFMono-Regular",Consolas,monospace
+    :root {
+      --ink: #17211b;
+      --muted: #64716a;
+      --line: #e5ebe6;
+      --green: #c8f36b;
+      --green-dark: #365c31;
+      --mint: #edf8ee;
+      --blue: #eaf2ff;
+      --peach: #fff0e8;
+      --surface: #ffffff;
+      --page: #f7faf7;
+      --max: 1160px;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .wrap{width:min(var(--max),calc(100% - 52px));margin:auto}
-    .skip{position:absolute;left:-9999px;top:10px;background:var(--acid);color:#111;padding:10px;z-index:99}
-    .skip:focus{left:10px}
-    .header{position:sticky;top:0;z-index:30;background:#11130feF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
-    .header-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-weight:900;letter-spacing:-.07em;font-size:20px}
-    .brand i{font-style:normal;color:var(--acid)}
-    .nav{display:flex;gap:28px;margin-left:auto}
-    .nav a{font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-    .nav a:hover{color:var(--acid)}
-    .header-cta{font-size:11px;font-weight:800;border:1px solid #68734b;padding:10px 15px;border-radius:3px}
-    .header-cta:hover{background:var(--acid);color:#111;border-color:var(--acid)}
-    .menu{display:none;background:transparent;color:var(--ink);border:1px solid var(--line);padding:8px 11px}
-    .hero{padding:86px 0 54px;overflow:hidden;position:relative}
-    .hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;right:-190px;top:-250px;background:radial-gradient(circle,#c8f16917,transparent 68%);pointer-events:none}
-    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:74px;align-items:center;position:relative}
-    .eyebrow{font:10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--acid);margin:0 0 22px}
-    .eyebrow:before{content:"";display:inline-block;width:24px;height:1px;background:var(--acid);vertical-align:middle;margin:0 10px 3px 0}
-    h1{font-size:clamp(48px,6.6vw,82px);line-height:.98;letter-spacing:-.075em;margin:0;max-width:690px}
-    h1 span{color:var(--acid)}
-    .hero-lead{max-width:590px;color:#c2c1b5;font-size:16px;line-height:1.85;margin:28px 0 0}
-    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border:1px solid var(--acid);background:var(--acid);color:#171b10;font-size:11px;font-weight:900;letter-spacing:.04em}
-    .btn:hover{background:#d9ff8c;border-color:#d9ff8c}
-    .btn-ghost{background:transparent;color:var(--ink);border-color:#555d45}
-    .btn-ghost:hover{color:#111}
-    .hero-note{font:9px var(--mono);letter-spacing:.08em;color:#7f8575;margin-top:25px;text-transform:uppercase}
-    .visual{background:var(--acid);color:#171b10;min-height:450px;padding:23px;position:relative;overflow:hidden}
-    .visual:after{content:"";position:absolute;width:350px;height:350px;border:1px solid #1113;border-radius:50%;right:-80px;top:95px;box-shadow:0 0 0 34px #11108,0 0 0 68px #11106}
-    .visual-top{display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;position:relative;z-index:1}
-    .visual-main{position:relative;z-index:1;margin-top:68px}
-    .visual-mark{font-size:clamp(54px,8vw,105px);font-weight:950;letter-spacing:-.12em;line-height:.88}
-    .visual-mark span{color:var(--orange)}
-    .visual-caption{font:10px var(--mono);letter-spacing:.12em;margin-top:20px}
-    .visual-bottom{position:absolute;z-index:2;left:23px;right:23px;bottom:22px;border-top:1px solid #18200c55;padding-top:15px;display:flex;justify-content:space-between;gap:12px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-    .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
-    .tag{border:1px solid #3c4334;color:#c5c8b7;padding:7px 10px;font:9px var(--mono);letter-spacing:.05em}
-    section{padding:92px 0;border-top:1px solid var(--line)}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:38px;margin-bottom:38px}
-    .section-index{font:9px var(--mono);letter-spacing:.17em;color:var(--acid);text-transform:uppercase;margin:0 0 13px}
-    h2{font-size:clamp(34px,4.6vw,56px);line-height:1.03;letter-spacing:-.065em;margin:0}
-    .section-intro{max-width:430px;margin:0;color:var(--muted);font-size:12px;line-height:1.9}
-    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .pillar{background:var(--bg2);border:1px solid var(--line);padding:24px;min-height:220px}
-    .pillar-no{font:10px var(--mono);color:var(--acid)}
-    .pillar h3{font-size:20px;letter-spacing:-.04em;margin:28px 0 10px}
-    .pillar p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
-    .experience{background:#e9e5d9;color:#171912}
-    .experience .section-index{color:#596b28}
-    .experience .section-intro{color:#636357}
-    .timeline{display:grid;gap:13px}
-    .job{display:grid;grid-template-columns:220px 1fr;gap:34px;padding:27px 0;border-top:1px solid #c9c6b8}
-    .job-date{font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#626653}
-    .job-company{font-size:21px;letter-spacing:-.045em;font-weight:900;margin:0 0 5px}
-    .job-role{font-size:11px;font-weight:800;color:#65733b;margin:0 0 15px}
-    .job ul{margin:0;padding-left:18px;display:grid;gap:7px;color:#55574e;font-size:12px;line-height:1.75}
-    .job li::marker{color:#758a35}
-    .case{background:var(--bg2)}
-    .case-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:16px}
-    .case-poster{background:#d3ef8b;color:#1c2412;padding:28px;min-height:440px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-    .case-poster:after{content:"";position:absolute;width:340px;height:340px;border:1px solid #17220c55;border-radius:50%;right:-115px;top:90px;box-shadow:0 0 0 32px #17220c0b,0 0 0 64px #17220c08}
-    .poster-top,.poster-bottom,.poster-content{position:relative;z-index:1}
-    .poster-top{display:flex;justify-content:space-between;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-    .poster-label{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase}
-    .poster-title{font-size:clamp(46px,6vw,75px);font-weight:950;line-height:.88;letter-spacing:-.095em;margin:15px 0}
-    .poster-sub{font-size:12px;font-weight:700;max-width:200px}
-    .poster-bottom{border-top:1px solid #1c24125c;padding-top:13px;font:9px var(--mono);letter-spacing:.07em}
-    .case-content{border:1px solid var(--line);padding:29px}
-    .case-kicker{font:9px var(--mono);letter-spacing:.15em;color:var(--acid);text-transform:uppercase}
-    .case-content h3{font-size:27px;line-height:1.12;letter-spacing:-.06em;margin:17px 0}
-    .case-content>p{font-size:12px;color:var(--muted);line-height:1.85}
-    .case-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
-    .case-item{border-top:1px solid var(--line);padding-top:11px}
-    .case-item b{display:block;font-size:11px;color:var(--ink);margin-bottom:5px}
-    .case-item span{display:block;color:var(--muted);font-size:10px;line-height:1.7}
-    .rebuild-note{border-left:2px solid var(--orange);padding:12px 14px;background:#ff815e12;color:#c9b7aa;font-size:10px;line-height:1.8;margin-top:23px}
-    .content-system{background:#e9e5d9;color:#171912}
-    .content-system .section-index{color:#596b28}
-    .content-system .section-intro{color:#636357}
-    .content-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-    .content-card{background:#f6f3e9;border:1px solid #d2cdbd;padding:19px;min-height:215px}
-    .content-card small{font:9px var(--mono);letter-spacing:.1em;color:#687a36}
-    .content-card h3{font-size:16px;line-height:1.2;letter-spacing:-.035em;margin:24px 0 9px}
-    .content-card p{font-size:10px;line-height:1.75;color:#66665b;margin:0}
-    .content-label{display:inline-block;margin-top:15px;font:8px var(--mono);color:#515f2b;border:1px solid #c5cba9;padding:5px 7px}
-    .analytics-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .analytics-card{border:1px solid var(--line);padding:24px}
-    .analytics-card h3{font-size:19px;margin:0 0 8px;letter-spacing:-.04em}
-    .analytics-card p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}
-    .metric-list{display:grid;gap:9px;margin-top:20px}
-    .metric{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:9px;font-size:10px}
-    .metric span:first-child{color:#dce2d0}.metric span:last-child{color:#98a084;text-align:right}
-    .bar-list{display:grid;gap:14px;margin-top:21px}
-    .bar-row{display:grid;grid-template-columns:112px 1fr;align-items:center;gap:12px;font-size:10px;color:#c4c7b9}
-    .bar-track{height:7px;background:#363d30;position:relative;overflow:hidden}
-    .bar-fill{height:100%;background:var(--acid)}
-    .bar-row:nth-child(2) .bar-fill{width:78%}.bar-row:nth-child(3) .bar-fill{width:60%}.bar-row:nth-child(4) .bar-fill{width:45%}
-    .bar-row:first-child .bar-fill{width:92%}
-    .bar-note{font:9px var(--mono);color:#7e8872;margin-top:17px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:29px}
-    .skill{border:1px solid #46503a;padding:9px 12px;color:#d5d9c9;font-size:10px}
-    .tool-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-    .tool-tag{border:1px solid #46503a;padding:8px 11px;color:#d5d9c9;font-size:10px}
-    .education-note{margin-top:28px;padding:20px 0;border-top:1px solid var(--line);display:flex;align-items:flex-start;gap:28px}
-    .education-note small{font:9px var(--mono);letter-spacing:.12em;color:var(--acid);min-width:150px}
-    .education-note p{margin:0;color:#c5c8b7;font-size:11px;line-height:1.8}
-    .contact{background:var(--acid);color:#171b10;border:0;padding:76px 0}
-    .contact .section-index{color:#465725}
-    .contact-layout{display:flex;justify-content:space-between;align-items:end;gap:32px}
-    .contact h2{max-width:650px}
-    .contact p{max-width:410px;color:#485238;font-size:12px;line-height:1.8}
-    .contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}
-    .contact-link{display:inline-flex;padding:11px 14px;border:1px solid #5f7042;font-size:10px;font-weight:900}
-    .contact-link:hover{background:#171b10;color:var(--acid);border-color:#171b10}
-    footer{padding:23px 0;color:#777c70;font:9px var(--mono);letter-spacing:.05em}
-    footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .mobile-menu{display:none}
-    @media(max-width:900px){
-      .hero-grid{gap:35px}.nav{gap:15px}.job{grid-template-columns:170px 1fr}.content-grid{grid-template-columns:repeat(2,1fr)}
-      .case-grid{grid-template-columns:.8fr 1.2fr}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font: 15px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
-    @media(max-width:700px){
-      .wrap{width:min(var(--max),calc(100% - 34px))}
-      .header-inner{height:66px}.nav,.header-cta{display:none}.menu{display:block}
-      .mobile-menu{display:none;position:absolute;top:66px;left:0;right:0;background:#171a14;border-bottom:1px solid var(--line);padding:12px 17px}
-      .mobile-menu.open{display:grid;gap:0}
-      .mobile-menu a{padding:12px 3px;border-bottom:1px solid var(--line);font:10px var(--mono);text-transform:uppercase;color:var(--muted)}
-      .hero{padding:61px 0 38px}.hero-grid{grid-template-columns:1fr;gap:34px}h1{font-size:clamp(47px,13vw,72px)}
-      .hero-lead{font-size:14px}.visual{min-height:340px}.visual-main{margin-top:50px}
-      section{padding:68px 0}.section-head{display:block;margin-bottom:27px}.section-intro{margin-top:16px}
-      .pillars{grid-template-columns:1fr}.pillar{min-height:0}.pillar h3{margin-top:18px}
-      .job{grid-template-columns:1fr;gap:10px;padding:22px 0}.job-company{font-size:19px}
-      .case-grid{grid-template-columns:1fr}.case-poster{min-height:320px}.case-content{padding:22px}
-      .content-grid{grid-template-columns:1fr 1fr}.content-card{min-height:200px;padding:15px}
-      .analytics-grid{grid-template-columns:1fr}.contact-layout{display:block}.contact p{margin-top:18px}
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .page-shell { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .skip-link { position: absolute; left: -9999px; top: 10px; z-index: 100; padding: 10px 14px; background: var(--green); color: var(--ink); border-radius: 12px; }
+    .skip-link:focus { left: 12px; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgb(255 255 255 / 92%); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-size: 21px; line-height: 1; font-weight: 850; letter-spacing: -.07em; }
+    .brand-mark { display: inline-grid; width: 34px; height: 34px; margin-right: 8px; place-items: center; border-radius: 12px; background: var(--green); letter-spacing: -.08em; }
+    .desktop-nav { display: flex; align-items: center; gap: 27px; margin-left: auto; }
+    .desktop-nav a { color: #5e6b63; font-size: 12px; font-weight: 650; transition: color .2s ease; }
+    .desktop-nav a:hover { color: var(--green-dark); }
+    .nav-cta { display: inline-flex; min-height: 43px; align-items: center; justify-content: center; padding: 0 17px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 12px; font-weight: 750; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .nav-cta:hover { background: #304338; transform: translateY(-2px); box-shadow: 0 10px 24px #1e34251c; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 12px; width: 42px; height: 42px; cursor: pointer; }
+    .mobile-nav { display: none; padding: 8px 0 16px; }
+    .mobile-nav.open { display: grid; gap: 4px; }
+    .mobile-nav a { padding: 10px 4px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    .hero { padding: 76px 0 88px; overflow: hidden; position: relative; }
+    .hero:before { content: ""; position: absolute; width: 600px; height: 600px; right: -170px; top: -275px; background: radial-gradient(circle, #d8f9a766 0, #d8f9a600 68%); pointer-events: none; }
+    .hero-layout { display: grid; grid-template-columns: 1.06fr .94fr; align-items: center; gap: 58px; position: relative; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 7px 12px; border: 1px solid #dcebdc; border-radius: 99px; background: #fff; color: #55724e; font-size: 11px; font-weight: 750; letter-spacing: .035em; }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #8bca51; box-shadow: 0 0 0 4px #8bca5120; }
+    h1 { max-width: 690px; margin: 22px 0 0; color: var(--ink); font-size: clamp(44px, 6.4vw, 76px); line-height: .99; letter-spacing: -.075em; font-weight: 850; }
+    h1 span { color: #6b9a44; }
+    .hero-copy { max-width: 570px; margin: 24px 0 0; color: #66736c; font-size: 16px; line-height: 1.8; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .primary-button, .secondary-button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 10px; padding: 0 21px; border-radius: 999px; font-size: 13px; font-weight: 750; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .primary-button { background: var(--ink); color: white; box-shadow: 0 10px 24px #17211b20; }
+    .primary-button:hover { transform: translateY(-3px); box-shadow: 0 14px 30px #17211b2b; background: #304338; }
+    .secondary-button { border: 1px solid #dce5de; background: white; color: #34423a; }
+    .secondary-button:hover { transform: translateY(-3px); box-shadow: 0 12px 25px #26382c12; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 9px 17px; margin-top: 28px; color: #77847c; font-size: 11px; }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+    .hero-meta b { color: #34453a; font-weight: 750; }
+    .hero-art { position: relative; min-height: 430px; padding: 25px; border-radius: 32px; background: linear-gradient(145deg, #eaf7dd 0%, #f0f7ee 52%, #eaf1ff 100%); box-shadow: 0 24px 65px #2f543013; overflow: hidden; }
+    .hero-art:before, .hero-art:after { content: ""; position: absolute; border: 1px solid #ffffffa8; border-radius: 50%; pointer-events: none; }
+    .hero-art:before { width: 380px; height: 380px; right: -130px; top: 100px; }
+    .hero-art:after { width: 270px; height: 270px; right: -75px; top: 155px; }
+    .art-top { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; color: #63775f; font-size: 10px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .art-window { position: relative; z-index: 2; width: min(100%, 360px); margin: 40px auto 0; padding: 19px; border: 1px solid #ffffff; border-radius: 22px; background: #ffffffed; box-shadow: 0 15px 45px #354a3216; transform: rotate(-2deg); transition: transform .35s ease; }
+    .hero-art:hover .art-window { transform: rotate(0) translateY(-4px); }
+    .window-bar { display: flex; align-items: center; gap: 6px; padding-bottom: 15px; border-bottom: 1px solid #edf0ed; }
+    .window-dot { width: 7px; height: 7px; border-radius: 50%; background: #d4e1d3; }
+    .window-title { margin-left: auto; color: #8b978e; font-size: 9px; }
+    .content-preview { display: grid; grid-template-columns: 1fr 82px; gap: 13px; align-items: center; padding: 19px 0 8px; }
+    .preview-kicker { color: #79a252; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .preview-heading { margin: 7px 0 5px; color: #24352a; font-size: 23px; line-height: 1.07; font-weight: 850; letter-spacing: -.06em; }
+    .preview-copy { margin: 0; color: #879188; font-size: 9px; line-height: 1.6; }
+    .preview-shape { display: grid; width: 82px; height: 100px; place-items: center; border-radius: 17px; background: linear-gradient(145deg, #d5efb8, #a8cf83); color: #456333; }
+    .preview-footer { display: flex; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid #edf0ed; color: #91a096; font-size: 8px; font-weight: 700; letter-spacing: .08em; }
+    .art-note { position: absolute; z-index: 3; right: 18px; bottom: 22px; padding: 11px 14px; border: 1px solid #fff; border-radius: 14px; background: #fff; color: #657469; font-size: 10px; font-weight: 750; box-shadow: 0 10px 25px #26382c10; }
+    .section { padding: 88px 0; }
+    .section-white { background: #fff; }
+    .section-soft { background: #f3f7f2; }
+    .section-heading { max-width: 690px; margin: 0 auto 40px; text-align: center; }
+    .section-kicker { margin: 0 0 11px; color: #78a44c; font-size: 10px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { margin: 0; color: var(--ink); font-size: clamp(33px, 4.5vw, 50px); line-height: 1.04; letter-spacing: -.065em; font-weight: 850; }
+    .section-intro { max-width: 590px; margin: 15px auto 0; color: #78847d; font-size: 14px; line-height: 1.8; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { min-height: 225px; padding: 27px; border: 1px solid #edf1ed; border-radius: 23px; background: #fff; box-shadow: 0 12px 35px #30473308; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .service-card:hover { transform: translateY(-7px); border-color: #dcebd4; box-shadow: 0 22px 45px #30473312; }
+    .service-icon { display: grid; width: 49px; height: 49px; place-items: center; border-radius: 16px; color: #4b7543; background: #edf7e8; }
+    .service-card:nth-child(2) .service-icon { background: #eaf1ff; color: #5676ad; }
+    .service-card:nth-child(3) .service-icon { background: #fff0e8; color: #b87855; }
+    .service-card h3 { margin: 23px 0 8px; color: #27372d; font-size: 21px; font-weight: 800; letter-spacing: -.045em; }
+    .service-card p { max-width: 310px; margin: 0; color: #7a867f; font-size: 13px; line-height: 1.8; }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .portfolio-card { overflow: hidden; border: 1px solid #e9eee9; border-radius: 22px; background: #fff; box-shadow: 0 12px 35px #30473308; transition: transform .25s ease, box-shadow .25s ease; }
+    .portfolio-card:hover { transform: translateY(-6px); box-shadow: 0 22px 44px #30473313; }
+    .placeholder { position: relative; display: grid; aspect-ratio: 4 / 3; place-items: center; overflow: hidden; background: linear-gradient(135deg, #edf0ed, #e3e9e4); color: #a4b0a7; }
+    .placeholder:before { content: ""; position: absolute; width: 70%; height: 70%; border: 1px dashed #c3cec5; border-radius: 25px; }
+    .placeholder-icon { position: relative; display: grid; width: 66px; height: 66px; place-items: center; border: 1px solid #d8e0d9; border-radius: 21px; background: #f8faf8; color: #97a59a; box-shadow: 0 9px 22px #43594a0b; }
+    .placeholder-caption { position: absolute; bottom: 18px; left: 0; right: 0; color: #8a978e; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+    .portfolio-body { padding: 19px 21px 21px; }
+    .portfolio-title { margin: 0; color: #2c3b31; font-size: 18px; font-weight: 800; letter-spacing: -.04em; }
+    .portfolio-desc { margin: 7px 0 0; color: #7a867e; font-size: 12px; line-height: 1.7; }
+    .portfolio-tag { display: inline-flex; margin-top: 14px; padding: 6px 10px; border-radius: 99px; background: #f1f6ef; color: #668253; font-size: 9px; font-weight: 800; letter-spacing: .04em; }
+    .portfolio-note { max-width: 690px; margin: 25px auto 0; color: #8a958d; font-size: 11px; line-height: 1.75; text-align: center; }
+    .case-layout { display: grid; grid-template-columns: .88fr 1.12fr; gap: 22px; align-items: stretch; }
+    .case-visual { display: flex; min-height: 420px; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 29px; border-radius: 26px; background: linear-gradient(145deg, #d9f1c1 0%, #eef7e7 60%, #e5f0ff 100%); position: relative; }
+    .case-visual:after { content: ""; position: absolute; width: 340px; height: 340px; right: -140px; bottom: -115px; border: 1px solid #fff; border-radius: 50%; box-shadow: 0 0 0 32px #ffffff50, 0 0 0 64px #ffffff38; }
+    .case-visual-top, .case-visual-main, .case-visual-bottom { position: relative; z-index: 1; }
+    .case-visual-top, .case-visual-bottom { display: flex; justify-content: space-between; gap: 12px; color: #67805d; font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .case-visual-main { margin: auto 0; }
+    .case-eyebrow { color: #688c52; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .case-wordmark { margin: 12px 0; color: #263b2a; font-size: clamp(50px, 6vw, 76px); line-height: .86; font-weight: 900; letter-spacing: -.09em; }
+    .case-sub { max-width: 220px; margin: 0; color: #64775e; font-size: 13px; font-weight: 650; }
+    .case-visual-bottom { border-top: 1px solid #8aab7855; padding-top: 14px; }
+    .case-copy { padding: 34px; border: 1px solid #e7eee7; border-radius: 26px; background: white; box-shadow: 0 14px 36px #30473308; }
+    .case-chip { display: inline-flex; padding: 7px 11px; border-radius: 99px; background: #edf7e8; color: #5b8149; font-size: 10px; font-weight: 850; }
+    .case-copy h3 { margin: 17px 0 12px; color: #27372d; font-size: clamp(25px, 3vw, 34px); line-height: 1.08; font-weight: 850; letter-spacing: -.06em; }
+    .case-copy > p { margin: 0; color: #758279; font-size: 13px; line-height: 1.85; }
+    .case-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 26px; }
+    .case-fact { padding: 15px 13px; border-radius: 16px; background: #f6f9f5; }
+    .case-fact b { display: block; color: #41683a; font-size: 23px; line-height: 1.1; font-weight: 850; letter-spacing: -.05em; }
+    .case-fact span { display: block; margin-top: 6px; color: #7b897e; font-size: 10px; line-height: 1.5; }
+    .case-details { display: grid; gap: 12px; margin-top: 22px; }
+    .case-detail { display: flex; align-items: flex-start; gap: 10px; color: #66736a; font-size: 12px; line-height: 1.7; }
+    .check-dot { display: grid; flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; place-items: center; border-radius: 50%; background: #edf7e8; color: #67924d; }
+    .honesty-note { margin-top: 20px; padding: 13px 15px; border-left: 3px solid #e6b27b; border-radius: 0 12px 12px 0; background: #fff8ef; color: #88765f; font-size: 10px; line-height: 1.7; }
+    .advantage-panel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: center; padding: 36px; border: 1px solid #e6eee5; border-radius: 28px; background: white; box-shadow: 0 16px 45px #30473308; }
+    .advantage-panel h2 { font-size: clamp(32px, 4vw, 46px); }
+    .advantage-panel .section-intro { margin: 14px 0 0; }
+    .advantage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .advantage-card { padding: 21px; border-radius: 19px; background: #f4f8f2; }
+    .advantage-card:nth-child(2) { background: #f1f5ff; }
+    .advantage-card:nth-child(3) { background: #fff4ed; }
+    .advantage-card:nth-child(4) { background: #f8f5ff; }
+    .advantage-icon { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 13px; background: #fff; color: #587e48; }
+    .advantage-card h3 { margin: 12px 0 5px; color: #344238; font-size: 15px; font-weight: 800; }
+    .advantage-card p { margin: 0; color: #7b887f; font-size: 11px; line-height: 1.65; }
+    .experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .experience-card { padding: 23px 25px; border: 1px solid #e9eee9; border-radius: 20px; background: white; }
+    .experience-date { color: #7b9a68; font-size: 10px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .experience-card h3 { margin: 9px 0 4px; color: #2e3d33; font-size: 19px; font-weight: 850; letter-spacing: -.04em; }
+    .experience-role { color: #718077; font-size: 11px; font-weight: 700; }
+    .experience-card p { margin: 12px 0 0; color: #7c8980; font-size: 12px; line-height: 1.75; }
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 27px; }
+    .skill { padding: 8px 12px; border: 1px solid #e4ebe4; border-radius: 99px; background: #fff; color: #65736a; font-size: 10px; font-weight: 650; }
+    .education { margin-top: 22px; color: #859188; font-size: 11px; text-align: center; }
+    .contact-section { padding: 70px 0; background: #e9f4e2; }
+    .contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .contact-panel h2 { max-width: 640px; }
+    .contact-panel p { max-width: 500px; margin: 14px 0 0; color: #697968; font-size: 13px; line-height: 1.8; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .contact-actions a { display: inline-flex; min-height: 43px; align-items: center; justify-content: center; padding: 0 15px; border: 1px solid #cbdcc5; border-radius: 99px; color: #40583a; font-size: 11px; font-weight: 800; transition: background .2s ease, transform .2s ease; }
+    .contact-actions a:hover { transform: translateY(-2px); background: #fff; }
+    .contact-cta { display: inline-flex; flex: 0 0 auto; min-height: 54px; align-items: center; justify-content: center; padding: 0 23px; border-radius: 99px; background: var(--ink); color: white; font-size: 13px; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease; }
+    .contact-cta:hover { transform: translateY(-3px); box-shadow: 0 13px 28px #17211b22; }
+    .site-footer { padding: 23px 0; background: white; color: #89958d; font-size: 10px; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-links a:hover { color: #456e3e; }
+    @media (max-width: 900px) {
+      .hero-layout { gap: 30px; }
+      .desktop-nav { gap: 15px; }
+      .hero-art { min-height: 390px; }
+      .case-layout { grid-template-columns: .8fr 1.2fr; }
+      .advantage-panel { grid-template-columns: 1fr; }
     }
-    @media(max-width:420px){
-      .content-grid,.case-list{grid-template-columns:1fr}.content-card{min-height:170px}
-      .visual-bottom{font-size:8px}.bar-row{grid-template-columns:94px 1fr}
-      .hero-actions .btn{width:100%}
+    @media (max-width: 700px) {
+      .page-shell { width: min(var(--max), calc(100% - 34px)); }
+      .header-inner { min-height: 66px; }
+      .desktop-nav, .header-cta { display: none; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .hero { padding: 55px 0 65px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 34px; }
+      h1 { font-size: clamp(45px, 12vw, 66px); }
+      .hero-copy { font-size: 14px; }
+      .hero-art { min-height: 350px; }
+      .section { padding: 68px 0; }
+      .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 0; }
+      .case-layout { grid-template-columns: 1fr; }
+      .case-visual { min-height: 300px; }
+      .case-copy { padding: 25px; }
+      .advantage-panel { padding: 25px; }
+      .experience-grid { grid-template-columns: 1fr; }
+      .contact-panel { display: block; }
+      .contact-cta { margin-top: 24px; }
     }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+    @media (max-width: 430px) {
+      .hero-actions > a { width: 100%; }
+      .case-facts { grid-template-columns: 1fr 1fr; }
+      .advantage-grid { grid-template-columns: 1fr 1fr; }
+      .advantage-card { padding: 15px; }
+      .contact-actions a { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Перейти к содержимому</a>
-  <header class="header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Артём Калинин">АК<i>.</i></a>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#about">Компетенции</a><a href="#experience">Опыт</a><a href="#case">Кейс</a><a href="#content">Пример контента</a><a href="#analytics">Навыки</a>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="page-shell header-inner container mx-auto flex items-center justify-between">
+      <a class="brand flex items-center" href="#top" aria-label="Артём Калинин — начало страницы">
+        <span class="brand-mark">АК</span> Артём Калинин
+      </a>
+      <nav class="desktop-nav flex items-center" aria-label="Основная навигация">
+        <a href="#services">Что я делаю</a>
+        <a href="#portfolio">Примеры</a>
+        <a href="#case">Кейс</a>
+        <a href="#about">Обо мне</a>
       </nav>
-      <a class="header-cta" href="#contact">Связаться ↗</a>
-      <button class="menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">☰</button>
+      <a class="nav-cta header-cta" href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">Связаться в Telegram ↗</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация">
-      <a href="#about">Компетенции</a><a href="#experience">Опыт</a><a href="#case">Кейс</a><a href="#content">Пример контента</a><a href="#analytics">Навыки</a><a href="#contact">Контакты</a>
+    <nav class="page-shell mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+      <a href="#services">Что я делаю</a>
+      <a href="#portfolio">Визуальные примеры</a>
+      <a href="#case">Кейс</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contact">Контакты</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="wrap">
-        <div class="hero-grid">
+      <div class="page-shell hero-layout grid md:grid-cols-2 items-center gap-12">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> SMM · Контент · Digital</div>
+          <h1>Контент, который помогает <span>бренду расти.</span></h1>
+          <p class="hero-copy">Создаю контент-стратегии, готовлю тексты и визуальные материалы, развиваю digital-каналы. А аналитику и автоматизацию использую, чтобы решения опирались не только на идеи, но и на данные.</p>
+          <div class="hero-actions flex flex-wrap gap-3">
+            <a class="primary-button" href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">
+              Связаться в Telegram
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="secondary-button" href="#portfolio">Посмотреть примеры ↓</a>
+          </div>
+          <div class="hero-meta">
+            <span><b>2 года 8 месяцев</b> опыта</span>
+            <span>Москва</span>
+            <span>Полная занятость</span>
+          </div>
+        </div>
+
+        <div class="hero-art rounded-3xl shadow-xl" aria-label="Декоративный пример контент-плана">
+          <div class="art-top"><span>Контент в системе</span><span>01 / 04</span></div>
+          <div class="art-window">
+            <div class="window-bar"><i class="window-dot"></i><i class="window-dot"></i><i class="window-dot"></i><span class="window-title">CONTENT BOARD</span></div>
+            <div class="content-preview">
+              <div>
+                <div class="preview-kicker">Неделя · план</div>
+                <div class="preview-heading">От идеи<br>до публикации</div>
+                <p class="preview-copy">Тема · формат · визуал · цель</p>
+              </div>
+              <div class="preview-shape">
+                <svg width="33" height="33" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              </div>
+            </div>
+            <div class="preview-footer"><span>ПЛАНИРУЮ</span><span>СОЗДАЮ</span><span>АНАЛИЗИРУЮ</span></div>
+          </div>
+          <div class="art-note">Идея + визуал + смысл</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="services">
+      <div class="page-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Чем могу помочь</p>
+          <h2>Контент — это больше,<br>чем просто публикации</h2>
+          <p class="section-intro">Помогаю бренду говорить с аудиторией понятным языком, выглядеть цельно и видеть, что действительно работает.</p>
+        </div>
+        <div class="services-grid grid md:grid-cols-3 gap-5">
+          <article class="service-card group rounded-2xl shadow-sm hover:-translate-y-1 transition">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2M8 3.8l1.3 2M16 3.8l-1.3 2"/></svg>
+            </div>
+            <h3>Стратегия</h3>
+            <p>Изучаю аудиторию и конкурентов, формирую темы, рубрики и контент-план. Помогаю связать публикации с задачами бренда.</p>
+          </article>
+          <article class="service-card group rounded-2xl shadow-sm hover:-translate-y-1 transition">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9h10M7 13h7M7 17h4"/></svg>
+            </div>
+            <h3>Контент</h3>
+            <p>Пишу тексты, создаю баннеры и афиши, подготавливаю материалы для соцсетей и наполняю сайты актуальной информацией.</p>
+          </article>
+          <article class="service-card group rounded-2xl shadow-sm hover:-translate-y-1 transition">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 6-7"/><path d="M16 6h4v4"/></svg>
+            </div>
+            <h3>Аналитика</h3>
+            <p>Отслеживаю вовлечённость, изучаю трафик и поведение пользователей. Использую данные, чтобы находить возможности для улучшений.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="portfolio">
+      <div class="page-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Визуальная подача</p>
+          <h2>Идеи, которые можно<br>превратить в контент</h2>
+          <p class="section-intro">Несколько демонстрационных форматов, показывающих направление визуальной работы и варианты подачи материалов.</p>
+        </div>
+        <div class="portfolio-grid grid md:grid-cols-3 gap-5">
+          <article class="portfolio-card rounded-2xl shadow-sm hover:-translate-y-1 transition">
+            <div class="placeholder" role="img" aria-label="Плейсхолдер изображения для примера поста">
+              <div class="placeholder-icon">
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              </div>
+              <span class="placeholder-caption">Image placeholder · 01</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Пример поста</h3>
+              <p class="portfolio-desc">Одиночная публикация: заголовок, ключевая мысль и понятный призыв к действию.</p>
+              <span class="portfolio-tag">Демонстрационный концепт</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card rounded-2xl shadow-sm hover:-translate-y-1 transition">
+            <div class="placeholder" role="img" aria-label="Плейсхолдер изображения для макета карусели">
+              <div class="placeholder-icon">
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="14" height="16" rx="2"/><path d="M3 17V5a2 2 0 0 1 2-2h11M10 10h6M10 14h6"/></svg>
+              </div>
+              <span class="placeholder-caption">Image placeholder · 02</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Макет карусели</h3>
+              <p class="portfolio-desc">Серия слайдов, которая последовательно раскрывает тему и удерживает внимание.</p>
+              <span class="portfolio-tag">Демонстрационный концепт</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card rounded-2xl shadow-sm hover:-translate-y-1 transition">
+            <div class="placeholder" role="img" aria-label="Плейсхолдер изображения для обложки Reels">
+              <div class="placeholder-icon">
+                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m10 8 6 4-6 4zM3 8h18M8 3l3 5M16 3l-3 5"/></svg>
+              </div>
+              <span class="placeholder-caption">Image placeholder · 03</span>
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Обложка для Reels</h3>
+              <p class="portfolio-desc">Вертикальная обложка с коротким заголовком, чтобы тема ролика считывалась сразу.</p>
+              <span class="portfolio-tag">Демонстрационный концепт</span>
+            </div>
+          </article>
+        </div>
+        <p class="portfolio-note">Это концептуальные примеры структуры портфолио, а не реальные опубликованные материалы клиентов. Вместо изображений пока оставлены аккуратные заглушки — их можно заменить готовыми креативами.</p>
+      </div>
+    </section>
+
+    <section class="section section-white" id="case">
+      <div class="page-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Опыт на практике</p>
+          <h2>East West Fitness</h2>
+          <p class="section-intro">Работа с digital-присутствием фитнес-клуба: информация для клиентов, контент сайта и анализ пользовательского поведения.</p>
+        </div>
+        <div class="case-layout grid md:grid-cols-2 gap-6">
+          <div class="case-visual">
+            <div class="case-visual-top"><span>East West Fitness</span><span>2022—2024</span></div>
+            <div class="case-visual-main">
+              <div class="case-eyebrow">Локальный digital</div>
+              <div class="case-wordmark">MOVE<br>BETTER.</div>
+              <p class="case-sub">Актуальная информация. Полезный контент. Понимание аудитории.</p>
+            </div>
+            <div class="case-visual-bottom"><span>ЯНДЕКС КАРТЫ</span><span>САЙТ</span><span>АНАЛИТИКА</span></div>
+          </div>
+          <div class="case-copy">
+            <span class="case-chip">SMM-менеджер / Администратор digital-каналов</span>
+            <h3>Помогал клубу оставаться заметным и понятным для клиентов в онлайне.</h3>
+            <p>Обновлял карточку организации на Яндекс Картах, работал с отзывами и репутацией. Создавал и публиковал контент на корпоративном сайте, а также анализировал посещаемость и поведение пользователей, чтобы находить точки улучшения пользовательского опыта.</p>
+
+            <div class="case-facts">
+              <div class="case-fact"><b>2 года</b><span>работы в East West Fitness</span></div>
+              <div class="case-fact"><b>2 канала</b><span>Яндекс Карты и сайт</span></div>
+              <div class="case-fact"><b>Python</b><span>автоматизация выгрузки показателей</span></div>
+            </div>
+
+            <div class="case-details">
+              <div class="case-detail"><span class="check-dot">✓</span><span>Поддерживал актуальность карточки клуба и отвечал за работу с отзывами.</span></div>
+              <div class="case-detail"><span class="check-dot">✓</span><span>Готовил и публиковал контент на корпоративном сайте.</span></div>
+              <div class="case-detail"><span class="check-dot">✓</span><span>Автоматизировал выгрузку маркетинговых показателей и анализировал трафик.</span></div>
+            </div>
+            <div class="honesty-note">В резюме не указаны подтверждённые проценты роста переходов или часы сэкономленного времени. Поэтому здесь показаны реальные задачи и инструменты, без придуманных KPI.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="advantage">
+      <div class="page-shell">
+        <div class="advantage-panel">
           <div>
-            <p class="eyebrow">CONTENT MANAGER / SMM / DIGITAL CONTENT</p>
-            <h1>Контент,<br>который работает<br><span>на задачи бизнеса.</span></h1>
-            <p class="hero-lead">Я Артём Калинин, контент-менеджер и SMM-специалист. Разрабатываю контент-планы, готовлю тексты и визуальные материалы, публикую контент на цифровых площадках. Сочетаю работу с материалами с анализом аудитории, трафика и эффективности публикаций.</p>
-            <div class="hero-actions">
-              <a class="btn" href="#experience">Опыт работы ↘</a>
-              <a class="btn btn-ghost" href="#contact">Связаться</a>
-            </div>
-            <div class="hero-tags"><span class="tag">CONTENT MANAGEMENT</span><span class="tag">SMM</span><span class="tag">WEBSITE CONTENT</span><span class="tag">ANALYTICS</span></div>
-            <p class="hero-note">2 года 8 месяцев опыта · Москва · Полная занятость · Работа на месте работодателя</p>
+            <p class="section-kicker">Моё преимущество</p>
+            <h2>Креативность —<br>с опорой на данные</h2>
+            <p class="section-intro">Использую современные инструменты, чтобы быстрее проходить путь от идеи до готового материала и внимательнее работать с результатами.</p>
           </div>
-          <div class="visual" aria-label="Визуальная концепция контент-менеджмента">
-            <div class="visual-top"><span>Content workflow / 2026</span><span>01 — 04</span></div>
-            <div class="visual-main">
-              <div class="visual-mark">CON<span>·</span><br>TENT</div>
-              <div class="visual-caption">PLAN / CREATE / PUBLISH / ANALYZE</div>
-            </div>
-            <div class="visual-bottom"><span>IDEA → MATERIAL</span><span>CONTENT WITH PURPOSE</span></div>
+          <div class="advantage-grid grid grid-cols-2 gap-3">
+            <article class="advantage-card">
+              <div class="advantage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16Z"/></svg>
+              </div>
+              <h3>Midjourney и DALL·E</h3>
+              <p>Помогают искать визуальные идеи и создавать основу для креативов.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 7h8M8 12h8M8 17h5"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+              </div>
+              <h3>ChatGPT и Claude</h3>
+              <p>Для генерации идей, черновиков и оптимизации контент-производства.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
+              </div>
+              <h3>Python</h3>
+              <p>Для сбора и обработки данных, автоматизации выгрузок и анализа аудитории.</p>
+            </article>
+            <article class="advantage-card">
+              <div class="advantage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 6-7"/></svg>
+              </div>
+              <h3>Google Sheets</h3>
+              <p>Для систематизации показателей и отслеживания динамики публикаций.</p>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="section-index">01 / Core skills</p><h2>Планирую.<br>Создаю. Публикую.</h2></div>
-          <p class="section-intro">Контентная работа для меня — это полный цикл от изучения аудитории и подготовки материалов до публикации на цифровых площадках и анализа эффективности. В опыте есть и контент корпоративного сайта, и самостоятельные проекты.</p>
+    <section class="section section-white" id="about">
+      <div class="page-shell">
+        <div class="section-heading">
+          <p class="section-kicker">Немного обо мне</p>
+          <h2>Опыт, на который<br>можно опереться</h2>
         </div>
-        <div class="pillars">
-          <article class="pillar"><span class="pillar-no">01 / CONTENT</span><h3>Контент и публикации</h3><p>Разработка контент-планов и стратегий продвижения, подготовка текстов, баннеров и афиш, обработка изображений и видео, наполнение сайта материалами.</p></article>
-          <article class="pillar"><span class="pillar-no">02 / DIGITAL CHANNELS</span><h3>Цифровые каналы</h3><p>Администрирование корпоративного сайта и карточки организации на Яндекс Картах, актуализация информации, работа с отзывами и поддержание digital-присутствия компании.</p></article>
-          <article class="pillar"><span class="pillar-no">03 / ANALYTICS</span><h3>Аналитика и данные</h3><p>Анализ аудитории и конкурентов, сбор и обработка данных на Python, оценка ER и эффективности публикаций, анализ посещаемости и поведения пользователей сайта.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience" id="experience">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="section-index">02 / Experience</p><h2>Опыт работы</h2></div>
-          <p class="section-intro">Опыт ведения digital-каналов фитнес-клуба и самостоятельной работы над контент-стратегиями для собственных GameDev-проектов.</p>
-        </div>
-        <div class="timeline">
-          <article class="job">
-            <div class="job-date">Апрель 2026 — настоящее время</div>
-            <div>
-              <h3 class="job-company">Independent Digital Practice</h3>
-              <p class="job-role">SMM-специалист / Контент-стратег · Самостоятельная проектная деятельность</p>
-              <ul>
-                <li>Разрабатываю контент-стратегии и планы продвижения для собственных проектов в сфере GameDev.</li>
-                <li>Анализирую конкурентов и целевую аудиторию; использую Python для сбора и обработки данных.</li>
-                <li>Создаю визуальные материалы: баннеры, афиши и рекламные креативы с помощью Midjourney, DALL·E и графических редакторов.</li>
-                <li>Готовлю тексты для публикаций, использую ChatGPT и Claude для генерации идей и оптимизации контент-производства.</li>
-                <li>Отслеживаю ER и анализирую эффективность публикаций.</li>
-                <li>Систематизирую маркетинговые показатели в Google Sheets.</li>
-              </ul>
-            </div>
+        <div class="experience-grid grid md:grid-cols-2 gap-4">
+          <article class="experience-card">
+            <div class="experience-date">Апрель 2026 — настоящее время</div>
+            <h3>Independent Digital Practice</h3>
+            <div class="experience-role">SMM-специалист / Контент-стратег</div>
+            <p>Самостоятельные проекты в GameDev: контент-стратегия, анализ аудитории и конкурентов, рекламные креативы, тексты и оценка ER.</p>
           </article>
-          <article class="job">
-            <div class="job-date">Декабрь 2022 — ноябрь 2024</div>
-            <div>
-              <h3 class="job-company">East West Fitness</h3>
-              <p class="job-role">SMM-менеджер / Администратор digital-каналов</p>
-              <ul>
-                <li>Администрировал карточку организации на Яндекс Картах: обновлял информацию, работал с отзывами и репутацией компании.</li>
-                <li>Создавал и публиковал контент на корпоративном сайте.</li>
-                <li>Разрабатывал Python-скрипты для автоматизации выгрузки данных и маркетинговых показателей с сайта.</li>
-                <li>Анализировал посещаемость и поведение пользователей, выявлял возможности улучшения пользовательского опыта и конверсии.</li>
-                <li>Поддерживал актуальность цифровых каналов присутствия компании.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="case" id="case">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="section-index">03 / Featured experience</p><h2>East West Fitness</h2></div>
-          <p class="section-intro">Администрирование карточки организации на Яндекс Картах, публикация материалов на корпоративном сайте и анализ данных о посещаемости и поведении пользователей.</p>
-        </div>
-        <div class="case-grid">
-          <div class="case-poster" aria-label="Демонстрационная визуальная концепция кейса East West Fitness">
-            <div class="poster-top"><span>LOCAL FITNESS / DIGITAL</span><span>CASE 01</span></div>
-            <div class="poster-content">
-              <div class="poster-label">East West</div>
-              <div class="poster-title">FIT<br>NESS.</div>
-              <div class="poster-sub">Локальное присутствие. Контент. Аналитика.</div>
-            </div>
-            <div class="poster-bottom">SMM MANAGEMENT · YANDEX MAPS · WEB CONTENT · PYTHON</div>
-          </div>
-          <div class="case-content">
-            <span class="case-kicker">Role / SMM-manager & content administrator</span>
-            <h3>Поддерживать цифровые каналы клуба и работать с контентом и данными.</h3>
-            <p>В East West Fitness я администрировал карточку организации на Яндекс Картах, обновлял информацию и работал с отзывами. Также создавал и публиковал материалы на корпоративном сайте, автоматизировал выгрузку маркетинговых показателей с помощью Python и анализировал посещаемость и поведение пользователей.</p>
-            <div class="case-list">
-              <div class="case-item"><b>Локальный SMM</b><span>Обновление карточки на Яндекс Картах, работа с отзывами и репутацией.</span></div>
-              <div class="case-item"><b>Контент сайта</b><span>Подготовка и публикация материалов на корпоративном сайте клуба.</span></div>
-              <div class="case-item"><b>Автоматизация</b><span>Python-скрипты для автоматической выгрузки данных и метрик сайта.</span></div>
-              <div class="case-item"><b>Аналитика</b><span>Изучение трафика и поведения пользователей, идеи по улучшению конверсии.</span></div>
-            </div>
-            <div class="rebuild-note"><b>О реконструкции кейса.</b> Оригинальные исходники, публикации и архив статистики не сохранились. Описание отражает задачи из резюме; графическая подача и контентная матрица ниже — демонстрационные материалы, а не архив публикаций клуба. Количественные результаты не заявляются без подтверждающих данных.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-system" id="content">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="section-index">04 / Content thinking</p><h2>Пример<br>контентной матрицы</h2></div>
-          <p class="section-intro">Демонстрационный пример для портфолио: как можно распределить темы фитнес-клуба по задачам контента. Это не архив публикаций East West Fitness и не утверждение, что именно эти материалы там выходили.</p>
-        </div>
-        <div class="content-grid">
-          <article class="content-card"><small>01 / EXPERTISE</small><h3>Тренер объясняет</h3><p>Короткие советы по технике, ответы на частые вопросы новичков, знакомство с тренерской командой.</p><span class="content-label">REELS / SHORT VIDEO</span></article>
-          <article class="content-card"><small>02 / PRODUCT</small><h3>Форматы тренировок</h3><p>Показывать отличия направлений, кому они подходят и как выбрать занятие под свою цель.</p><span class="content-label">CAROUSEL / POST</span></article>
-          <article class="content-card"><small>03 / COMMUNITY</small><h3>Жизнь клуба</h3><p>Атмосфера, события и ответы на вопросы аудитории. Истории клиентов — только с их согласием.</p><span class="content-label">STORIES / COMMUNITY</span></article>
-          <article class="content-card"><small>04 / CONVERSION</small><h3>Первое посещение</h3><p>Понятный маршрут нового гостя: как записаться, что взять с собой и чего ожидать на первой тренировке.</p><span class="content-label">FAQ / CTA</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="analytics">
-      <div class="wrap">
-        <div class="section-head">
-          <div><p class="section-index">05 / Analytics & tools</p><h2>Контент — это гипотеза.<br>Данные помогают её проверить.</h2></div>
-          <p class="section-intro">Смотрю не на одну цифру, а на связку показателей. Для каждой площадки важно заранее определить цель публикации и одинаково считать метрики в динамике.</p>
-        </div>
-        <div class="analytics-grid">
-          <article class="analytics-card">
-            <h3>Аналитика в опыте</h3>
-            <p>В резюме отражены конкретные направления анализа и работы с данными:</p>
-            <div class="metric-list">
-              <div class="metric"><span>ER</span><span>Вовлечённость публикаций</span></div>
-              <div class="metric"><span>Эффективность публикаций</span><span>Контент-анализ</span></div>
-              <div class="metric"><span>Посещаемость сайта</span><span>Анализ трафика</span></div>
-              <div class="metric"><span>Поведение пользователей</span><span>Пользовательский опыт</span></div>
-              <div class="metric"><span>Маркетинговые показатели</span><span>Систематизация данных</span></div>
-            </div>
-          </article>
-          <article class="analytics-card">
-            <h3>Инструменты и площадки</h3>
-            <p>Инструменты для подготовки контента, администрирования сайтов и работы с данными.</p>
-            <div class="tool-tags">
-              <span class="tool-tag">Python</span><span class="tool-tag">Google Sheets</span><span class="tool-tag">Google Docs</span>
-              <span class="tool-tag">WordPress</span><span class="tool-tag">Adobe Photoshop</span>
-              <span class="tool-tag">ChatGPT</span><span class="tool-tag">Claude</span>
-              <span class="tool-tag">Midjourney</span><span class="tool-tag">DALL·E</span>
-              <span class="tool-tag">Telegram</span><span class="tool-tag">VK</span><span class="tool-tag">TikTok</span><span class="tool-tag">YouTube</span>
-            </div>
+          <article class="experience-card">
+            <div class="experience-date">Декабрь 2022 — ноябрь 2024</div>
+            <h3>East West Fitness</h3>
+            <div class="experience-role">SMM-менеджер / Администратор digital-каналов</div>
+            <p>Яндекс Карты, отзывы, публикации на корпоративном сайте, автоматизация отчётности и анализ поведения пользователей.</p>
           </article>
         </div>
         <div class="skills">
-          <span class="skill">SMM</span><span class="skill">Социальные сети</span><span class="skill">Контент-план</span><span class="skill">Копирайтинг</span>
-          <span class="skill">Создание креативов</span><span class="skill">Баннерная реклама</span><span class="skill">Интернет-реклама</span>
-          <span class="skill">Статистический анализ</span><span class="skill">Анализ эффективности кампаний</span>
-          <span class="skill">Стратегия продвижения продуктов</span><span class="skill">Наполнение контентом</span>
-          <span class="skill">Обработка видео</span><span class="skill">Обработка изображений</span><span class="skill">SEO</span>
-          <span class="skill">Графический дизайн</span><span class="skill">Анализ данных</span><span class="skill">Редактирование</span>
-          <span class="skill">Администрирование сайтов</span><span class="skill">Яндекс Карты</span><span class="skill">Python</span>
+          <span class="skill">Контент-план</span><span class="skill">Копирайтинг</span><span class="skill">SMM</span>
+          <span class="skill">Создание креативов</span><span class="skill">WordPress</span><span class="skill">Adobe Photoshop</span>
+          <span class="skill">SEO</span><span class="skill">Яндекс Карты</span><span class="skill">VK</span>
+          <span class="skill">Telegram</span><span class="skill">TikTok</span><span class="skill">YouTube</span>
+          <span class="skill">Обработка фото и видео</span><span class="skill">Статистический анализ</span>
         </div>
-        <div class="education-note">
-          <small>ОБРАЗОВАНИЕ / 2023</small>
-          <p><b>МГКИТ</b> · Среднее специальное образование<br>Математическое обеспечение и администрирование информационных систем (математик-программист).</p>
-        </div>
+        <p class="education">МГКИТ · Среднее специальное образование · Математическое обеспечение и администрирование информационных систем</p>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="contact-layout">
-          <div>
-            <p class="section-index">06 / Contact</p>
-            <h2>Готов к новым<br>задачам с контентом.</h2>
-            <p>Рассматриваю предложения на позицию контент-менеджера или SMM-менеджера. Москва, полная занятость, формат работы — на месте работодателя.</p>
-            <div class="contact-links">
-              <a class="contact-link" href="mailto:blvxx@inbox.ru">blvxx@inbox.ru ↗</a>
-              <a class="contact-link" href="tel:+79161984121">+7 (916) 198-41-21 ↗</a>
-              <a class="contact-link" href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
-              <a class="contact-link" href="https://set.ki/account/LmXrzmU" target="_blank" rel="noopener noreferrer">Профиль Setka ↗</a>
-            </div>
+    <section class="contact-section" id="contact">
+      <div class="page-shell contact-panel">
+        <div>
+          <p class="section-kicker">Давайте знакомиться</p>
+          <h2>Есть задача для контента?<br>Обсудим её.</h2>
+          <p>Открыт к предложениям на позицию SMM- или контент-менеджера. Москва · полная занятость · работа на месте работодателя.</p>
+          <div class="contact-actions">
+            <a href="mailto:blvxx@inbox.ru">blvxx@inbox.ru</a>
+            <a href="tel:+79161984121">+7 (916) 198-41-21</a>
+            <a href="https://set.ki/account/LmXrzmU" target="_blank" rel="noopener noreferrer">Профиль Setka ↗</a>
           </div>
-          <p><b>Артём Калинин</b><br>Контент-менеджер / SMM-специалист<br><br>Также доступны отдельные портфолио по веб-разработке и инженерным направлениям.</p>
         </div>
+        <a class="contact-cta" href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">Написать мне в Telegram ↗</a>
       </div>
     </section>
   </main>
-  <footer><div class="wrap"><span>© 2026 ARTEM KALININ / CONTENT MANAGEMENT & SMM</span><span><a href="https://github.com/blvxx">GITHUB</a> · <a href="https://blvxx.github.io/web-development-portfolio/">WEB PORTFOLIO</a></span></div></footer>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-inner">
+      <span>© 2026 Артём Калинин · SMM & Content</span>
+      <div class="footer-links">
+        <a href="https://t.me/blvlxx" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://set.ki/account/LmXrzmU" target="_blank" rel="noopener noreferrer">Setka</a>
+        <a href="https://github.com/blvxx" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    const menuButton=document.querySelector('.menu');
-    const mobileMenu=document.querySelector('.mobile-menu');
-    menuButton.addEventListener('click',()=>{
-      const open=mobileMenu.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded',String(open));
-      menuButton.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileNav = document.querySelector("#mobile-nav");
+
+    function closeMenu() {
+      mobileNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Открыть меню");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobileNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
     });
-    mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
-      mobileMenu.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Открыть меню');
-    }));
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
   </script>
 </body>
 </html>
