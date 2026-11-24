@@ -131,6 +131,14 @@
     .case-fact { padding: 15px 13px; border-radius: 16px; background: #f6f9f5; }
     .case-fact b { display: block; color: #41683a; font-size: 23px; line-height: 1.1; font-weight: 850; letter-spacing: -.05em; }
     .case-fact span { display: block; margin-top: 6px; color: #7b897e; font-size: 10px; line-height: 1.5; }
+    .demo-kpi-panel { margin-top: 22px; padding: 18px; border: 1px solid #e5eee1; border-radius: 18px; background: linear-gradient(135deg, #f7fbf3, #f3f7ff); }
+    .demo-kpi-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; color: #435d3d; font-size: 11px; font-weight: 850; }
+    .demo-kpi-heading small { padding: 5px 8px; border-radius: 99px; background: #fff1df; color: #a36b35; font-size: 9px; font-weight: 800; }
+    .demo-kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 13px; }
+    .demo-kpi { padding: 14px; border-radius: 14px; background: #fff; }
+    .demo-kpi b { display: block; color: #41683a; font-size: 28px; line-height: 1.05; font-weight: 900; letter-spacing: -.06em; }
+    .demo-kpi span { display: block; margin-top: 7px; color: #748176; font-size: 10px; line-height: 1.55; }
+    .demo-kpi-panel > p { margin: 12px 0 0; color: #8a7a65; font-size: 9px; line-height: 1.65; }
     .case-details { display: grid; gap: 12px; margin-top: 22px; }
     .case-detail { display: flex; align-items: flex-start; gap: 10px; color: #66736a; font-size: 12px; line-height: 1.7; }
     .check-dot { display: grid; flex: 0 0 20px; width: 20px; height: 20px; margin-top: 1px; place-items: center; border-radius: 50%; background: #edf7e8; color: #67924d; }
@@ -329,7 +337,7 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Пример поста</h3>
-              <p class="portfolio-desc">Одиночная публикация: заголовок, ключевая мысль и понятный призыв к действию.</p>
+              <p class="portfolio-desc">Здесь мог бы быть ваш креатив: цепляющий заголовок, полезная мысль и понятный призыв к действию.</p>
               <span class="portfolio-tag">Демонстрационный концепт</span>
             </div>
           </article>
@@ -343,7 +351,7 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Макет карусели</h3>
-              <p class="portfolio-desc">Серия слайдов, которая последовательно раскрывает тему и удерживает внимание.</p>
+              <p class="portfolio-desc">Здесь мог бы быть ваш контент: несколько слайдов, которые просто и наглядно раскрывают тему.</p>
               <span class="portfolio-tag">Демонстрационный концепт</span>
             </div>
           </article>
@@ -357,12 +365,12 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Обложка для Reels</h3>
-              <p class="portfolio-desc">Вертикальная обложка с коротким заголовком, чтобы тема ролика считывалась сразу.</p>
+              <p class="portfolio-desc">Здесь мог бы быть ваш креатив: яркая обложка, которая сразу объясняет тему ролика.</p>
               <span class="portfolio-tag">Демонстрационный концепт</span>
             </div>
           </article>
         </div>
-        <p class="portfolio-note">Это концептуальные примеры структуры портфолио, а не реальные опубликованные материалы клиентов. Вместо изображений пока оставлены аккуратные заглушки — их можно заменить готовыми креативами.</p>
+        <p class="portfolio-note">Визуальные материалы и примеры контента созданы специально для демонстрации подхода в портфолио. Это концепты, а не публикации из реальных аккаунтов клиентов.</p>
       </div>
     </section>
 
@@ -394,12 +402,21 @@
               <div class="case-fact"><b>Python</b><span>автоматизация выгрузки показателей</span></div>
             </div>
 
+            <div class="demo-kpi-panel">
+              <div class="demo-kpi-heading"><span>Пример измеримых ориентиров</span><small>Демонстрационные KPI</small></div>
+              <div class="demo-kpi-grid">
+                <div class="demo-kpi"><b>+20%</b><span>пример целевого роста переходов из карточки на Яндекс Картах</span></div>
+                <div class="demo-kpi"><b>5 ч</b><span>пример возможной экономии времени в неделю за счёт автоматизации отчётов</span></div>
+              </div>
+              <p>Это иллюстрация того, как можно формулировать цели и оценивать эффект работы. Это не фактические результаты East West Fitness и не подтверждённые показатели из моего опыта.</p>
+            </div>
+
             <div class="case-details">
               <div class="case-detail"><span class="check-dot">✓</span><span>Поддерживал актуальность карточки клуба и отвечал за работу с отзывами.</span></div>
               <div class="case-detail"><span class="check-dot">✓</span><span>Готовил и публиковал контент на корпоративном сайте.</span></div>
               <div class="case-detail"><span class="check-dot">✓</span><span>Автоматизировал выгрузку маркетинговых показателей и анализировал трафик.</span></div>
             </div>
-            <div class="honesty-note">В резюме не указаны подтверждённые проценты роста переходов или часы сэкономленного времени. Поэтому здесь показаны реальные задачи и инструменты, без придуманных KPI.</div>
+            <div class="honesty-note">Подтверждённые результаты в процентах в резюме не указаны. Поэтому отдельно показаны демонстрационные ориентиры — они не выдаются за достигнутые результаты.</div>
           </div>
         </div>
       </div>
