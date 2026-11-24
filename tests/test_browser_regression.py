@@ -252,3 +252,55 @@ def test_smm_profile_renders_on_mobile_and_navigation_works(
         assert page_errors == []
     finally:
         context.close()
+
+
+@pytest.mark.parametrize(
+    "page_path",
+    [
+        "/",
+        "/projects/domforma/",
+        "/projects/vera-skin/",
+        "/smm/",
+    ],
+)
+@pytest.mark.parametrize("width", [320, 375, 768, 1440])
+def test_core_pages_meet_responsive_and_accessibility_basics(
+    browser: Browser,
+    site_url: str,
+    page_path: str,
+    width: int,
+) -> None:
+    context, page = open_local_page(browser, width=width, height=900)
+    try:
+        page.goto(f"{site_url}{page_path}", wait_until="domcontentloaded")
+        page.locator("h1").first.wait_for(state="visible")
+
+        quality = page.evaluate(
+            """() => ({
+                title: document.title.trim(),
+                description: document.querySelector('meta[name="description"]')?.content?.trim() || '',
+                viewport: document.querySelector('meta[name="viewport"]')?.content?.trim() || '',
+                h1Count: document.querySelectorAll('h1').length,
+                mainCount: document.querySelectorAll('main').length,
+                scrollWidth: document.documentElement.scrollWidth,
+                clientWidth: document.documentElement.clientWidth,
+                images: Array.from(document.images).map(image => ({
+                    alt: image.getAttribute('alt'),
+                    hasAlt: image.hasAttribute('alt')
+                }))
+            })"""
+        )
+
+        assert quality["title"], f"{page_path} has no document title"
+        assert quality["description"], f"{page_path} has no meta description"
+        assert "width=device-width" in quality["viewport"].replace(" ", ""), f"{page_path} has no responsive viewport"
+        assert quality["h1Count"] == 1, f"{page_path} must expose one primary heading"
+        assert quality["mainCount"] == 1, f"{page_path} must expose one main landmark"
+        assert quality["scrollWidth"] <= quality["clientWidth"] + 1, (
+            f"{page_path} has horizontal overflow at {width}px"
+        )
+        assert all(image["hasAlt"] and str(image["alt"] or "").strip() for image in quality["images"]), (
+            f"{page_path} contains an image without meaningful alt text"
+        )
+    finally:
+        context.close()
