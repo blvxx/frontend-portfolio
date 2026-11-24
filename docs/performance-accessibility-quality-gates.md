@@ -10,6 +10,7 @@ The Playwright regression suite covers these public demo entry points:
 - ДОМФОРМА service-site concept.
 - VÉRA SKIN e-commerce UI concept.
 - SMM/content portfolio page.
+- Yandex Business local SEO clinic case-study page.
 
 For each entry point, the quality matrix tests viewport widths of **320, 375, 768 and 1440 CSS pixels**. It verifies:
 
