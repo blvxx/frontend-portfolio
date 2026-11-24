@@ -21,10 +21,11 @@
 
 ## Контакты
 
-- Email: blvxx@inbox.ru
-- Телефон: +7 (916) 198-41-21
+- Email: [blvx8x@gmail.com](mailto:blvx8x@gmail.com)
 - Telegram: [@blvlxx](https://t.me/blvlxx)
 - Setka: [профиль](https://set.ki/account/LmXrzmU)
+
+Контакты в этом README синхронизированы с основным GitHub-профилем. Телефон не публикуется в текстовой документации портфолио.
 
 ## Другие портфолио
 
