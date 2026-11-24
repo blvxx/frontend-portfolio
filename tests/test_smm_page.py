@@ -98,10 +98,12 @@ class SmmPortfolioPageTests(unittest.TestCase):
         self.assertIn("5 ч", self.html)
         self.assertIn("Это не фактические результаты East West Fitness", self.html)
 
-    def test_resume_contacts_are_present(self) -> None:
-        for term in ("blvxx@inbox.ru", "+7 (916) 198-41-21", "https://t.me/blvlxx", "https://set.ki/account/LmXrzmU"):
+    def test_public_contacts_are_current_and_consistent(self) -> None:
+        for term in ("blvx8x@gmail.com", "https://t.me/blvlxx", "https://set.ki/account/LmXrzmU"):
             with self.subTest(term=term):
                 self.assertIn(term, self.html)
+        self.assertNotIn("blvxx@inbox.ru", self.html)
+        self.assertNotIn("+7 (916) 198-41-21", self.html)
 
     def test_internal_anchor_links_resolve(self) -> None:
         broken = [
