@@ -73,7 +73,7 @@ class SmmPortfolioPageTests(unittest.TestCase):
         self.assertIn("О реконструкции кейса", self.html)
         self.assertIn("Оригинальные исходники, публикации и архив статистики не сохранились", self.html)
         self.assertIn("Количественные результаты не заявляются", self.html)
-        self.assertIn("демонстрационная контент-матрица", self.html)
+        self.assertIn("демонстрационной контент-матрицы", self.html)
 
     def test_internal_anchor_links_resolve(self) -> None:
         broken = [
