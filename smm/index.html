@@ -108,6 +108,11 @@
     .placeholder:before { content: ""; position: absolute; width: 70%; height: 70%; border: 1px dashed #c3cec5; border-radius: 25px; }
     .placeholder-icon { position: relative; display: grid; width: 66px; height: 66px; place-items: center; border: 1px solid #d8e0d9; border-radius: 21px; background: #f8faf8; color: #97a59a; box-shadow: 0 9px 22px #43594a0b; }
     .placeholder-caption { position: absolute; bottom: 18px; left: 0; right: 0; color: #8a978e; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-align: center; text-transform: uppercase; }
+    .portfolio-image { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #e8eee8; }
+    .portfolio-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+    .portfolio-card:hover .portfolio-image img { transform: scale(1.055); }
+    .image-shade { position: absolute; inset: 0; background: linear-gradient(180deg, #10181008 38%, #101810a8 100%); }
+    .image-label { position: absolute; left: 17px; bottom: 15px; padding: 7px 10px; border: 1px solid #ffffff66; border-radius: 99px; background: #17211b9c; color: #fff; font-size: 9px; font-weight: 850; letter-spacing: .1em; backdrop-filter: blur(8px); }
     .portfolio-body { padding: 19px 21px 21px; }
     .portfolio-title { margin: 0; color: #2c3b31; font-size: 18px; font-weight: 800; letter-spacing: -.04em; }
     .portfolio-desc { margin: 7px 0 0; color: #7a867e; font-size: 12px; line-height: 1.7; }
@@ -329,48 +334,45 @@
         </div>
         <div class="portfolio-grid grid md:grid-cols-3 gap-5">
           <article class="portfolio-card rounded-2xl shadow-sm hover:-translate-y-1 transition">
-            <div class="placeholder" role="img" aria-label="Плейсхолдер изображения для примера поста">
-              <div class="placeholder-icon">
-                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              </div>
-              <span class="placeholder-caption">Image placeholder · 01</span>
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1561402811-8cf986c35eec?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Спортсменка тренируется с гантелями в современном зале" loading="lazy">
+              <span class="image-shade"></span>
+              <span class="image-label">FITNESS · POST</span>
             </div>
             <div class="portfolio-body">
-              <h3 class="portfolio-title">Пример поста</h3>
-              <p class="portfolio-desc">Здесь мог бы быть ваш креатив: цепляющий заголовок, полезная мысль и понятный призыв к действию.</p>
+              <h3 class="portfolio-title">Концепт поста для фитнеса</h3>
+              <p class="portfolio-desc">Визуал для мотивационного поста: акцент на движении, коротком сообщении и понятном действии.</p>
               <span class="portfolio-tag">Демонстрационный концепт</span>
             </div>
           </article>
 
           <article class="portfolio-card rounded-2xl shadow-sm hover:-translate-y-1 transition">
-            <div class="placeholder" role="img" aria-label="Плейсхолдер изображения для макета карусели">
-              <div class="placeholder-icon">
-                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="14" height="16" rx="2"/><path d="M3 17V5a2 2 0 0 1 2-2h11M10 10h6M10 14h6"/></svg>
-              </div>
-              <span class="placeholder-caption">Image placeholder · 02</span>
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1788905073183-e39738f51230?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Сыворотка для ухода за кожей в предметной фотосъёмке" loading="lazy">
+              <span class="image-shade"></span>
+              <span class="image-label">BEAUTY · CAROUSEL</span>
             </div>
             <div class="portfolio-body">
-              <h3 class="portfolio-title">Макет карусели</h3>
-              <p class="portfolio-desc">Здесь мог бы быть ваш контент: несколько слайдов, которые просто и наглядно раскрывают тему.</p>
+              <h3 class="portfolio-title">Карусель для beauty-бренда</h3>
+              <p class="portfolio-desc">Подача продукта через серию карточек: преимущества, состав и сценарий использования.</p>
               <span class="portfolio-tag">Демонстрационный концепт</span>
             </div>
           </article>
 
           <article class="portfolio-card rounded-2xl shadow-sm hover:-translate-y-1 transition">
-            <div class="placeholder" role="img" aria-label="Плейсхолдер изображения для обложки Reels">
-              <div class="placeholder-icon">
-                <svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m10 8 6 4-6 4zM3 8h18M8 3l3 5M16 3l-3 5"/></svg>
-              </div>
-              <span class="placeholder-caption">Image placeholder · 03</span>
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1775410631936-7de96322df0b?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Игровая компьютерная станция с несколькими мониторами и RGB-подсветкой" loading="lazy">
+              <span class="image-shade"></span>
+              <span class="image-label">GAMEDEV · REELS</span>
             </div>
             <div class="portfolio-body">
-              <h3 class="portfolio-title">Обложка для Reels</h3>
-              <p class="portfolio-desc">Здесь мог бы быть ваш креатив: яркая обложка, которая сразу объясняет тему ролика.</p>
+              <h3 class="portfolio-title">Обложка Reels для GameDev</h3>
+              <p class="portfolio-desc">Контрастная обложка для короткого видео: визуальный хук и понятная тема ролика.</p>
               <span class="portfolio-tag">Демонстрационный концепт</span>
             </div>
           </article>
         </div>
-        <p class="portfolio-note">Визуальные материалы и примеры контента созданы специально для демонстрации подхода в портфолио. Это концепты, а не публикации из реальных аккаунтов клиентов.</p>
+        <p class="portfolio-note">Визуальные материалы и примеры контента созданы специально для демонстрации подхода в портфолио. Это концепты, а не публикации из реальных аккаунтов клиентов. Фотографии: <a href="https://unsplash.com/photos/woman-exercising-with-dumbbell-inside-gym-YFJn6-GZVuw" target="_blank" rel="noopener noreferrer">Jahir Martinez</a>, <a href="https://unsplash.com/photos/serum-bottle-on-terracotta-surface-bf3aer4Xm9g" target="_blank" rel="noopener noreferrer">Ela De Pure</a>, <a href="https://unsplash.com/photos/gamers-setup-with-multiple-monitors-and-rgb-lighting-zHzRrYV_Ars" target="_blank" rel="noopener noreferrer">Branden Skeli</a> / Unsplash.</p>
       </div>
     </section>
 
