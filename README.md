@@ -94,7 +94,7 @@ A separate SMM profile page is published as a route inside this existing GitHub 
 
 **[SMM-специалист / Контент-стратег — опыт и кейс East West Fitness](https://blvxx.github.io/web-development-portfolio/smm/)**
 
-The page presents experience at Independent Digital Practice, Delivery Club and East West Fitness. The East West Fitness case is reconstructed from the described work because original source files and historical metrics are unavailable; visual examples and content matrix are labelled as demonstrations, and no unverified performance figures are claimed.
+The page is adapted to the Content Manager / SMM resume and presents experience at Independent Digital Practice and East West Fitness. The East West Fitness case is reconstructed from the described work because original source files and historical metrics are unavailable; visual examples and the content matrix are labelled as demonstrations, and no unverified performance figures are claimed.
 
 
 ## Новый кейс: ДОМФОРМА
