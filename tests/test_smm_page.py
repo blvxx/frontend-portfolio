@@ -49,6 +49,8 @@ class SmmPortfolioPageTests(unittest.TestCase):
         self.assertIn('property="og:url"', self.html)
         self.assertIn("https://blvxx.github.io/web-development-portfolio/smm/", self.html)
         self.assertIn("@tailwindcss/browser@4", self.html)
+        self.assertIn('href="yandex-business-clinic-case.html"', self.html)
+        self.assertIn('href="#local-seo"', self.html)
 
     def test_visual_showcase_has_three_concept_cards(self) -> None:
         for label in ("Концепт поста для фитнеса", "Карусель для beauty-бренда", "Обложка Reels для GameDev"):
@@ -104,6 +106,25 @@ class SmmPortfolioPageTests(unittest.TestCase):
                 self.assertIn(term, self.html)
         self.assertNotIn("blvxx@inbox.ru", self.html)
         self.assertNotIn("+7 (916) 198-41-21", self.html)
+
+
+    def test_yandex_business_clinic_case_is_labelled_as_demonstration(self) -> None:
+        case_path = ROOT / "smm" / "yandex-business-clinic-case.html"
+        self.assertTrue(case_path.exists())
+        case = case_path.read_text(encoding="utf-8")
+        for term in (
+            "Демонстрационный сценарий",
+            "двумя филиалами",
+            "План на первые 30 дней",
+            "Контрольная матрица",
+            "Ежемесячного отчёта",
+            "Не обсуждать публично",
+            "не клиентский результат",
+        ):
+            with self.subTest(term=term):
+                self.assertIn(term, case)
+        self.assertIn("Заполняется из статистики", case)
+        self.assertNotIn("+20%", case)
 
     def test_internal_anchor_links_resolve(self) -> None:
         broken = [
