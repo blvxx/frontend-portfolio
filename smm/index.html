@@ -201,9 +201,12 @@
       .section { padding: 68px 0; }
       .services-grid, .portfolio-grid { grid-template-columns: 1fr; }
       .service-card { min-height: 0; }
-      .case-layout { grid-template-columns: 1fr; }
-      .case-visual { min-height: 300px; }
-      .case-copy { padding: 25px; }
+      .case-layout { grid-template-columns: minmax(0, 1fr); }
+      .case-layout > * { min-width: 0; width: 100%; max-width: 100%; }
+      .case-visual { min-height: 300px; min-width: 0; }
+      .case-copy { padding: 25px; min-width: 0; overflow-wrap: anywhere; }
+      .case-chip { max-width: 100%; flex-wrap: wrap; white-space: normal; overflow-wrap: anywhere; }
+      .case-visual-bottom { flex-wrap: wrap; }
       .advantage-panel { padding: 25px; }
       .experience-grid { grid-template-columns: 1fr; }
       .contact-panel { display: block; }
