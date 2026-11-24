@@ -261,6 +261,7 @@ def test_smm_profile_renders_on_mobile_and_navigation_works(
         "/projects/domforma/",
         "/projects/vera-skin/",
         "/smm/",
+        "/smm/yandex-business-clinic-case.html",
     ],
 )
 @pytest.mark.parametrize("width", [320, 375, 768, 1440])
