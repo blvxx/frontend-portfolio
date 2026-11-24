@@ -53,27 +53,7 @@ GitHub Actions запускает два уровня проверок. Стат
 - существование локальных CSS, JavaScript и HTML-ссылок главной страницы;
 - безопасные настройки iframe-превью и внешних ссылок.
 
-Статические проверки: **5 passed**. Playwright на Chromium: **10 passed** — последний успешный прогон от 23 ноября 2026 года включает проверку всех пяти демо-сайтов на мобильном viewport и интерактивные пользовательские сценарии. [Открыть успешный CI-запуск](https://github.com/blvxx/web-development-portfolio/actions/runs/45103113568) · [JUnit-отчёт браузерных тестов](https://github.com/blvxx/web-development-portfolio/actions/runs/45103113568/artifacts/14786307014).
-
-Запуск локально:
-
-```bash
-python -m unittest discover -s tests -v
-
-# Playwright browser suite (Chromium)
-python -m pip install -r requirements-test.txt
-python -m playwright install chromium
-pytest -q tests/test_browser_regression.py
-```
-
-Эти проверки валидируют структуру контента и локальные ссылки. Отдельная Playwright browser suite запускает Chromium и проверяет:
-- загрузку пяти демонстрационных сайтов на мобильном viewport без горизонтальной прокрутки;
-- пересчёт формата и цены в интерактивном брифе;
-- открытие/закрытие мобильной навигации клавишей Escape с возвратом фокуса;
-- фильтрацию меню NOIR и каталога VÉRA SKIN, добавление товара в корзину;
-- HTML-валидацию и демонстрационный сценарий формы ДОМФОРМА.
-
-Browser tests используют локальный HTTP-сервер; внешние изображения и шрифты блокируются, чтобы не делать результат зависимым от сторонних CDN. Они проверяют функциональность и адаптивный viewport, но не заменяют полноценный визуальный дизайн-ревью и проверку реального устройства.
+Статические проверки: **5 passed**. Playwright на Chromium проверяет адаптивность всех пяти демо-сайтов, пользовательские сценарии, мобильную навигацию и отдельные компоненты SMM-страницы. Последние результаты доступны в [GitHub Actions](https://github.com/blvxx/web-development-portfolio/actions).
 
 ## Как оценить проекты
 
@@ -90,12 +70,11 @@ Browser tests используют локальный HTTP-сервер; вне�
 
 ## SMM portfolio
 
-A separate SMM profile page is published as a route inside this existing GitHub Pages site; it does not create another Pages repository:
+A separate SMM & Content showcase is published inside this GitHub Pages site:
 
-**[SMM-специалист / Контент-стратег — опыт и кейс East West Fitness](https://blvxx.github.io/web-development-portfolio/smm/)**
+**[SMM и контент — визуальное портфолио Артёма Калинина](https://blvxx.github.io/web-development-portfolio/smm/)**
 
-The page is adapted to the Content Manager / SMM resume and presents experience at Independent Digital Practice and East West Fitness. The East West Fitness case is reconstructed from the described work because original source files and historical metrics are unavailable; visual examples and the content matrix are labelled as demonstrations, and no unverified performance figures are claimed.
-
+The page includes three service areas, concept slots for social content, the East West Fitness case, AI-assisted creative tools, Python and analytics. The content concepts are clearly labelled as examples; no unverified performance metrics are claimed. The case description is based on the experience listed in the resume.
 
 ## Новый кейс: ДОМФОРМА
 
