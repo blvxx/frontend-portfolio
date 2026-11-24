@@ -51,10 +51,15 @@ class SmmPortfolioPageTests(unittest.TestCase):
         self.assertIn("@tailwindcss/browser@4", self.html)
 
     def test_visual_showcase_has_three_concept_cards(self) -> None:
-        for label in ("Пример поста", "Макет карусели", "Обложка для Reels"):
+        for label in ("Концепт поста для фитнеса", "Карусель для beauty-бренда", "Обложка Reels для GameDev"):
             with self.subTest(label=label):
                 self.assertIn(label, self.html)
         self.assertEqual(self.html.count('class="portfolio-card'), 3)
+        self.assertEqual(self.html.count('class="portfolio-image"'), 3)
+        self.assertEqual(self.html.count("<img src=\"https://images.unsplash.com/"), 3)
+        self.assertIn("Jahir Martinez", self.html)
+        self.assertIn("Ela De Pure", self.html)
+        self.assertIn("Branden Skeli", self.html)
         self.assertIn("Демонстрационный концепт", self.html)
         self.assertIn("Визуальные материалы и примеры контента созданы специально для демонстрации подхода в портфолио", self.html)
 
