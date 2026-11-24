@@ -56,7 +56,7 @@ class SmmPortfolioPageTests(unittest.TestCase):
                 self.assertIn(label, self.html)
         self.assertEqual(self.html.count('class="portfolio-card'), 3)
         self.assertIn("Демонстрационный концепт", self.html)
-        self.assertIn("не реальные опубликованные материалы клиентов", self.html)
+        self.assertIn("Визуальные материалы и примеры контента созданы специально для демонстрации подхода в портфолио", self.html)
 
     def test_resume_experience_and_tools_match_pdf(self) -> None:
         for term in (
@@ -84,13 +84,14 @@ class SmmPortfolioPageTests(unittest.TestCase):
                 self.assertIn(term, self.html)
         self.assertNotIn("Delivery Club", self.html)
 
-    def test_case_uses_only_supported_facts_and_no_fake_kpis(self) -> None:
+    def test_case_distinguishes_demo_kpis_from_verified_results(self) -> None:
         self.assertIn("2 года", self.html)
         self.assertIn("2 канала", self.html)
         self.assertIn("автоматизация выгрузки показателей", self.html)
-        self.assertIn("В резюме не указаны подтверждённые проценты роста переходов или часы сэкономленного времени", self.html)
-        self.assertNotIn("20%", self.html)
-        self.assertNotIn("5 часов", self.html)
+        self.assertIn("Демонстрационные KPI", self.html)
+        self.assertIn("+20%", self.html)
+        self.assertIn("5 ч", self.html)
+        self.assertIn("Это не фактические результаты East West Fitness", self.html)
 
     def test_resume_contacts_are_present(self) -> None:
         for term in ("blvxx@inbox.ru", "+7 (916) 198-41-21", "https://t.me/blvlxx", "https://set.ki/account/LmXrzmU"):
