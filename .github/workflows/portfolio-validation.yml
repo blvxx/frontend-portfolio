@@ -14,6 +14,7 @@ on:
       - "website-service.css"
       - "telegram-bots.html"
       - "projects/**"
+      - "smm/**"
       - "tests/**"
       - "requirements-test.txt"
       - ".github/workflows/portfolio-validation.yml"
@@ -50,7 +51,9 @@ jobs:
           python-version: "3.12"
 
       - name: Validate project data, demo pages and local links
-        run: python -m unittest discover -s tests -p 'test_portfolio_content.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_portfolio_content.py' -v
+          python -m unittest discover -s tests -p 'test_smm_page.py' -v
 
   browser-regression:
     runs-on: ubuntu-latest
