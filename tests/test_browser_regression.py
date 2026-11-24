@@ -229,8 +229,11 @@ def test_smm_profile_renders_on_mobile_and_navigation_works(
         assert "Обложка для Reels" in portfolio
         assert "Independent Digital Practice" in page.locator("#about").inner_text()
         assert "East West Fitness" in page.locator("#about").inner_text()
-        assert "20%" not in page.locator("#case").inner_text()
-        assert "5 часов" not in page.locator("#case").inner_text()
+        case_text = page.locator("#case").inner_text()
+        assert "+20%" in case_text
+        assert "5 ч" in case_text
+        assert "Демонстрационные KPI" in case_text
+        assert "не фактические результаты" in case_text
 
         has_horizontal_overflow = page.evaluate(
             "document.documentElement.scrollWidth > document.documentElement.clientWidth + 1"
