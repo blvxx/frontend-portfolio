@@ -34,7 +34,7 @@ class PortfolioContentTests(unittest.TestCase):
         cls.script = (ROOT / "script.js").read_text(encoding="utf-8")
 
     def test_project_catalogue_has_unique_ids_and_complete_case_data(self) -> None:
-        self.assertEqual(len(self.projects), 5, "The portfolio README advertises five demo projects")
+        self.assertEqual(len(self.projects), 6, "The client-facing catalogue contains six demo projects")
         ids = [project["id"] for project in self.projects]
         self.assertEqual(len(ids), len(set(ids)), "Project IDs must be unique")
 
@@ -60,14 +60,14 @@ class PortfolioContentTests(unittest.TestCase):
             with self.subTest(project=project["title"]):
                 demo = urlsplit(project["demo_url"])
                 self.assertEqual(demo.netloc, "blvxx.github.io")
-                prefix = "/web-development-portfolio/projects/"
+                prefix = "/Web-Development-Services/projects/"
                 self.assertTrue(demo.path.startswith(prefix), demo.path)
                 slug = demo.path[len(prefix):].strip("/")
                 self.assertTrue(slug, "Demo URL must identify a project folder")
 
                 source = urlsplit(project["url"])
                 expected_source_path = (
-                    f"/blvxx/web-development-portfolio/tree/main/projects/{slug}"
+                    f"/blvxx/Web-Development-Services/tree/main/projects/{slug}"
                 )
                 self.assertEqual(source.netloc, "github.com")
                 self.assertEqual(source.path, expected_source_path)
