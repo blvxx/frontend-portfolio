@@ -7,12 +7,12 @@
 Основной проект для презентации услуг по созданию и доработке сайтов. В репозитории собраны демонстрационные сайты, примеры интерфейсов, тесты и материалы по работе с заказчиками.
 
 <p align="center">
-  <a href="https://blvxx.github.io/web-development-portfolio/"><strong>Открыть веб-портфолио</strong></a> ·
-  <a href="https://blvxx.github.io/web-development-portfolio/smm/"><strong>Портфолио SMM и контента</strong></a> ·
-  <a href="https://github.com/blvxx/web-development-portfolio"><strong>Исходный код</strong></a>
+  <a href="https://blvxx.github.io/Web-Development-Services/"><strong>Открыть веб-портфолио</strong></a> ·
+  <a href="https://blvxx.github.io/Web-Development-Services/smm/"><strong>Портфолио SMM и контента</strong></a> ·
+  <a href="https://github.com/blvxx/Web-Development-Services"><strong>Исходный код</strong></a>
 </p>
 
-![Web Portfolio Validation](https://github.com/blvxx/web-development-portfolio/actions/workflows/portfolio-validation.yml/badge.svg)
+![Web Portfolio Validation](https://github.com/blvxx/Web-Development-Services/actions/workflows/portfolio-validation.yml/badge.svg)
 
 ## Услуги
 
@@ -29,14 +29,14 @@
 | [NOIR COFFEE](./projects/noir-coffee/) | Сайт кофейни | Визуальная айдентика, меню, типографика и адаптивная навигация |
 | [FRAME STUDIO](./projects/frame-studio/) | Сайт студии | Композиция, портфолио и презентация услуг |
 | [IRON DISTRICT](./projects/iron-district/) | Лендинг фитнес-клуба | Контрастная визуальная система, направления тренировок и призывы к действию |
-| [ДОМФОРМА](./projects/domforma/) · [Live](https://blvxx.github.io/web-development-portfolio/projects/domforma/) | Сайт ремонтной компании | Структура услуг, интерьерные концепции, этапы работ, FAQ и демо-форма |
+| [ДОМФОРМА](./projects/domforma/) · [Live](https://blvxx.github.io/Web-Development-Services/projects/domforma/) | Сайт ремонтной компании | Структура услуг, интерьерные концепции, этапы работ, FAQ и демо-форма |
 | [VÉRA SKIN](./projects/vera-skin/) | E-commerce UI | Каталог, фильтрация, избранное и демонстрационная корзина |
 
 > **О проектах:** это самостоятельные концепт-работы для демонстрации навыков и подхода. Они не выдаются за коммерческие внедрения или отзывы реальных заказчиков. Форма ДОМФОРМА работает в демонстрационном режиме и не отправляет данные; функции VÉRA SKIN также демонстрационные.
 
 ## Дополнительное направление: SMM и контент
 
-[Открыть SMM-портфолио](https://blvxx.github.io/web-development-portfolio/smm/)
+[Открыть SMM-портфолио](https://blvxx.github.io/Web-Development-Services/smm/)
 
 Отдельная страница с направлениями SMM, контент-стратегией, концептами публикаций, аналитическими примерами и описанием опыта в digital-каналах. Визуальные материалы обозначены как демонстрационные концепции; неподтверждённые показатели эффективности не заявляются.
 
@@ -55,7 +55,7 @@
 1. Клонировать репозиторий:
 
    ```bash
-   git clone https://github.com/blvxx/web-development-portfolio.git
+   git clone https://github.com/blvxx/Web-Development-Services.git
    ```
 
 2. Открыть корневой `index.html` в браузере.
@@ -73,7 +73,7 @@ GitHub Actions выполняет статические проверки и б�
 - существование локальных CSS, JavaScript и HTML-ссылок главной страницы;
 - безопасные настройки iframe-превью и внешних ссылок.
 
-Playwright проверяет адаптивность демо-сайтов, пользовательские сценарии, мобильную навигацию и компоненты SMM-страницы. Отдельная матрица проверяет пять ключевых страниц на ширинах 320, 375, 768 и 1440 px: title/description, viewport, один h1/main landmark, alt у изображений и отсутствие горизонтальной прокрутки. Последние результаты доступны в [GitHub Actions](https://github.com/blvxx/web-development-portfolio/actions). На 24 ноября 2026 года последний workflow проверки завершился успешно: [посмотреть запуск](https://github.com/blvxx/web-development-portfolio/actions/runs/45421786046).
+Playwright проверяет адаптивность демо-сайтов, пользовательские сценарии, мобильную навигацию и компоненты SMM-страницы. Отдельная матрица проверяет пять ключевых страниц на ширинах 320, 375, 768 и 1440 px: title/description, viewport, один h1/main landmark, alt у изображений и отсутствие горизонтальной прокрутки. Последние результаты доступны в [GitHub Actions](https://github.com/blvxx/Web-Development-Services/actions). На 24 ноября 2026 года последний workflow проверки завершился успешно: [посмотреть запуск](https://github.com/blvxx/Web-Development-Services/actions/runs/45421786046).
 
 ## Проверки качества интерфейса
 
