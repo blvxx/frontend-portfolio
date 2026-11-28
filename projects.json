@@ -17,13 +17,13 @@
       "Responsive"
     ],
     "status": "Концепт · демонстрационный проект",
-    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/noir-coffee",
+    "url": "https://github.com/blvxx/Web-Development-Services/tree/main/projects/noir-coffee",
     "link": "Код на GitHub",
-    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/noir-coffee/",
+    "demo_url": "https://blvxx.github.io/Web-Development-Services/projects/noir-coffee/",
     "demo_label": "Открыть сайт",
     "preview": {
       "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/noir-coffee/",
+      "src": "https://blvxx.github.io/Web-Development-Services/projects/noir-coffee/",
       "alt": "Живое превью сайта NOIR Coffee Studio"
     },
     "case_goal": "Помочь потенциальному гостю быстро понять формат кофейни, познакомиться с меню и найти контакты.",
@@ -48,13 +48,13 @@
       "Responsive"
     ],
     "status": "Концепт · вымышленная студия",
-    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/frame-studio",
+    "url": "https://github.com/blvxx/Web-Development-Services/tree/main/projects/frame-studio",
     "link": "Код на GitHub",
-    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/frame-studio/",
+    "demo_url": "https://blvxx.github.io/Web-Development-Services/projects/frame-studio/",
     "demo_label": "Открыть сайт",
     "preview": {
       "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/frame-studio/",
+      "src": "https://blvxx.github.io/Web-Development-Services/projects/frame-studio/",
       "alt": "Живое превью сайта FRAME Digital Studio"
     },
     "case_goal": "Показать услуги и позиционирование digital-студии через лаконичный сайт, который не перегружает посетителя информацией.",
@@ -79,13 +79,13 @@
       "Responsive"
     ],
     "status": "Концепт · заявки демонстрационные",
-    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/iron-district",
+    "url": "https://github.com/blvxx/Web-Development-Services/tree/main/projects/iron-district",
     "link": "Код на GitHub",
-    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/iron-district/",
+    "demo_url": "https://blvxx.github.io/Web-Development-Services/projects/iron-district/",
     "demo_label": "Открыть сайт",
     "preview": {
       "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/iron-district/",
+      "src": "https://blvxx.github.io/Web-Development-Services/projects/iron-district/",
       "alt": "Живое превью сайта IRON DISTRICT"
     },
     "case_goal": "Быстро объяснить, чем занимается фитнес-клуб, показать направления тренировок и привести посетителя к сценарию записи.",
@@ -110,13 +110,13 @@
       "E-commerce UI"
     ],
     "status": "Концепт · без реальных продаж",
-    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/vera-skin",
+    "url": "https://github.com/blvxx/Web-Development-Services/tree/main/projects/vera-skin",
     "link": "Код на GitHub",
-    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/vera-skin/",
+    "demo_url": "https://blvxx.github.io/Web-Development-Services/projects/vera-skin/",
     "demo_label": "Открыть сайт",
     "preview": {
       "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/vera-skin/",
+      "src": "https://blvxx.github.io/Web-Development-Services/projects/vera-skin/",
       "alt": "Живое превью сайта VÉRA SKIN"
     },
     "case_goal": "Показать ассортимент косметики и понятный пользовательский путь от просмотра каталога до добавления товара в корзину.",
@@ -142,17 +142,50 @@
       "Accessibility"
     ],
     "status": "Концепт · вымышленная компания",
-    "url": "https://github.com/blvxx/web-development-portfolio/tree/main/projects/domforma",
+    "url": "https://github.com/blvxx/Web-Development-Services/tree/main/projects/domforma",
     "link": "Код на GitHub",
-    "demo_url": "https://blvxx.github.io/web-development-portfolio/projects/domforma/",
+    "demo_url": "https://blvxx.github.io/Web-Development-Services/projects/domforma/",
     "demo_label": "Открыть сайт",
     "preview": {
       "type": "iframe",
-      "src": "https://blvxx.github.io/web-development-portfolio/projects/domforma/",
+      "src": "https://blvxx.github.io/Web-Development-Services/projects/domforma/",
       "alt": "Живое превью сайта ДОМФОРМА — ремонт и отделка"
     },
     "case_goal": "Структурировать услуги ремонтной компании, показать этапы взаимодействия и дать посетителю понятный способ отправить запрос.",
     "case_solution": "Сделаны страницы и блоки услуг, адаптивное меню, FAQ, CSS-иллюстрации интерьеров и форма с HTML-валидацией.",
     "case_scope": "Концепт вымышленной компании. Форма показывает демонстрационное подтверждение и не передаёт заявку менеджеру или в CRM."
+  },
+  {
+    "id": 14,
+    "category": "prototype",
+    "kicker": "WORDPRESS / CONTACT FORM 7 / SERVICE PROTOTYPE",
+    "title": "SiteProof — диагностика WordPress-форм",
+    "description": "Прототип услуги по диагностике одной формы WordPress Contact Form 7: проверка структуры формы, тестового сценария, визуальной обратной связи и фиксация доказательств для владельца сайта.",
+    "highlights": [
+      "Разделение наличия формы, принятия тестового действия и фактической доставки email",
+      "Пошаговый manual-first сценарий проверки Contact Form 7",
+      "Локальная рабочая область для фиксации симптомов, доказательств и рекомендаций"
+    ],
+    "tech": [
+      "WordPress",
+      "Contact Form 7",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "QA"
+    ],
+    "status": "Статический прототип · не подключён к WordPress",
+    "url": "https://github.com/blvxx/Web-Development-Services/tree/main/projects/siteproof-demo",
+    "link": "Исходники на GitHub",
+    "demo_url": "https://blvxx.github.io/Web-Development-Services/projects/siteproof-demo/",
+    "demo_label": "Открыть SiteProof",
+    "preview": {
+      "type": "iframe",
+      "src": "https://blvxx.github.io/Web-Development-Services/projects/siteproof-demo/",
+      "alt": "SiteProof — статический прототип диагностики WordPress Contact Form 7"
+    },
+    "case_goal": "Показать понятный процесс диагностики формы WordPress для владельца небольшого сайта: от воспроизведения симптома до структурированной рекомендации.",
+    "case_solution": "Подготовлен статический интерактивный прототип с ручным чек-листом, раздельными состояниями проверки и рабочим пространством для фиксации доказательств и результата.",
+    "case_scope": "Демонстрационный прототип. Он не подключается к реальному WordPress или Contact Form 7, не отправляет внешние формы и письма, не проверяет SMTP и не хранит данные на сервере. Любые результаты в нём — локальная демонстрация процесса, а не подтверждение фактической доставки email."
   }
 ]
