@@ -71,8 +71,8 @@ def test_main_portfolio_renders_projects_and_recalculates_brief(
         page.goto(f"{site_url}/", wait_until="domcontentloaded")
         page.locator("#projects-grid .project-card").nth(4).wait_for()
 
-        assert page.locator("#projects-grid .project-card").count() == 5
-        assert page.locator("#project-count").inner_text() == "05 / 05"
+        assert page.locator("#projects-grid .project-card").count() == len(PROJECTS)
+        assert page.locator("#project-count").inner_text() == f"{len(PROJECTS):02d} / {len(PROJECTS):02d}"
         assert page.locator("#brief-result-price").inner_text() == "от 8 000 ₽"
 
         page.locator('input[name="brief-format"][value="company"]').check()
