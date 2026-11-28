@@ -22,6 +22,10 @@
 - Исправление HTML, CSS и JavaScript.
 - Доработка навигации, форм и интерактивных элементов.
 
+## Product prototype
+
+[SiteProof — WordPress form diagnostic prototype](./products/siteproof-demo/README.md) — interactive manual-first demonstration for checking a Contact Form 7 enquiry path. It separates form visibility, successful test submission, message generation and confirmed email receipt. The static prototype does not contact websites or send email; all demo records are synthetic.
+
 ## Избранные проекты
 
 | Проект | Формат | Что демонстрирует |
