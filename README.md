@@ -31,8 +31,15 @@
 | [IRON DISTRICT](./projects/iron-district/) | Лендинг фитнес-клуба | Контрастная визуальная система, направления тренировок и призывы к действию |
 | [ДОМФОРМА](./projects/domforma/) · [Live](https://blvxx.github.io/Web-Development-Services/projects/domforma/) | Сайт ремонтной компании | Структура услуг, интерьерные концепции, этапы работ, FAQ и демо-форма |
 | [VÉRA SKIN](./projects/vera-skin/) | E-commerce UI | Каталог, фильтрация, избранное и демонстрационная корзина |
+| [SiteProof](./projects/siteproof-demo/) · [Live](https://blvxx.github.io/Web-Development-Services/projects/siteproof-demo/) | WordPress / Contact Form 7 diagnostic prototype | Manual-first проверка формы, фиксация доказательств и local-only workspace |
 
 > **О проектах:** это самостоятельные концепт-работы для демонстрации навыков и подхода. Они не выдаются за коммерческие внедрения или отзывы реальных заказчиков. Форма ДОМФОРМА работает в демонстрационном режиме и не отправляет данные; функции VÉRA SKIN также демонстрационные.
+
+### SiteProof — диагностика WordPress-форм
+
+[Открыть демонстрацию](https://blvxx.github.io/Web-Development-Services/projects/siteproof-demo/) · [Исходники](./projects/siteproof-demo/)
+
+Прототип услуги по ручной проверке одного авторизованного сценария WordPress Contact Form 7. Страница разделяет наличие формы, принятие тестовой отправки, генерацию сообщения и фактическое получение email. Это статическая демонстрация: она не отправляет запросы на внешние сайты, не отправляет письма и не хранит серверные данные.
 
 ## Дополнительное направление: SMM и контент
 
