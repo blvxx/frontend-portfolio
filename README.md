@@ -80,7 +80,7 @@ GitHub Actions выполняет статические проверки и б�
 - существование локальных CSS, JavaScript и HTML-ссылок главной страницы;
 - безопасные настройки iframe-превью и внешних ссылок.
 
-Playwright проверяет адаптивность демо-сайтов, пользовательские сценарии, мобильную навигацию и компоненты SMM-страницы. Отдельная матрица проверяет пять ключевых страниц на ширинах 320, 375, 768 и 1440 px: title/description, viewport, один h1/main landmark, alt у изображений и отсутствие горизонтальной прокрутки. Последние результаты доступны в [GitHub Actions](https://github.com/blvxx/Web-Development-Services/actions). На 24 ноября 2026 года последний workflow проверки завершился успешно: [посмотреть запуск](https://github.com/blvxx/Web-Development-Services/actions/runs/45421786046).
+Playwright проверяет адаптивность демо-сайтов, пользовательские сценарии, мобильную навигацию и компоненты SMM-страницы. Отдельная матрица проверяет пять ключевых страниц на ширинах 320, 375, 768 и 1440 px: title/description, viewport, один h1/main landmark, alt у изображений и отсутствие горизонтальной прокрутки. Последние результаты доступны в [GitHub Actions](https://github.com/blvxx/Web-Development-Services/actions). На 28 ноября 2026 года последний workflow проверки ветки `main` завершился успешно: [посмотреть запуск](https://github.com/blvxx/Web-Development-Services/actions/runs/46151595399).
 
 ## Проверки качества интерфейса
 
