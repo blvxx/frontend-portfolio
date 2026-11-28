@@ -2,7 +2,11 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const grid = $('#projects-grid');
 const filtersEl = $('#project-filters');
 const countEl = $('#project-count');
-const filters = [];
+const filters = [
+  {id:'all',label:'Все проекты'},
+  {id:'web',label:'Сайты и e-commerce'},
+  {id:'prototype',label:'Прототипы'}
+];
 let activeFilter = 'all';
 let projects = [];
 
